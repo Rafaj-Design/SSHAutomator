@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
+		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
+		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
+		15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC737C1A683A9300CD8DFA /* RIViewController.m */; };
+		15BC73801A683A9300CD8DFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC737E1A683A9300CD8DFA /* Main.storyboard */; };
+		15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73811A683A9300CD8DFA /* Images.xcassets */; };
+		15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
+		15BC73911A683A9300CD8DFA /* SSHAutomatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */; };
+		15BC739F1A683B7D00CD8DFA /* RIAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */; };
+		15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73A41A683BE400CD8DFA /* RIAccountsController.m */; };
+		15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73A91A683F2200CD8DFA /* RITableView.m */; };
+		15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73AC1A683F3C00CD8DFA /* RIAccountsTableView.m */; };
+		15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B31A68563900CD8DFA /* RICoreData.m */; };
+		15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */; };
+		15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15BC738B1A683A9300CD8DFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BC73661A683A9200CD8DFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15BC736D1A683A9300CD8DFA;
+			remoteInfo = SSHAutomator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15BC73751A683A9300CD8DFA /* RIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIAppDelegate.h; sourceTree = "<group>"; };
+		15BC73761A683A9300CD8DFA /* RIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIAppDelegate.m; sourceTree = "<group>"; };
+		15BC73791A683A9300CD8DFA /* SSHAutomator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SSHAutomator.xcdatamodel; sourceTree = "<group>"; };
+		15BC737B1A683A9300CD8DFA /* RIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIViewController.h; sourceTree = "<group>"; };
+		15BC737C1A683A9300CD8DFA /* RIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIViewController.m; sourceTree = "<group>"; };
+		15BC737F1A683A9300CD8DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15BC73811A683A9300CD8DFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15BC73841A683A9300CD8DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHAutomatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15BC738F1A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHAutomatorTests.m; sourceTree = "<group>"; };
+		15BC739D1A683B7D00CD8DFA /* RIAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccountsViewController.h; sourceTree = "<group>"; };
+		15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAccountsViewController.m; sourceTree = "<group>"; };
+		15BC73A31A683BE400CD8DFA /* RIAccountsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccountsController.h; sourceTree = "<group>"; };
+		15BC73A41A683BE400CD8DFA /* RIAccountsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAccountsController.m; sourceTree = "<group>"; };
+		15BC73A81A683F2200CD8DFA /* RITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITableView.h; sourceTree = "<group>"; };
+		15BC73A91A683F2200CD8DFA /* RITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITableView.m; sourceTree = "<group>"; };
+		15BC73AB1A683F3C00CD8DFA /* RIAccountsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccountsTableView.h; sourceTree = "<group>"; };
+		15BC73AC1A683F3C00CD8DFA /* RIAccountsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAccountsTableView.m; sourceTree = "<group>"; };
+		15BC73B21A68563900CD8DFA /* RICoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICoreData.h; sourceTree = "<group>"; };
+		15BC73B31A68563900CD8DFA /* RICoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICoreData.m; sourceTree = "<group>"; };
+		15BC73B61A6858A900CD8DFA /* RIEditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIEditAccountViewController.h; sourceTree = "<group>"; };
+		15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditAccountViewController.m; sourceTree = "<group>"; };
+		15BC73BA1A685C1300CD8DFA /* RIIconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconsViewController.h; sourceTree = "<group>"; };
+		15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15BC736B1A683A9300CD8DFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BC73871A683A9300CD8DFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15BC73651A683A9200CD8DFA = {
+			isa = PBXGroup;
+			children = (
+				15BC73701A683A9300CD8DFA /* SSHAutomator */,
+				15BC73711A683A9300CD8DFA /* Supporting Files */,
+				15BC738D1A683A9300CD8DFA /* SSHAutomatorTests */,
+				15BC736F1A683A9300CD8DFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15BC736F1A683A9300CD8DFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15BC736E1A683A9300CD8DFA /* SSHAutomator.app */,
+				15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15BC73701A683A9300CD8DFA /* SSHAutomator */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73B01A68561C00CD8DFA /* Data */,
+				15BC73A61A683E3900CD8DFA /* Views */,
+				15BC739A1A683ABE00CD8DFA /* View controllers */,
+				15BC73751A683A9300CD8DFA /* RIAppDelegate.h */,
+				15BC73761A683A9300CD8DFA /* RIAppDelegate.m */,
+			);
+			path = SSHAutomator;
+			sourceTree = "<group>";
+		};
+		15BC73711A683A9300CD8DFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15BC737E1A683A9300CD8DFA /* Main.storyboard */,
+				15BC73811A683A9300CD8DFA /* Images.xcassets */,
+				15BC73831A683A9300CD8DFA /* LaunchScreen.xib */,
+				15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */,
+				15BC73721A683A9300CD8DFA /* Info.plist */,
+				15BC73731A683A9300CD8DFA /* main.m */,
+			);
+			name = "Supporting Files";
+			path = SSHAutomator;
+			sourceTree = "<group>";
+		};
+		15BC738D1A683A9300CD8DFA /* SSHAutomatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */,
+				15BC738E1A683A9300CD8DFA /* Supporting Files */,
+			);
+			path = SSHAutomatorTests;
+			sourceTree = "<group>";
+		};
+		15BC738E1A683A9300CD8DFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15BC738F1A683A9300CD8DFA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73B91A685BFB00CD8DFA /* Icons */,
+				15BC73B51A68588500CD8DFA /* New account */,
+				15BC739C1A683B4C00CD8DFA /* Accounts */,
+				15BC739B1A683B4200CD8DFA /* Basic */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		15BC739B1A683B4200CD8DFA /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				15BC737B1A683A9300CD8DFA /* RIViewController.h */,
+				15BC737C1A683A9300CD8DFA /* RIViewController.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		15BC739C1A683B4C00CD8DFA /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				15BC739D1A683B7D00CD8DFA /* RIAccountsViewController.h */,
+				15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		15BC73A01A683BB800CD8DFA /* Data controllers */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73A21A683BC500CD8DFA /* Accounts */,
+			);
+			name = "Data controllers";
+			sourceTree = "<group>";
+		};
+		15BC73A21A683BC500CD8DFA /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73A31A683BE400CD8DFA /* RIAccountsController.h */,
+				15BC73A41A683BE400CD8DFA /* RIAccountsController.m */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		15BC73A61A683E3900CD8DFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73A71A683E4800CD8DFA /* Table view */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		15BC73A71A683E4800CD8DFA /* Table view */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73AE1A683FC300CD8DFA /* Accounts table view */,
+				15BC73AF1A683FD500CD8DFA /* Basic */,
+			);
+			name = "Table view";
+			sourceTree = "<group>";
+		};
+		15BC73AE1A683FC300CD8DFA /* Accounts table view */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73AB1A683F3C00CD8DFA /* RIAccountsTableView.h */,
+				15BC73AC1A683F3C00CD8DFA /* RIAccountsTableView.m */,
+			);
+			name = "Accounts table view";
+			sourceTree = "<group>";
+		};
+		15BC73AF1A683FD500CD8DFA /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73A81A683F2200CD8DFA /* RITableView.h */,
+				15BC73A91A683F2200CD8DFA /* RITableView.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		15BC73B01A68561C00CD8DFA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73B11A68562200CD8DFA /* Core Data */,
+				15BC73A01A683BB800CD8DFA /* Data controllers */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		15BC73B11A68562200CD8DFA /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73B21A68563900CD8DFA /* RICoreData.h */,
+				15BC73B31A68563900CD8DFA /* RICoreData.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		15BC73B51A68588500CD8DFA /* New account */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73B61A6858A900CD8DFA /* RIEditAccountViewController.h */,
+				15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */,
+			);
+			name = "New account";
+			sourceTree = "<group>";
+		};
+		15BC73B91A685BFB00CD8DFA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73BA1A685C1300CD8DFA /* RIIconsViewController.h */,
+				15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15BC736D1A683A9300CD8DFA /* SSHAutomator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BC73941A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomator" */;
+			buildPhases = (
+				15BC736A1A683A9300CD8DFA /* Sources */,
+				15BC736B1A683A9300CD8DFA /* Frameworks */,
+				15BC736C1A683A9300CD8DFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSHAutomator;
+			productName = SSHAutomator;
+			productReference = 15BC736E1A683A9300CD8DFA /* SSHAutomator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15BC73891A683A9300CD8DFA /* SSHAutomatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15BC73971A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomatorTests" */;
+			buildPhases = (
+				15BC73861A683A9300CD8DFA /* Sources */,
+				15BC73871A683A9300CD8DFA /* Frameworks */,
+				15BC73881A683A9300CD8DFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15BC738C1A683A9300CD8DFA /* PBXTargetDependency */,
+			);
+			name = SSHAutomatorTests;
+			productName = SSHAutomatorTests;
+			productReference = 15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15BC73661A683A9200CD8DFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ridiculous Innovations";
+				TargetAttributes = {
+					15BC736D1A683A9300CD8DFA = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					15BC73891A683A9300CD8DFA = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 15BC736D1A683A9300CD8DFA;
+					};
+				};
+			};
+			buildConfigurationList = 15BC73691A683A9200CD8DFA /* Build configuration list for PBXProject "SSHAutomator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15BC73651A683A9200CD8DFA;
+			productRefGroup = 15BC736F1A683A9300CD8DFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15BC736D1A683A9300CD8DFA /* SSHAutomator */,
+				15BC73891A683A9300CD8DFA /* SSHAutomatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15BC736C1A683A9300CD8DFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BC73801A683A9300CD8DFA /* Main.storyboard in Resources */,
+				15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */,
+				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BC73881A683A9300CD8DFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15BC736A1A683A9300CD8DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BC739F1A683B7D00CD8DFA /* RIAccountsViewController.m in Sources */,
+				15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */,
+				15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */,
+				15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */,
+				15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */,
+				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
+				15BC73741A683A9300CD8DFA /* main.m in Sources */,
+				15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */,
+				15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */,
+				15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */,
+				15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15BC73861A683A9300CD8DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BC73911A683A9300CD8DFA /* SSHAutomatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15BC738C1A683A9300CD8DFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15BC736D1A683A9300CD8DFA /* SSHAutomator */;
+			targetProxy = 15BC738B1A683A9300CD8DFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15BC737E1A683A9300CD8DFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BC737F1A683A9300CD8DFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15BC73831A683A9300CD8DFA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15BC73841A683A9300CD8DFA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15BC73921A683A9300CD8DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15BC73931A683A9300CD8DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15BC73951A683A9300CD8DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SSHAutomator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		15BC73961A683A9300CD8DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SSHAutomator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		15BC73981A683A9300CD8DFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SSHAutomatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSHAutomator.app/SSHAutomator";
+			};
+			name = Debug;
+		};
+		15BC73991A683A9300CD8DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SSHAutomatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSHAutomator.app/SSHAutomator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15BC73691A683A9200CD8DFA /* Build configuration list for PBXProject "SSHAutomator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BC73921A683A9300CD8DFA /* Debug */,
+				15BC73931A683A9300CD8DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15BC73941A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BC73951A683A9300CD8DFA /* Debug */,
+				15BC73961A683A9300CD8DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15BC73971A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15BC73981A683A9300CD8DFA /* Debug */,
+				15BC73991A683A9300CD8DFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15BC73791A683A9300CD8DFA /* SSHAutomator.xcdatamodel */,
+			);
+			currentVersion = 15BC73791A683A9300CD8DFA /* SSHAutomator.xcdatamodel */;
+			path = SSHAutomator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 15BC73661A683A9200CD8DFA /* Project object */;
+}
