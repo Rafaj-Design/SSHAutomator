@@ -7,6 +7,7 @@
 //
 
 #import "RIAccountsViewController.h"
+#import "RIEditAccountViewController.h"
 #import "RIAccountsController.h"
 #import "RIAccountsTableView.h"
 
@@ -25,7 +26,8 @@
 #pragma mark Creating elements
 
 - (void)createControlButtons {
-    
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccountPressed:)];
+    [self.navigationItem setRightBarButtonItem:add];
 }
 
 - (void)createTableView {
@@ -39,6 +41,15 @@
     [super createAllElements];
     
     [self createTableView];
+    [self createControlButtons];
+}
+
+#pragma mark Actions
+
+- (void)addAccountPressed:(UIBarButtonItem *)sender {
+    RIEditAccountViewController *c = [[RIEditAccountViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 #pragma mark Initialization

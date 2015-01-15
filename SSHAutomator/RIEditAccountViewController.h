@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import "RIViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface RIEditAccountViewController : RIViewController
+@interface RIEditAccountViewController : UITableViewController
 
 @end

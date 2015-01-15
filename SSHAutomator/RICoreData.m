@@ -16,6 +16,17 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
+#pragma mark Helper methods
+
+- (RIAccount *)newAccount {
+    return nil;
+}
+
+- (RIAccount *)newJobForAccount:(RIAccount *)account {
+    return nil;
+}
+
+
 #pragma mark Core Data stack
 
 - (NSURL *)applicationDocumentsDirectory {
@@ -52,7 +63,6 @@
     
     return _persistentStoreCoordinator;
 }
-
 
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext != nil) {

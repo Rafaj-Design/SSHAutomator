@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
+#import "RITask.h"
+#import "RIJob.h"
+#import "RIAccount.h"
+#import "RIHistory.h"
+#import "RICertificate.h"
 
 
 @interface RICoreData : NSObject
@@ -17,6 +21,9 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+- (RIAccount *)newAccount;
+- (RIJob *)newJobForAccount:(RIAccount *)account;
 
 
 @end
