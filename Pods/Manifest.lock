@@ -1,5 +1,19 @@
 PODS:
-  - FontAwesome+iOS (0.1.4)
+  - FontAwesomeKit (2.1.8):
+    - FontAwesomeKit/Core
+    - FontAwesomeKit/FontAwesome
+    - FontAwesomeKit/FoundationIcons
+    - FontAwesomeKit/IonIcons
+    - FontAwesomeKit/Zocial
+  - FontAwesomeKit/Core (2.1.8)
+  - FontAwesomeKit/FontAwesome (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.8):
+    - FontAwesomeKit/Core
   - GCDWebServer/Core (3.2.2)
   - GCDWebServer/WebUploader (3.2.2):
     - GCDWebServer/Core
@@ -11,13 +25,13 @@ PODS:
   - REValidation (0.1.4)
 
 DEPENDENCIES:
-  - FontAwesome+iOS
+  - FontAwesomeKit (~> 2.1.0)
   - GCDWebServer/WebUploader (~> 3.0)
   - NMSSH
   - RETableViewManager
 
 SPEC CHECKSUMS:
-  FontAwesome+iOS: 816c20304edef4ca92835de669577005cbaaf261
+  FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
   GCDWebServer: 285fde9951ab2cd87c2d9d74735fee977a16fe04
   NMSSH: 6075839f1d4415ce55bf5db62fa1178888e12ae5
   REFormattedNumberField: 86318c549b60130a6d7a05abebb142f08f671319

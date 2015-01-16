@@ -19,8 +19,8 @@
 #pragma mark Accounts
 
 - (RIAccount *)newAccount {
-    RIAccount *account = [NSEntityDescription insertNewObjectForEntityForName:@"Accounts" inManagedObjectContext:self.managedObjectContext];
-    return account;
+    RIAccount *object = [NSEntityDescription insertNewObjectForEntityForName:@"Accounts" inManagedObjectContext:self.managedObjectContext];
+    return object;
 }
 
 - (NSArray *)accounts {
@@ -51,6 +51,38 @@
     return nil;
 }
 
+- (NSArray *)jobsForAccount:(RIAccount *)account {
+    return account.jobs.allObjects;
+}
+
+#pragma mark Certificates
+
+- (RICertificate *)newCertificate {
+    RICertificate *object = [NSEntityDescription insertNewObjectForEntityForName:@"Certificates" inManagedObjectContext:self.managedObjectContext];
+    return object;
+}
+
+- (NSArray *)certificates {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Accounts" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sort]];
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        return nil;
+    }
+    else {
+        return result;
+    }
+}
 
 #pragma mark Core Data stack
 

@@ -8,6 +8,7 @@
 
 #import "RIAccountsController.h"
 #import "RITableView.h"
+#import "RITableViewCell.h"
 #import "NSObject+CoreData.h"
 
 
@@ -24,8 +25,8 @@
 #pragma mark Data management
 
 - (RIAccount *)accountAtIndexPath:(NSIndexPath *)indexPath {
-    RIAccount *account = _data[indexPath.row];
-    return account;
+    RIAccount *object = _data[indexPath.row];
+    return object;
 }
 
 #pragma mark Settings
@@ -50,15 +51,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"accountCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    RITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[RITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     }
     
-    RIAccount *account = _data[indexPath.row];
-    [cell.textLabel setText:account.name];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@:%@", account.host, account.port]];
+    RIAccount *object = _data[indexPath.row];
+    [cell.textLabel setText:object.name];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@:%@", object.host, object.port]];
     
     return cell;
 }

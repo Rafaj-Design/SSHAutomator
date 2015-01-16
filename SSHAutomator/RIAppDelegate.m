@@ -7,8 +7,9 @@
 //
 
 #import "RIAppDelegate.h"
-#import "RIAccountsViewController.h"
 #import <Crashlytics/Crashlytics.h>
+#import "RIAccountsViewController.h"
+#import "RIConfig.h"
 
 
 @interface RIAppDelegate ()
@@ -27,6 +28,13 @@
     
     // Core Data
     _coreData = [[RICoreData alloc] init];
+    
+    // Appearance
+    [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];
+    [[UINavigationBar appearance] setTintColor:[RIConfig lightTextColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:20]}];
+    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:16]} forState:UIControlStateNormal];
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[RIAccountsViewController alloc] init]];
     [_window setRootViewController:nc];

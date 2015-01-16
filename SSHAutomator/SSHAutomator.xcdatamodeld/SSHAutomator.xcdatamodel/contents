@@ -7,7 +7,7 @@
         <attribute name="port" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="certificate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Certificates" inverseName="accounts" inverseEntity="Certificates" syncable="YES"/>
-        <relationship name="jobs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jobs" inverseName="account" inverseEntity="Jobs" syncable="YES"/>
+        <relationship name="jobs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Jobs" inverseName="account" inverseEntity="Jobs" syncable="YES"/>
     </entity>
     <entity name="Certificates" representedClassName="RICertificate" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,8 +27,8 @@
         <attribute name="repeat" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sort" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Accounts" inverseName="jobs" inverseEntity="Accounts" syncable="YES"/>
-        <relationship name="history" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="History" inverseName="job" inverseEntity="History" syncable="YES"/>
-        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="job" inverseEntity="Tasks" syncable="YES"/>
+        <relationship name="history" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="History" inverseName="job" inverseEntity="History" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tasks" inverseName="job" inverseEntity="Tasks" syncable="YES"/>
     </entity>
     <entity name="Tasks" representedClassName="RITask" syncable="YES">
         <attribute name="command" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,10 +37,10 @@
         <relationship name="job" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jobs" inverseName="tasks" inverseEntity="Jobs" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Accounts" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Accounts" positionX="-63" positionY="-18" width="128" height="148"/>
         <element name="Certificates" positionX="-18" positionY="108" width="128" height="88"/>
         <element name="History" positionX="-45" positionY="63" width="128" height="118"/>
-        <element name="Jobs" positionX="-54" positionY="36" width="128" height="150"/>
+        <element name="Jobs" positionX="-54" positionY="36" width="128" height="148"/>
         <element name="Tasks" positionX="-54" positionY="36" width="128" height="103"/>
     </elements>
 </model>

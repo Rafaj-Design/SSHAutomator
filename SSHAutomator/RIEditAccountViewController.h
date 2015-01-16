@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RITableViewController.h"
 
 
 @class RIAccount;
 
-@interface RIEditAccountViewController : UITableViewController
+@interface RIEditAccountViewController : RITableViewController
 
 @property (nonatomic, copy) void (^dismissController)(RIEditAccountViewController *controller, RIAccount *account);
 @property (nonatomic, strong) RIAccount *account;

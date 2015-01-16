@@ -15,6 +15,14 @@
 		156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5CD1A687D16009BB672 /* RIAccount.m */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
+		156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D91A691121009BB672 /* RITableViewCell.m */; };
+		156EC5DE1A6911A2009BB672 /* RITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5DD1A6911A2009BB672 /* RITableViewController.m */; };
+		156EC5E21A691227009BB672 /* RIJobsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5E11A691227009BB672 /* RIJobsController.m */; };
+		156EC5E61A691252009BB672 /* RIJobsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5E51A691252009BB672 /* RIJobsTableView.m */; };
+		156EC5EB1A691B4A009BB672 /* RIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5EA1A691B4A009BB672 /* RIConfig.m */; };
+		156EC5F11A69253A009BB672 /* RICertificatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5F01A69253A009BB672 /* RICertificatesViewController.m */; };
+		156EC5F51A6925BB009BB672 /* RICertificatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5F41A6925BB009BB672 /* RICertificatesController.m */; };
+		156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5F81A692875009BB672 /* RICertificatesTableView.m */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -58,6 +66,22 @@
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
+		156EC5D81A691121009BB672 /* RITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITableViewCell.h; sourceTree = "<group>"; };
+		156EC5D91A691121009BB672 /* RITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITableViewCell.m; sourceTree = "<group>"; };
+		156EC5DC1A6911A2009BB672 /* RITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITableViewController.h; sourceTree = "<group>"; };
+		156EC5DD1A6911A2009BB672 /* RITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITableViewController.m; sourceTree = "<group>"; };
+		156EC5E01A691227009BB672 /* RIJobsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsController.h; sourceTree = "<group>"; };
+		156EC5E11A691227009BB672 /* RIJobsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsController.m; sourceTree = "<group>"; };
+		156EC5E41A691252009BB672 /* RIJobsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsTableView.h; sourceTree = "<group>"; };
+		156EC5E51A691252009BB672 /* RIJobsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsTableView.m; sourceTree = "<group>"; };
+		156EC5E91A691B4A009BB672 /* RIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIConfig.h; sourceTree = "<group>"; };
+		156EC5EA1A691B4A009BB672 /* RIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIConfig.m; sourceTree = "<group>"; };
+		156EC5EF1A69253A009BB672 /* RICertificatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICertificatesViewController.h; sourceTree = "<group>"; };
+		156EC5F01A69253A009BB672 /* RICertificatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificatesViewController.m; sourceTree = "<group>"; };
+		156EC5F31A6925BB009BB672 /* RICertificatesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICertificatesController.h; sourceTree = "<group>"; };
+		156EC5F41A6925BB009BB672 /* RICertificatesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificatesController.m; sourceTree = "<group>"; };
+		156EC5F71A692875009BB672 /* RICertificatesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICertificatesTableView.h; sourceTree = "<group>"; };
+		156EC5F81A692875009BB672 /* RICertificatesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificatesTableView.m; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +177,77 @@
 			name = Jobs;
 			sourceTree = "<group>";
 		};
+		156EC5D61A691103009BB672 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5D71A69110B009BB672 /* Basic */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		156EC5D71A69110B009BB672 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5D81A691121009BB672 /* RITableViewCell.h */,
+				156EC5D91A691121009BB672 /* RITableViewCell.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		156EC5DF1A691213009BB672 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5E01A691227009BB672 /* RIJobsController.h */,
+				156EC5E11A691227009BB672 /* RIJobsController.m */,
+			);
+			name = Jobs;
+			sourceTree = "<group>";
+		};
+		156EC5E31A69123B009BB672 /* Jobs table view */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5E41A691252009BB672 /* RIJobsTableView.h */,
+				156EC5E51A691252009BB672 /* RIJobsTableView.m */,
+			);
+			name = "Jobs table view";
+			sourceTree = "<group>";
+		};
+		156EC5E81A691B37009BB672 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5E91A691B4A009BB672 /* RIConfig.h */,
+				156EC5EA1A691B4A009BB672 /* RIConfig.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		156EC5EE1A692502009BB672 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5EF1A69253A009BB672 /* RICertificatesViewController.h */,
+				156EC5F01A69253A009BB672 /* RICertificatesViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		156EC5F21A692595009BB672 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5F31A6925BB009BB672 /* RICertificatesController.h */,
+				156EC5F41A6925BB009BB672 /* RICertificatesController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		156EC5F61A69285C009BB672 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5F71A692875009BB672 /* RICertificatesTableView.h */,
+				156EC5F81A692875009BB672 /* RICertificatesTableView.m */,
+			);
+			name = Certificates;
+			sourceTree = "<group>";
+		};
 		15BC73651A683A9200CD8DFA = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +272,7 @@
 		15BC73701A683A9300CD8DFA /* SSHAutomator */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5E81A691B37009BB672 /* Config */,
 				152FF8641A685F0B00F87169 /* Thirdparty */,
 				152FFB5C1A68736B00F87169 /* Categories */,
 				15BC73B01A68561C00CD8DFA /* Data */,
@@ -221,6 +317,7 @@
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5EE1A692502009BB672 /* Settings */,
 				156EC5D21A688F7B009BB672 /* Jobs */,
 				15BC739C1A683B4C00CD8DFA /* Accounts */,
 				15BC739B1A683B4200CD8DFA /* Basic */,
@@ -233,6 +330,8 @@
 			children = (
 				15BC737B1A683A9300CD8DFA /* RIViewController.h */,
 				15BC737C1A683A9300CD8DFA /* RIViewController.m */,
+				156EC5DC1A6911A2009BB672 /* RITableViewController.h */,
+				156EC5DD1A6911A2009BB672 /* RITableViewController.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -250,6 +349,8 @@
 		15BC73A01A683BB800CD8DFA /* Data controllers */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5F21A692595009BB672 /* Controllers */,
+				156EC5DF1A691213009BB672 /* Jobs */,
 				15BC73A21A683BC500CD8DFA /* Accounts */,
 			);
 			name = "Data controllers";
@@ -267,6 +368,7 @@
 		15BC73A61A683E3900CD8DFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5D61A691103009BB672 /* Cells */,
 				15BC73A71A683E4800CD8DFA /* Table view */,
 			);
 			name = Views;
@@ -275,6 +377,8 @@
 		15BC73A71A683E4800CD8DFA /* Table view */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5F61A69285C009BB672 /* Certificates */,
+				156EC5E31A69123B009BB672 /* Jobs table view */,
 				15BC73AE1A683FC300CD8DFA /* Accounts table view */,
 				15BC73AF1A683FD500CD8DFA /* Basic */,
 			);
@@ -506,19 +610,27 @@
 				15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */,
 				15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */,
 				15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */,
+				156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */,
 				152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */,
+				156EC5EB1A691B4A009BB672 /* RIConfig.m in Sources */,
 				15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */,
 				152FFB6F1A68777900F87169 /* RITask.m in Sources */,
 				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
+				156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */,
 				156EC5CB1A687D15009BB672 /* RIJob.m in Sources */,
+				156EC5E21A691227009BB672 /* RIJobsController.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
 				156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */,
 				156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */,
 				15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */,
 				15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */,
+				156EC5F11A69253A009BB672 /* RICertificatesViewController.m in Sources */,
 				152FFB661A68777900F87169 /* RIHistory.m in Sources */,
+				156EC5DE1A6911A2009BB672 /* RITableViewController.m in Sources */,
+				156EC5F51A6925BB009BB672 /* RICertificatesController.m in Sources */,
 				15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */,
 				156EC5C81A687D15009BB672 /* RICertificate.m in Sources */,
+				156EC5E61A691252009BB672 /* RIJobsTableView.m in Sources */,
 				15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

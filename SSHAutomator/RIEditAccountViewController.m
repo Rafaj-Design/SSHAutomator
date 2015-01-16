@@ -67,6 +67,7 @@
     
     _accountName = [RETextItem itemWithTitle:@"Name" value:nil placeholder:@"Account name"];
     [_accountName setValidators:@[@"presence", @"length(1, 999)"]];
+    [_accountName setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [section addItem:_accountName];
     
     section = [RETableViewSection sectionWithHeaderTitle:@"Server"];
@@ -74,6 +75,7 @@
     
     _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:@"my.example-host.com"];
     [_serverHost setValidators:@[@"presence"]];
+    [_serverHost setKeyboardType:UIKeyboardTypeURL];
     [section addItem:_serverHost];
     
     _serverPort = [RENumberItem itemWithTitle:@"Port" value:@"22" placeholder:@"22" format:@"XXXXXXXX"];
@@ -82,6 +84,7 @@
     
     _serverUser = [RETextItem itemWithTitle:@"User" value:nil placeholder:@"ec2-user"];
     [_serverUser setValidators:@[@"presence"]];
+    [_serverUser setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [section addItem:_serverUser];
     
     _serverPassword = [RETextItem itemWithTitle:@"Password" value:nil placeholder:@"mySup3rs3cr3tP4ssw0rd (optional)"];

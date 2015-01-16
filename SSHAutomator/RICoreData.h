@@ -26,6 +26,10 @@
 - (NSArray *)accounts;
 
 - (RIJob *)newJobForAccount:(RIAccount *)account;
+- (NSArray *)jobsForAccount:(RIAccount *)account;
+
+- (RICertificate *)newCertificate;
+- (NSArray *)certificates;
 
 
 @end

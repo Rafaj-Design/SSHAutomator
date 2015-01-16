@@ -43,7 +43,10 @@ install_resource()
       ;;
   esac
 }
-          install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
+          install_resource "FontAwesomeKit/FontAwesomeKit/FontAwesome.otf"
+                    install_resource "FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf"
+                    install_resource "FontAwesomeKit/FontAwesomeKit/ionicons.ttf"
+                    install_resource "FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"
                     install_resource "GCDWebServer/GCDWebUploader/GCDWebUploader.bundle"
                     install_resource "RETableViewManager/RETableViewManager/RETableViewManager.bundle"
           
