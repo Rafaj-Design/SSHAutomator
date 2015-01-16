@@ -23,6 +23,8 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 - (RIAccount *)newAccount;
+- (NSArray *)accounts;
+
 - (RIJob *)newJobForAccount:(RIAccount *)account;
 
 

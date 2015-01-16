@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class RIAccount;
+
 @interface RIEditAccountViewController : UITableViewController
+
+@property (nonatomic, copy) void (^dismissController)(RIEditAccountViewController *controller, RIAccount *account);
+@property (nonatomic, strong) RIAccount *account;
+
 
 @end

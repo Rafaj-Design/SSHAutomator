@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class RIAccount;
+
 @interface RIAccountsController : NSObject <UITableViewDataSource>
+
+@property (nonatomic, copy) void (^requiresReload)();
+
+- (RIAccount *)accountAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)reloadData;
+
 
 @end

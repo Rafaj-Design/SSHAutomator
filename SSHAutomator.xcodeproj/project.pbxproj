@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
-		152FFB631A68777800F87169 /* RICertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB621A68777800F87169 /* RICertificate.m */; };
 		152FFB661A68777900F87169 /* RIHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB651A68777900F87169 /* RIHistory.m */; };
-		152FFB691A68777900F87169 /* RIAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB681A68777900F87169 /* RIAccount.m */; };
-		152FFB6C1A68777900F87169 /* RIJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6B1A68777900F87169 /* RIJob.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
+		156EC5C81A687D15009BB672 /* RICertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5C71A687D15009BB672 /* RICertificate.m */; };
+		156EC5CB1A687D15009BB672 /* RIJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5CA1A687D15009BB672 /* RIJob.m */; };
+		156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5CD1A687D16009BB672 /* RIAccount.m */; };
+		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
+		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
 		15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC737C1A683A9300CD8DFA /* RIViewController.m */; };
-		15BC73801A683A9300CD8DFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BC737E1A683A9300CD8DFA /* Main.storyboard */; };
 		15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73811A683A9300CD8DFA /* Images.xcassets */; };
 		15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		15BC73911A683A9300CD8DFA /* SSHAutomatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */; };
@@ -44,16 +45,19 @@
 /* Begin PBXFileReference section */
 		152FFB5D1A68739300F87169 /* NSObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreData.h"; sourceTree = "<group>"; };
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
-		152FFB611A68777800F87169 /* RICertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICertificate.h; sourceTree = "<group>"; };
-		152FFB621A68777800F87169 /* RICertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificate.m; sourceTree = "<group>"; };
 		152FFB641A68777900F87169 /* RIHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistory.h; sourceTree = "<group>"; };
 		152FFB651A68777900F87169 /* RIHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistory.m; sourceTree = "<group>"; };
-		152FFB671A68777900F87169 /* RIAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccount.h; sourceTree = "<group>"; };
-		152FFB681A68777900F87169 /* RIAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAccount.m; sourceTree = "<group>"; };
-		152FFB6A1A68777900F87169 /* RIJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJob.h; sourceTree = "<group>"; };
-		152FFB6B1A68777900F87169 /* RIJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJob.m; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
 		152FFB6E1A68777900F87169 /* RITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITask.m; sourceTree = "<group>"; };
+		156EC5C61A687D15009BB672 /* RICertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RICertificate.h; path = ../RICertificate.h; sourceTree = "<group>"; };
+		156EC5C71A687D15009BB672 /* RICertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RICertificate.m; path = ../RICertificate.m; sourceTree = "<group>"; };
+		156EC5C91A687D15009BB672 /* RIJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIJob.h; path = ../RIJob.h; sourceTree = "<group>"; };
+		156EC5CA1A687D15009BB672 /* RIJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIJob.m; path = ../RIJob.m; sourceTree = "<group>"; };
+		156EC5CC1A687D16009BB672 /* RIAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIAccount.h; path = ../RIAccount.h; sourceTree = "<group>"; };
+		156EC5CD1A687D16009BB672 /* RIAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIAccount.m; path = ../RIAccount.m; sourceTree = "<group>"; };
+		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
+		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,7 +66,6 @@
 		15BC73791A683A9300CD8DFA /* SSHAutomator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SSHAutomator.xcdatamodel; sourceTree = "<group>"; };
 		15BC737B1A683A9300CD8DFA /* RIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIViewController.h; sourceTree = "<group>"; };
 		15BC737C1A683A9300CD8DFA /* RIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIViewController.m; sourceTree = "<group>"; };
-		15BC737F1A683A9300CD8DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15BC73811A683A9300CD8DFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15BC73841A683A9300CD8DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHAutomatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,18 +129,28 @@
 		152FFB601A68773F00F87169 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5CC1A687D16009BB672 /* RIAccount.h */,
+				156EC5CD1A687D16009BB672 /* RIAccount.m */,
+				156EC5C91A687D15009BB672 /* RIJob.h */,
+				156EC5CA1A687D15009BB672 /* RIJob.m */,
+				156EC5C61A687D15009BB672 /* RICertificate.h */,
+				156EC5C71A687D15009BB672 /* RICertificate.m */,
 				152FFB6D1A68777900F87169 /* RITask.h */,
 				152FFB6E1A68777900F87169 /* RITask.m */,
-				152FFB6A1A68777900F87169 /* RIJob.h */,
-				152FFB6B1A68777900F87169 /* RIJob.m */,
-				152FFB671A68777900F87169 /* RIAccount.h */,
-				152FFB681A68777900F87169 /* RIAccount.m */,
 				152FFB641A68777900F87169 /* RIHistory.h */,
 				152FFB651A68777900F87169 /* RIHistory.m */,
-				152FFB611A68777800F87169 /* RICertificate.h */,
-				152FFB621A68777800F87169 /* RICertificate.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		156EC5D21A688F7B009BB672 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				15BC73B91A685BFB00CD8DFA /* Icons */,
+				156EC5D31A688FA8009BB672 /* RIJobsViewController.h */,
+				156EC5D41A688FA8009BB672 /* RIJobsViewController.m */,
+			);
+			name = Jobs;
 			sourceTree = "<group>";
 		};
 		15BC73651A683A9200CD8DFA = {
@@ -177,7 +191,6 @@
 		15BC73711A683A9300CD8DFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				15BC737E1A683A9300CD8DFA /* Main.storyboard */,
 				15BC73811A683A9300CD8DFA /* Images.xcassets */,
 				15BC73831A683A9300CD8DFA /* LaunchScreen.xib */,
 				15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */,
@@ -208,8 +221,7 @@
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				15BC73B91A685BFB00CD8DFA /* Icons */,
-				15BC73B51A68588500CD8DFA /* New account */,
+				156EC5D21A688F7B009BB672 /* Jobs */,
 				15BC739C1A683B4C00CD8DFA /* Accounts */,
 				15BC739B1A683B4200CD8DFA /* Basic */,
 			);
@@ -228,6 +240,7 @@
 		15BC739C1A683B4C00CD8DFA /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
+				15BC73B51A68588500CD8DFA /* New account */,
 				15BC739D1A683B7D00CD8DFA /* RIAccountsViewController.h */,
 				15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */,
 			);
@@ -326,6 +339,7 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
 				D9FEF6B7B0105015289E10E7 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -352,6 +366,7 @@
 				15BC736B1A683A9300CD8DFA /* Frameworks */,
 				15BC736C1A683A9300CD8DFA /* Resources */,
 				D9DE8AE141BD3AA264B46DD6 /* Copy Pods Resources */,
+				156EC5CF1A68877B009BB672 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -422,7 +437,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15BC73801A683A9300CD8DFA /* Main.storyboard in Resources */,
 				15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
 			);
@@ -453,6 +467,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		156EC5CF1A68877B009BB672 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run fdad57f5fd93d14410334446675bff03d3a3f996 718bb4804b7397ffca9550527a28d9dd77a37ec037e726d45a8078b310c8e7f4";
+		};
 		D9DE8AE141BD3AA264B46DD6 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,21 +503,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BC739F1A683B7D00CD8DFA /* RIAccountsViewController.m in Sources */,
-				152FFB631A68777800F87169 /* RICertificate.m in Sources */,
 				15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */,
 				15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */,
-				152FFB691A68777900F87169 /* RIAccount.m in Sources */,
 				15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */,
 				152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */,
 				15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */,
-				152FFB6C1A68777900F87169 /* RIJob.m in Sources */,
 				152FFB6F1A68777900F87169 /* RITask.m in Sources */,
 				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
+				156EC5CB1A687D15009BB672 /* RIJob.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
+				156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */,
+				156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */,
 				15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */,
 				15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */,
 				152FFB661A68777900F87169 /* RIHistory.m in Sources */,
 				15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */,
+				156EC5C81A687D15009BB672 /* RICertificate.m in Sources */,
 				15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,14 +542,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		15BC737E1A683A9300CD8DFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15BC737F1A683A9300CD8DFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15BC73831A683A9300CD8DFA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -619,6 +639,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -640,6 +661,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

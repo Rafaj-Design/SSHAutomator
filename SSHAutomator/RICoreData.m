@@ -16,11 +16,36 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
-#pragma mark Helper methods
+#pragma mark Accounts
 
 - (RIAccount *)newAccount {
-    return nil;
+    RIAccount *account = [NSEntityDescription insertNewObjectForEntityForName:@"Accounts" inManagedObjectContext:self.managedObjectContext];
+    return account;
 }
+
+- (NSArray *)accounts {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Accounts" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sort]];
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        return nil;
+    }
+    else {
+        return result;
+    }
+}
+
+#pragma mark Jobs
 
 - (RIAccount *)newJobForAccount:(RIAccount *)account {
     return nil;
