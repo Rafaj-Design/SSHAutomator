@@ -29,7 +29,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Accounts" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     [fetchRequest setSortDescriptors:@[sort]];
     
     NSError *error = nil;
@@ -47,12 +47,66 @@
 
 #pragma mark Jobs
 
-- (RIAccount *)newJobForAccount:(RIAccount *)account {
-    return nil;
+- (RIJob *)newJobForAccount:(RIAccount *)account {
+    RIJob *object = [NSEntityDescription insertNewObjectForEntityForName:@"Jobs" inManagedObjectContext:self.managedObjectContext];
+    [object setAccount:account];
+    return object;
 }
 
 - (NSArray *)jobsForAccount:(RIAccount *)account {
-    return account.jobs.allObjects;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Jobs" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"account == %@", account]];
+
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sort]];
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        return nil;
+    }
+    else {
+        return result;
+    }
+}
+
+#pragma mark Tasks
+
+- (RITask *)newTaskForJob:(RIJob *)job {
+    RITask *object = [NSEntityDescription insertNewObjectForEntityForName:@"Tasks" inManagedObjectContext:self.managedObjectContext];
+    [object setJob:job];
+    return object;
+}
+
+- (NSArray *)tasksForJob:(RIJob *)job {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"job == %@", job]];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"sort" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sort]];
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+        return nil;
+    }
+    else {
+        return result;
+    }
 }
 
 #pragma mark Certificates

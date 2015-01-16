@@ -35,6 +35,11 @@
     _data = [self.coreData jobsForAccount:_account];
 }
 
+- (void)setAccount:(RIAccount *)account {
+    _account = account;
+    [self reloadData];
+}
+
 #pragma mark Table view data source methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -91,7 +96,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self reloadData];
+        
     }
     return self;
 }

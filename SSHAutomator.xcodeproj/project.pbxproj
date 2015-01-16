@@ -23,6 +23,12 @@
 		156EC5F11A69253A009BB672 /* RICertificatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5F01A69253A009BB672 /* RICertificatesViewController.m */; };
 		156EC5F51A6925BB009BB672 /* RICertificatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5F41A6925BB009BB672 /* RICertificatesController.m */; };
 		156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5F81A692875009BB672 /* RICertificatesTableView.m */; };
+		156EC6021A693A2B009BB672 /* RIEditJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6011A693A2B009BB672 /* RIEditJobViewController.m */; };
+		156EC6061A694002009BB672 /* RITasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6051A694002009BB672 /* RITasksViewController.m */; };
+		156EC60A1A694065009BB672 /* RITasksController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6091A694065009BB672 /* RITasksController.m */; };
+		156EC60E1A694182009BB672 /* RITasksTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC60D1A694182009BB672 /* RITasksTableView.m */; };
+		156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6111A694325009BB672 /* RIEditTaskViewController.m */; };
+		156EC6161A6948D7009BB672 /* RIRunJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6151A6948D7009BB672 /* RIRunJob.m */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -82,6 +88,18 @@
 		156EC5F41A6925BB009BB672 /* RICertificatesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificatesController.m; sourceTree = "<group>"; };
 		156EC5F71A692875009BB672 /* RICertificatesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICertificatesTableView.h; sourceTree = "<group>"; };
 		156EC5F81A692875009BB672 /* RICertificatesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificatesTableView.m; sourceTree = "<group>"; };
+		156EC6001A693A2B009BB672 /* RIEditJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIEditJobViewController.h; sourceTree = "<group>"; };
+		156EC6011A693A2B009BB672 /* RIEditJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditJobViewController.m; sourceTree = "<group>"; };
+		156EC6041A694002009BB672 /* RITasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITasksViewController.h; sourceTree = "<group>"; };
+		156EC6051A694002009BB672 /* RITasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITasksViewController.m; sourceTree = "<group>"; };
+		156EC6081A694065009BB672 /* RITasksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITasksController.h; sourceTree = "<group>"; };
+		156EC6091A694065009BB672 /* RITasksController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITasksController.m; sourceTree = "<group>"; };
+		156EC60C1A694182009BB672 /* RITasksTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITasksTableView.h; sourceTree = "<group>"; };
+		156EC60D1A694182009BB672 /* RITasksTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITasksTableView.m; sourceTree = "<group>"; };
+		156EC6101A694325009BB672 /* RIEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIEditTaskViewController.h; sourceTree = "<group>"; };
+		156EC6111A694325009BB672 /* RIEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditTaskViewController.m; sourceTree = "<group>"; };
+		156EC6141A6948D7009BB672 /* RIRunJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIRunJob.h; sourceTree = "<group>"; };
+		156EC6151A6948D7009BB672 /* RIRunJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIRunJob.m; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -170,6 +188,7 @@
 		156EC5D21A688F7B009BB672 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				156EC5FF1A6939E9009BB672 /* Edit job */,
 				15BC73B91A685BFB00CD8DFA /* Icons */,
 				156EC5D31A688FA8009BB672 /* RIJobsViewController.h */,
 				156EC5D41A688FA8009BB672 /* RIJobsViewController.m */,
@@ -221,13 +240,13 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
-		156EC5EE1A692502009BB672 /* Settings */ = {
+		156EC5EE1A692502009BB672 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
 				156EC5EF1A69253A009BB672 /* RICertificatesViewController.h */,
 				156EC5F01A69253A009BB672 /* RICertificatesViewController.m */,
 			);
-			name = Settings;
+			name = Certificates;
 			sourceTree = "<group>";
 		};
 		156EC5F21A692595009BB672 /* Controllers */ = {
@@ -246,6 +265,61 @@
 				156EC5F81A692875009BB672 /* RICertificatesTableView.m */,
 			);
 			name = Certificates;
+			sourceTree = "<group>";
+		};
+		156EC5FF1A6939E9009BB672 /* Edit job */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6001A693A2B009BB672 /* RIEditJobViewController.h */,
+				156EC6011A693A2B009BB672 /* RIEditJobViewController.m */,
+			);
+			name = "Edit job";
+			sourceTree = "<group>";
+		};
+		156EC6031A693FD0009BB672 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				156EC60F1A694303009BB672 /* Edit task */,
+				156EC6041A694002009BB672 /* RITasksViewController.h */,
+				156EC6051A694002009BB672 /* RITasksViewController.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		156EC6071A69404E009BB672 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6081A694065009BB672 /* RITasksController.h */,
+				156EC6091A694065009BB672 /* RITasksController.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		156EC60B1A694166009BB672 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				156EC60C1A694182009BB672 /* RITasksTableView.h */,
+				156EC60D1A694182009BB672 /* RITasksTableView.m */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		156EC60F1A694303009BB672 /* Edit task */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6101A694325009BB672 /* RIEditTaskViewController.h */,
+				156EC6111A694325009BB672 /* RIEditTaskViewController.m */,
+			);
+			name = "Edit task";
+			sourceTree = "<group>";
+		};
+		156EC6131A6948BB009BB672 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6141A6948D7009BB672 /* RIRunJob.h */,
+				156EC6151A6948D7009BB672 /* RIRunJob.m */,
+			);
+			name = Libs;
 			sourceTree = "<group>";
 		};
 		15BC73651A683A9200CD8DFA = {
@@ -276,6 +350,7 @@
 				152FF8641A685F0B00F87169 /* Thirdparty */,
 				152FFB5C1A68736B00F87169 /* Categories */,
 				15BC73B01A68561C00CD8DFA /* Data */,
+				156EC6131A6948BB009BB672 /* Libs */,
 				15BC73A61A683E3900CD8DFA /* Views */,
 				15BC739A1A683ABE00CD8DFA /* View controllers */,
 				15BC73751A683A9300CD8DFA /* RIAppDelegate.h */,
@@ -317,7 +392,8 @@
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				156EC5EE1A692502009BB672 /* Settings */,
+				156EC5EE1A692502009BB672 /* Certificates */,
+				156EC6031A693FD0009BB672 /* Tasks */,
 				156EC5D21A688F7B009BB672 /* Jobs */,
 				15BC739C1A683B4C00CD8DFA /* Accounts */,
 				15BC739B1A683B4200CD8DFA /* Basic */,
@@ -339,7 +415,7 @@
 		15BC739C1A683B4C00CD8DFA /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
-				15BC73B51A68588500CD8DFA /* New account */,
+				15BC73B51A68588500CD8DFA /* Edit account */,
 				15BC739D1A683B7D00CD8DFA /* RIAccountsViewController.h */,
 				15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */,
 			);
@@ -350,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				156EC5F21A692595009BB672 /* Controllers */,
+				156EC6071A69404E009BB672 /* Tasks */,
 				156EC5DF1A691213009BB672 /* Jobs */,
 				15BC73A21A683BC500CD8DFA /* Accounts */,
 			);
@@ -378,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				156EC5F61A69285C009BB672 /* Certificates */,
+				156EC60B1A694166009BB672 /* Tasks */,
 				156EC5E31A69123B009BB672 /* Jobs table view */,
 				15BC73AE1A683FC300CD8DFA /* Accounts table view */,
 				15BC73AF1A683FD500CD8DFA /* Basic */,
@@ -422,13 +500,13 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
-		15BC73B51A68588500CD8DFA /* New account */ = {
+		15BC73B51A68588500CD8DFA /* Edit account */ = {
 			isa = PBXGroup;
 			children = (
 				15BC73B61A6858A900CD8DFA /* RIEditAccountViewController.h */,
 				15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */,
 			);
-			name = "New account";
+			name = "Edit account";
 			sourceTree = "<group>";
 		};
 		15BC73B91A685BFB00CD8DFA /* Icons */ = {
@@ -611,16 +689,22 @@
 				15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */,
 				15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */,
 				156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */,
+				156EC60E1A694182009BB672 /* RITasksTableView.m in Sources */,
 				152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */,
 				156EC5EB1A691B4A009BB672 /* RIConfig.m in Sources */,
 				15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */,
+				156EC6161A6948D7009BB672 /* RIRunJob.m in Sources */,
 				152FFB6F1A68777900F87169 /* RITask.m in Sources */,
 				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
 				156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */,
+				156EC6021A693A2B009BB672 /* RIEditJobViewController.m in Sources */,
 				156EC5CB1A687D15009BB672 /* RIJob.m in Sources */,
 				156EC5E21A691227009BB672 /* RIJobsController.m in Sources */,
+				156EC6061A694002009BB672 /* RITasksViewController.m in Sources */,
+				156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
 				156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */,
+				156EC60A1A694065009BB672 /* RITasksController.m in Sources */,
 				156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */,
 				15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */,
 				15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */,

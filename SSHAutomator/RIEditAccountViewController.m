@@ -10,6 +10,7 @@
 #import <RETableViewManager/RETableViewManager.h>
 #import "RITableView.h"
 #import "RETableViewOptionsController.h"
+#import "RICertificatesController.h"
 #import "NSObject+CoreData.h"
 
 
@@ -94,9 +95,11 @@
     _serverCertificate = [RERadioItem itemWithTitle:@"Certificate" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         
+        RICertificatesController *controller = [[RICertificatesController alloc] init];
+        
         NSMutableArray *options = [[NSMutableArray alloc] init];
-        for (NSInteger i = 1; i < 4; i++) {
-            [options addObject:[NSString stringWithFormat:@"Option %li", (long) i]];
+        for (NSArray *o in [controller certificates]) {
+            [options addObject:o[0]];
         }
         
         // Present options controller

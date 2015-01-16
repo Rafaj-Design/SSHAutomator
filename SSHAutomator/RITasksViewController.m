@@ -1,23 +1,24 @@
 //
-//  RIJobsViewController.m
+//  RITasksViewController.m
 //  SSHAutomator
 //
 //  Created by Ondrej Rafaj on 16/01/2015.
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import "RIJobsViewController.h"
-#import "RIEditJobViewController.h"
 #import "RITasksViewController.h"
-#import "RIJobsTableView.h"
-#import "RIJobsController.h"
-#import "RIAccount.h"
+#import "RIEditTaskViewController.h"
+#import "RITasksViewController.h"
+#import "RITasksTableView.h"
+#import "RITasksController.h"
+#import "RIJob.h"
+#import "RIRunJob.h"
 
 
-@interface RIJobsViewController () <UITableViewDelegate>
+@interface RITasksViewController () <UITableViewDelegate>
 
-@property (nonatomic, readonly) RIJobsController *controller;
-@property (nonatomic, readonly) RIJobsTableView *tableView;
+@property (nonatomic, readonly) RITasksController *controller;
+@property (nonatomic, readonly) RITasksTableView *tableView;
 
 @property (nonatomic, readonly) UIBarButtonItem *editButton;
 @property (nonatomic, readonly) UIBarButtonItem *doneButton;
@@ -26,7 +27,7 @@
 @end
 
 
-@implementation RIJobsViewController
+@implementation RITasksViewController
 
 
 #pragma mark Creating elements
@@ -34,13 +35,13 @@
 - (void)createControlButtons {
     _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
     _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editPressed:)];
-    _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addJobPressed:)];
+    _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTaskPressed:)];
     
     [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];
 }
 
 - (void)createTableView {
-    _tableView = [[RIJobsTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView = [[RITasksTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView setDataSource:_controller];
     [_tableView setDelegate:self];
     [self.view addSubview:_tableView];
@@ -55,14 +56,14 @@
 
 #pragma mark Settings
 
-- (void)setAccount:(RIAccount *)account {
-    _account = account;
+- (void)setJob:(RIJob *)job {
+    _job = job;
     
-    [self setTitle:_account.name];
+    [self setTitle:_job.name];
     
     __typeof(self) __weak weakSelf = self;
-    _controller = [[RIJobsController alloc] init];
-    [_controller setAccount:_account];
+    _controller = [[RITasksController alloc] init];
+    [_controller setJob:_job];
     [_controller setRequiresReload:^{
         [weakSelf reloadData];
     }];
@@ -75,11 +76,14 @@
 
 #pragma mark Actions
 
-- (void)addJobPressed:(UIBarButtonItem *)sender {
+- (void)addTaskPressed:(UIBarButtonItem *)sender {
     __typeof(self) __weak weakSelf = self;
-    RIEditJobViewController *c = [[RIEditJobViewController alloc] init];
-    [c setAccount:_account];
-    [c setDismissController:^(RIEditJobViewController *controller, RIJob *job) {
+    RIEditTaskViewController *c = [[RIEditTaskViewController alloc] init];
+    [c setJob:_job];
+    [c setDismissController:^(RIEditTaskViewController *controller, RITask *task) {
+        if (task) {
+            [_controller saveOrder];
+        }
         [weakSelf reloadData];
         [controller dismissViewControllerAnimated:YES completion:nil];
     }];
@@ -103,22 +107,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    RITasksViewController *c = [[RITasksViewController alloc] init];
-    [c setJob:[_controller jobAtIndexPath:indexPath]];
-    [self.navigationController pushViewController:c animated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    __typeof(self) __weak weakSelf = self;
-    RIEditJobViewController *c = [[RIEditJobViewController alloc] init];
-    [c setAccount:_account];
-    [c setJob:[_controller jobAtIndexPath:indexPath]];
-    [c setDismissController:^(RIEditJobViewController *controller, RIJob *job) {
-        [weakSelf reloadData];
-        [controller dismissViewControllerAnimated:YES completion:nil];
-    }];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
-    [self presentViewController:nc animated:YES completion:nil];
+    if (indexPath.section == 0) {
+        [RIRunJob run:_job];
+    }
+    else {
+        __typeof(self) __weak weakSelf = self;
+        RIEditTaskViewController *c = [[RIEditTaskViewController alloc] init];
+        [c setJob:_job];
+        [c setTask:[_controller taskAtIndexPath:indexPath]];
+        [c setDismissController:^(RIEditTaskViewController *controller, RITask *task) {
+            [weakSelf reloadData];
+            [controller dismissViewControllerAnimated:YES completion:nil];
+        }];
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
+        [self presentViewController:nc animated:YES completion:nil];
+    }
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

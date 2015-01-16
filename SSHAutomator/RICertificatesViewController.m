@@ -9,16 +9,18 @@
 #import "RICertificatesViewController.h"
 #import "RICertificatesController.h"
 #import "RICertificatesTableView.h"
+#import "GCDWebUploader.h"
 
 
-@interface RICertificatesViewController () <UITableViewDelegate>
+@interface RICertificatesViewController () <UITableViewDelegate, GCDWebUploaderDelegate>
 
 @property (nonatomic, readonly) RICertificatesController *controller;
 @property (nonatomic, readonly) RICertificatesTableView *tableView;
 
 @property (nonatomic, readonly) UIBarButtonItem *editButton;
 @property (nonatomic, readonly) UIBarButtonItem *doneButton;
-@property (nonatomic, readonly) UIBarButtonItem *addButton;
+
+@property (nonatomic, readonly) GCDWebUploader *webUploader;
 
 @end
 
@@ -28,12 +30,32 @@
 
 #pragma mark Creating elements
 
+- (void)createUploader {
+    NSString *dirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    dirPath = [dirPath stringByAppendingPathComponent:@"certificates"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isDir = YES;
+    BOOL pathExists = [fileManager fileExistsAtPath:dirPath isDirectory:&isDir];
+    if (!pathExists) [fileManager createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    _webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:dirPath];
+    [_webUploader setAllowHiddenItems:NO];
+    [_webUploader setAllowedFileExtensions:@[@"pem"]];
+    [_webUploader setDelegate:self];
+    [_webUploader start];
+    
+    [_controller setUploaderUrlString:_webUploader.serverURL.absoluteString];
+}
+
 - (void)createControlButtons {
+    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
+    [self.navigationItem setLeftBarButtonItem:close];
+    
     _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
     _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editPressed:)];
-    _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addCertificatePressed:)];
     
-    [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];
+    [self.navigationItem setRightBarButtonItems:@[_editButton]];
 }
 
 - (void)createTableView {
@@ -48,6 +70,7 @@
     
     [self createTableView];
     [self createControlButtons];
+    [self createUploader];
 }
 
 #pragma mark Settings
@@ -59,41 +82,49 @@
 
 #pragma mark Actions
 
-- (void)addCertificatePressed:(UIBarButtonItem *)sender {
-    
+- (void)closePressed:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)editPressed:(UIBarButtonItem *)sender {
     [_tableView setEditing:!_tableView.isEditing animated:YES];
-    [self.navigationItem setRightBarButtonItems:@[(_tableView.isEditing ? _doneButton : _editButton), _addButton] animated:YES];
+    [self.navigationItem setRightBarButtonItems:@[(_tableView.isEditing ? _doneButton : _editButton)] animated:YES];
 }
 
 #pragma mark Initialization
 
 - (void)setup {
     [super setup];
+    
+    _controller = [[RICertificatesController alloc] init];
 }
 
 #pragma mark Table view delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    //    __typeof(self) __weak weakSelf = self;
-    //    RIEditAccountViewController *c = [[RIEditAccountViewController alloc] init];
-    //    [c setAccount:[_accountsController accountAtIndexPath:indexPath]];
-    //    [c setDismissController:^(RIEditAccountViewController *controller, RIAccount *account) {
-    //        [weakSelf reloadData];
-    //        [controller dismissViewControllerAnimated:YES completion:nil];
-    //    }];
-    //    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
-    //    [self presentViewController:nc animated:YES completion:nil];
+    [_tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
+}
+
+#pragma mark Web uploader delegate
+
+- (void)webUploader:(GCDWebUploader *)uploader didCreateDirectoryAtPath:(NSString *)path {
+    
+}
+
+- (void)webUploader:(GCDWebUploader *)uploader didUploadFileAtPath:(NSString *)path {
+    [self reloadData];
+}
+
+- (void)webUploader:(GCDWebUploader *)uploader didDeleteItemAtPath:(NSString *)path {
+    [self reloadData];
+}
+
+- (void)webUploader:(GCDWebUploader *)uploader didMoveItemFromPath:(NSString *)fromPath toPath:(NSString *)toPath {
+    [self reloadData];
 }
 
 

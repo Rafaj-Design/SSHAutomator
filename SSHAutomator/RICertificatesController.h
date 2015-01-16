@@ -14,8 +14,10 @@
 @interface RICertificatesController : NSObject <UITableViewDataSource>
 
 @property (nonatomic, copy) void (^requiresReload)();
+@property (nonatomic, strong) NSString *uploaderUrlString;
 
-- (RICertificate *)certificateAtIndexPath:(NSIndexPath *)indexPath;
+- (NSArray *)certificateAtIndexPath:(NSIndexPath *)indexPath;
+- (NSArray *)certificates;
 
 - (void)reloadData;
 
