@@ -26,6 +26,7 @@
 
 - (void)createTableView {
     _tableView = [[RICertificatesTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_tableView setDataSource:_controller];
     [_tableView setDelegate:self];
     [self.view addSubview:_tableView];

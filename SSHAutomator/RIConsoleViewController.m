@@ -25,6 +25,7 @@
 
 - (void)createConsoleView {
     _textView = [[UITextView alloc] initWithFrame:self.view.bounds];
+    [_textView setEditable:NO];
     [_textView setFont:[UIFont fontWithName:@"Courier" size:10]];
     [_textView setTextColor:[UIColor greenColor]];
     [_textView setBackgroundColor:[UIColor clearColor]];

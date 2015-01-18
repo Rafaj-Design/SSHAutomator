@@ -47,7 +47,6 @@
 		15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC737C1A683A9300CD8DFA /* RIViewController.m */; };
 		15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73811A683A9300CD8DFA /* Images.xcassets */; };
 		15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
-		15BC73911A683A9300CD8DFA /* SSHAutomatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */; };
 		15BC739F1A683B7D00CD8DFA /* RIAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */; };
 		15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73A41A683BE400CD8DFA /* RIAccountsController.m */; };
 		15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73A91A683F2200CD8DFA /* RITableView.m */; };
@@ -57,16 +56,6 @@
 		15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */; };
 		BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FEF6B7B0105015289E10E7 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		15BC738B1A683A9300CD8DFA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15BC73661A683A9200CD8DFA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15BC736D1A683A9300CD8DFA;
-			remoteInfo = SSHAutomator;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		152FFB5D1A68739300F87169 /* NSObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreData.h"; sourceTree = "<group>"; };
@@ -143,7 +132,6 @@
 		15BC737C1A683A9300CD8DFA /* RIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIViewController.m; sourceTree = "<group>"; };
 		15BC73811A683A9300CD8DFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15BC73841A683A9300CD8DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSHAutomatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC738F1A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHAutomatorTests.m; sourceTree = "<group>"; };
 		15BC739D1A683B7D00CD8DFA /* RIAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccountsViewController.h; sourceTree = "<group>"; };
@@ -172,13 +160,6 @@
 			files = (
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15BC73871A683A9300CD8DFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +454,6 @@
 			isa = PBXGroup;
 			children = (
 				15BC736E1A683A9300CD8DFA /* SSHAutomator.app */,
-				15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -701,39 +681,18 @@
 			productReference = 15BC736E1A683A9300CD8DFA /* SSHAutomator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		15BC73891A683A9300CD8DFA /* SSHAutomatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 15BC73971A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomatorTests" */;
-			buildPhases = (
-				15BC73861A683A9300CD8DFA /* Sources */,
-				15BC73871A683A9300CD8DFA /* Frameworks */,
-				15BC73881A683A9300CD8DFA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				15BC738C1A683A9300CD8DFA /* PBXTargetDependency */,
-			);
-			name = SSHAutomatorTests;
-			productName = SSHAutomatorTests;
-			productReference = 15BC738A1A683A9300CD8DFA /* SSHAutomatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		15BC73661A683A9200CD8DFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RI;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Ridiculous Innovations";
 				TargetAttributes = {
 					15BC736D1A683A9300CD8DFA = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					15BC73891A683A9300CD8DFA = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 15BC736D1A683A9300CD8DFA;
 					};
 				};
 			};
@@ -751,7 +710,6 @@
 			projectRoot = "";
 			targets = (
 				15BC736D1A683A9300CD8DFA /* SSHAutomator */,
-				15BC73891A683A9300CD8DFA /* SSHAutomatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -766,13 +724,6 @@
 				156EC6301A6AA774009BB672 /* uploader-done.html in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
 				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15BC73881A683A9300CD8DFA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,23 +824,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15BC73861A683A9300CD8DFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				15BC73911A683A9300CD8DFA /* SSHAutomatorTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		15BC738C1A683A9300CD8DFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 15BC736D1A683A9300CD8DFA /* SSHAutomator */;
-			targetProxy = 15BC738B1A683A9300CD8DFA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		15BC73831A683A9300CD8DFA /* LaunchScreen.xib */ = {
@@ -903,6 +838,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		156EC6551A6C63DF009BB672 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		156EC6561A6C63DF009BB672 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fuerte Int Ltd";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SSHAutomator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-iOS/Libraries/lib",
+					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8DE82982-C128-4E90-A941-5001D32DFC4C";
+			};
+			name = Enterprise;
+		};
 		15BC73921A683A9300CD8DFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -920,7 +915,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -962,7 +957,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -986,6 +981,7 @@
 			baseConfigurationReference = DF2DA2B31CCC993EFA094AF9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
@@ -1025,40 +1021,6 @@
 			};
 			name = Release;
 		};
-		15BC73981A683A9300CD8DFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SSHAutomatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSHAutomator.app/SSHAutomator";
-			};
-			name = Debug;
-		};
-		15BC73991A683A9300CD8DFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SSHAutomatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSHAutomator.app/SSHAutomator";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1067,6 +1029,7 @@
 			buildConfigurations = (
 				15BC73921A683A9300CD8DFA /* Debug */,
 				15BC73931A683A9300CD8DFA /* Release */,
+				156EC6551A6C63DF009BB672 /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1076,15 +1039,7 @@
 			buildConfigurations = (
 				15BC73951A683A9300CD8DFA /* Debug */,
 				15BC73961A683A9300CD8DFA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		15BC73971A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				15BC73981A683A9300CD8DFA /* Debug */,
-				15BC73991A683A9300CD8DFA /* Release */,
+				156EC6561A6C63DF009BB672 /* Enterprise */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

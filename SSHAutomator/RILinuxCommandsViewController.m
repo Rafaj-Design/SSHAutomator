@@ -26,6 +26,7 @@
 
 - (void)createTableView {
     _tableView = [[RITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_tableView setDataSource:_controller];
     [_tableView setDelegate:self];
     [self.view addSubview:_tableView];
@@ -59,7 +60,7 @@
 #pragma mark Table view delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {

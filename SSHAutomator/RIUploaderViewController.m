@@ -12,6 +12,8 @@
 #import "GCDWebServerDataResponse.h"
 #import "GCDWebServerFileResponse.h"
 #import "GCDWebServerMultiPartFormRequest.h"
+#include <ifaddrs.h>
+#include <arpa/inet.h>
 
 
 @interface RIUploaderViewController ()
@@ -35,6 +37,8 @@
     [_label setTextColor:[UIColor darkTextColor]];
     [_label setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:_label];
+    
+    [self updateLabel];
 }
 
 - (void)createAllElements {
@@ -46,7 +50,39 @@
     [self createUrlLabel];
 }
 
+#pragma mark Settings
+
+- (void)updateLabel {
+    [_label setText:[NSString stringWithFormat:@"Visit %@:8888 in your web browser", [self getIPAddress]]];
+}
+
 #pragma mark Initialization
+
+- (NSString *)getIPAddress {
+    NSString *address = @"error";
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0) {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while(temp_addr != NULL) {
+            if(temp_addr->ifa_addr->sa_family == AF_INET) {
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                }
+            }
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+    // Free memory
+    freeifaddrs(interfaces);
+    return address;
+}
 
 - (void)setupWebServer {
     _reachability = [Reachability reachabilityForLocalWiFi];
@@ -79,18 +115,16 @@
         return [GCDWebServerDataResponse responseWithHTML:html];
     }];
     
-    [weakSelf.webServer startWithPort:8888 bonjourName:nil];
+    BOOL ok = [_webServer startWithPort:8888 bonjourName:nil];
     
     [_reachability setReachableBlock:^void (Reachability * reachability) {
         [weakSelf.webServer startWithPort:8888 bonjourName:nil];
-        NSLog(@"Visit %@ in your web browser", weakSelf.webServer.serverURL);
-        [weakSelf.label setText:[NSString stringWithFormat:@"Visit %@ in your web browser", weakSelf.webServer.serverURL.absoluteString]];
+        [weakSelf updateLabel];
     }];
     [_reachability setUnreachableBlock:^void (Reachability * reachability) {
         
     }];
-    NSLog(@"Visit %@ in your web browser", _webServer.serverURL);
-    [_label setText:[NSString stringWithFormat:@"Visit %@ in your web browser", _webServer.serverURL.absoluteString]];
+    [self updateLabel];
     
     [_reachability startNotifier];
 }
