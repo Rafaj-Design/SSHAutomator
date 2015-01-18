@@ -15,6 +15,7 @@
 @interface RIHistoryController ()
 
 @property (nonatomic, readonly) NSArray *data;
+@property (nonatomic, readonly) NSDateFormatter *formatter;
 
 @end
 
@@ -35,6 +36,11 @@
 #pragma mark Settings
 
 - (void)setJob:(RIJob *)job {
+    _formatter = [[NSDateFormatter alloc] init];
+    [_formatter setDateStyle:NSDateFormatterLongStyle];
+    [_formatter setTimeStyle:NSDateFormatterLongStyle];
+    
+    _job = job;
     [self reloadData];
 }
 
@@ -69,8 +75,7 @@
     }
     
     RIHistory *object = [self historyAtIndexPath:indexPath];
-    [cell.textLabel setText:object.log];
-    [cell.detailTextLabel setText:object.log];
+    [cell.detailTextLabel setText:[_formatter stringFromDate:object.date]];
     
     return cell;
 }

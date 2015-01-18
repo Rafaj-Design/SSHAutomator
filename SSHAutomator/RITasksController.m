@@ -82,6 +82,7 @@
         
         if (indexPath.row == 0) {
             [cell.textLabel setText:@"Run"];
+            
         }
         else {
             [cell.textLabel setText:@"History"];

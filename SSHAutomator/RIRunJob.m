@@ -82,6 +82,7 @@
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             RIHistory *history = [self.coreData newHistoryForJob:_job];
+            [history setDate:[NSDate date]];
             [history setLog:_log];
             [self.coreData saveContext];
             

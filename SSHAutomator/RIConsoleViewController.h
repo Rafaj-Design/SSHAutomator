@@ -13,8 +13,9 @@
 
 @interface RIConsoleViewController : RIViewController
 
+@property (nonatomic, strong) RIHistory *history;
+
 - (void)executeJob:(RIJob *)job;
-- (void)displayHistory:(RIHistory *)history;
 
 
 @end

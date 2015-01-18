@@ -29,6 +29,10 @@
     [_textView setTextColor:[UIColor greenColor]];
     [_textView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:_textView];
+    
+    if (_history) {
+        [_textView setText:_history.log];
+    }
 }
 
 - (void)createAllElements {
@@ -54,8 +58,9 @@
     [executor run:job];
 }
 
-- (void)displayHistory:(RIHistory *)history {
-    [_textView setText:history.log];
+- (void)setHistory:(RIHistory *)history {
+    _history = history;
+    [_textView setText:_history.log];
 }
 
 

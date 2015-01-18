@@ -7,6 +7,7 @@
 //
 
 #import "RIHistoryViewController.h"
+#import "RIConsoleViewController.h"
 #import "RIHistoryController.h"
 #import "RITableView.h"
 
@@ -64,7 +65,11 @@
 #pragma mark Table view delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [_tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [_tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    RIConsoleViewController *c = [[RIConsoleViewController alloc] init];
+    [c setHistory:[_controller historyAtIndexPath:indexPath]];
+    [self.navigationController pushViewController:c animated:YES];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
