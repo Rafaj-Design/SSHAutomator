@@ -15,6 +15,7 @@
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Accounts" inverseName="certificate" inverseEntity="Accounts" syncable="YES"/>
     </entity>
     <entity name="History" representedClassName="RIHistory" syncable="YES">
+        <attribute name="command" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="executionTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="log" optional="YES" attributeType="String" syncable="YES"/>
@@ -39,7 +40,7 @@
     <elements>
         <element name="Accounts" positionX="-63" positionY="-18" width="128" height="148"/>
         <element name="Certificates" positionX="-18" positionY="108" width="128" height="88"/>
-        <element name="History" positionX="-45" positionY="63" width="128" height="118"/>
+        <element name="History" positionX="-45" positionY="63" width="128" height="133"/>
         <element name="Jobs" positionX="-54" positionY="36" width="128" height="148"/>
         <element name="Tasks" positionX="-54" positionY="36" width="128" height="103"/>
     </elements>

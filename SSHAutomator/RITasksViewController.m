@@ -9,10 +9,11 @@
 #import "RITasksViewController.h"
 #import "RIEditTaskViewController.h"
 #import "RITasksViewController.h"
+#import "RIConsoleViewController.h"
+#import "RIHistoryViewController.h"
 #import "RITasksTableView.h"
 #import "RITasksController.h"
 #import "RIJob.h"
-#import "RIRunJob.h"
 
 
 @interface RITasksViewController () <UITableViewDelegate>
@@ -102,13 +103,30 @@
     [super setup];
 }
 
+#pragma mark View lifecycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self reloadData];
+}
+
 #pragma mark Table view delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        [RIRunJob run:_job];
+        if (indexPath.row == 0) {
+            RIConsoleViewController *c = [[RIConsoleViewController alloc] init];
+            [c executeJob:_job];
+            [self.navigationController pushViewController:c animated:YES];
+        }
+        else {
+            RIHistoryViewController *c = [[RIHistoryViewController alloc] init];
+            [c setJob:_job];
+            [self.navigationController pushViewController:c animated:YES];
+        }
     }
     else {
         __typeof(self) __weak weakSelf = self;

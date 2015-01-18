@@ -8,6 +8,9 @@
 
 #import "RIEditAccountViewController.h"
 #import <RETableViewManager/RETableViewManager.h>
+#import <FontAwesomeKit/FAKFontAwesome.h>
+#import "RICertificatesViewController.h"
+#import "RISelectCertificateViewController.h"
 #import "RITableView.h"
 #import "RETableViewOptionsController.h"
 #import "RICertificatesController.h"
@@ -25,6 +28,8 @@
 @property (nonatomic, readonly) RETextItem *serverPassword;
 @property (nonatomic, readonly) RERadioItem *serverCertificate;
 
+@property (nonatomic) RICertificate *temporaryCertificate;
+
 @end
 
 
@@ -41,10 +46,17 @@
         [_serverUser setValue:_account.user];
         [_serverPassword setValue:_account.password];
     }
+    if (_temporaryCertificate) {
+        [_serverCertificate setValue:_temporaryCertificate.name];
+    }
+    else {
+        [_serverCertificate setValue:@"Use password"];
+    }
 }
 
 - (void)setAccount:(RIAccount *)account {
     _account = account;
+    _temporaryCertificate = _account.certificate;
     [self assignValues];
 }
 
@@ -54,8 +66,11 @@
     UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
     [self.navigationItem setLeftBarButtonItem:cancel];
     
+    FAKFontAwesome *settingsIcon = [FAKFontAwesome certificateIconWithSize:20];
+    UIBarButtonItem *settings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[settingsIcon] imageSize:CGSizeMake(22, 22)] style:UIBarButtonItemStyleDone target:self action:@selector(settingsPressed:)];
+    
     UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(savePressed:)];
-    [self.navigationItem setRightBarButtonItem:save];
+    [self.navigationItem setRightBarButtonItems:@[save, settings]];
 }
 
 - (void)createTableElements {
@@ -88,37 +103,21 @@
     [_serverUser setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [section addItem:_serverUser];
     
-    _serverPassword = [RETextItem itemWithTitle:@"Password" value:nil placeholder:@"mySup3rs3cr3tP4ssw0rd (optional)"];
+    _serverPassword = [RETextItem itemWithTitle:@"Password" value:nil placeholder:@"password"];
     [_serverPassword setSecureTextEntry:YES];
     [section addItem:_serverPassword];
     
     _serverCertificate = [RERadioItem itemWithTitle:@"Certificate" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         
-        RICertificatesController *controller = [[RICertificatesController alloc] init];
-        
-        NSMutableArray *options = [[NSMutableArray alloc] init];
-        for (NSArray *o in [controller certificates]) {
-            [options addObject:o[0]];
-        }
-        
-        // Present options controller
-        RETableViewOptionsController *optionsController = [[RETableViewOptionsController alloc] initWithItem:item options:options multipleChoice:NO completionHandler:^(RETableViewItem *selectedItem){
-            [weakSelf.navigationController popViewControllerAnimated:YES];
-            
-            [item reloadRowWithAnimation:UITableViewRowAnimationNone];
+        // Present options
+        RISelectCertificateViewController *c = [[RISelectCertificateViewController alloc] init];
+        [c setDidSelectCertificate:^(RICertificate *certificate) {
+            [weakSelf setTemporaryCertificate:certificate];
+            [weakSelf assignValues];
+            [weakSelf.serverCertificate reloadRowWithAnimation:UITableViewRowAnimationNone];
         }];
-        
-        // Adjust styles
-        [optionsController setDelegate:weakSelf];
-        [optionsController setStyle:section.style];
-        if (weakSelf.tableView.backgroundView == nil) {
-            optionsController.tableView.backgroundColor = weakSelf.tableView.backgroundColor;
-            optionsController.tableView.backgroundView = nil;
-        }
-        
-        // Push the options controller
-        [weakSelf.navigationController pushViewController:optionsController animated:YES];
+        [weakSelf.navigationController pushViewController:c animated:YES];
     }];
     [section addItem:_serverCertificate];
     
@@ -139,6 +138,12 @@
 }
 
 #pragma mark Actions
+
+- (void)settingsPressed:(UIBarButtonItem *)sender {
+    RICertificatesViewController *c = [[RICertificatesViewController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
+    [self presentViewController:nc animated:YES completion:nil];
+}
 
 - (void)closePressed:(UIBarButtonItem *)sender {
     if (_dismissController) {
@@ -165,6 +170,8 @@
         [_account setHost:_serverHost.value];
         [_account setPort:_serverPort.value];
         [_account setUser:_serverUser.value];
+        [_account setPassword:_serverPassword.value];
+        [_account setCertificate:_temporaryCertificate];
         [_account setPassword:_serverPassword.value];
         [self.coreData saveContext];
         if (_dismissController) {

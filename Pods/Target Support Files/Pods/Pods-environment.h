@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_FontAwesomeKit_Zocial 1
 #define COCOAPODS_VERSION_PATCH_FontAwesomeKit_Zocial 8
 
+// GCDWebServer
+#define COCOAPODS_POD_AVAILABLE_GCDWebServer
+#define COCOAPODS_VERSION_MAJOR_GCDWebServer 3
+#define COCOAPODS_VERSION_MINOR_GCDWebServer 2
+#define COCOAPODS_VERSION_PATCH_GCDWebServer 2
+
 // GCDWebServer/Core
 #define COCOAPODS_POD_AVAILABLE_GCDWebServer_Core
 #define COCOAPODS_VERSION_MAJOR_GCDWebServer_Core 3
@@ -77,4 +83,10 @@
 #define COCOAPODS_VERSION_MAJOR_REValidation 0
 #define COCOAPODS_VERSION_MINOR_REValidation 1
 #define COCOAPODS_VERSION_PATCH_REValidation 4
+
+// Reachability
+#define COCOAPODS_POD_AVAILABLE_Reachability
+#define COCOAPODS_VERSION_MAJOR_Reachability 3
+#define COCOAPODS_VERSION_MINOR_Reachability 2
+#define COCOAPODS_VERSION_PATCH_Reachability 0
 

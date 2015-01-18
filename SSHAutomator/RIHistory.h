@@ -2,20 +2,22 @@
 //  RIHistory.h
 //  SSHAutomator
 //
-//  Created by Ondrej Rafaj on 15/01/2015.
+//  Created by Ondrej Rafaj on 18/01/2015.
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
 @class RIJob;
 
 @interface RIHistory : NSManagedObject
 
+@property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSNumber * executionTime;
 @property (nonatomic, retain) NSString * log;
-@property (nonatomic) NSTimeInterval date;
-@property (nonatomic) int16_t loginTime;
-@property (nonatomic) int16_t executionTime;
+@property (nonatomic, retain) NSNumber * loginTime;
+@property (nonatomic, retain) NSString * command;
 @property (nonatomic, retain) RIJob *job;
 
 @end

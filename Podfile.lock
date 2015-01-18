@@ -14,10 +14,13 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.1.8):
     - FontAwesomeKit/Core
+  - GCDWebServer (3.2.2):
+    - GCDWebServer/Core
   - GCDWebServer/Core (3.2.2)
   - GCDWebServer/WebUploader (3.2.2):
     - GCDWebServer/Core
   - NMSSH (2.2.0)
+  - Reachability (3.2)
   - REFormattedNumberField (1.1.5)
   - RETableViewManager (1.5.14):
     - REFormattedNumberField (~> 1.1.5)
@@ -26,14 +29,17 @@ PODS:
 
 DEPENDENCIES:
   - FontAwesomeKit (~> 2.1.0)
+  - GCDWebServer (~> 3.0)
   - GCDWebServer/WebUploader (~> 3.0)
   - NMSSH
+  - Reachability
   - RETableViewManager
 
 SPEC CHECKSUMS:
   FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
   GCDWebServer: 285fde9951ab2cd87c2d9d74735fee977a16fe04
   NMSSH: 6075839f1d4415ce55bf5db62fa1178888e12ae5
+  Reachability: 1ef8adf5c4e3d362f96515d4278f68dad3c26930
   REFormattedNumberField: 86318c549b60130a6d7a05abebb142f08f671319
   RETableViewManager: 62cab967dd2d24545283cf4751e94c222268533a
   REValidation: a0033a582415848854e875dfcbe69c107de19f81

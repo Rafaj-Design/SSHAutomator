@@ -56,7 +56,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return (section == 0) ? 1 : _data.count;
+    return (section == 0) ? ((_job.history.count > 0) ? 2 : 1) : _data.count;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,7 +80,12 @@
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         }
         
-        [cell.textLabel setText:@"Run"];
+        if (indexPath.row == 0) {
+            [cell.textLabel setText:@"Run"];
+        }
+        else {
+            [cell.textLabel setText:@"History"];
+        }
         
         return cell;
     }

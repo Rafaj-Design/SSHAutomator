@@ -31,6 +31,9 @@
 - (RITask *)newTaskForJob:(RIJob *)job;
 - (NSArray *)tasksForJob:(RIJob *)job;
 
+- (RIHistory *)newHistoryForJob:(RIJob *)job;
+- (NSArray *)historyForJob:(RIJob *)job;
+
 - (RICertificate *)newCertificate;
 - (NSArray *)certificates;
 

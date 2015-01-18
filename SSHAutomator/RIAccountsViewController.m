@@ -7,9 +7,7 @@
 //
 
 #import "RIAccountsViewController.h"
-#import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIEditAccountViewController.h"
-#import "RICertificatesViewController.h"
 #import "RIJobsViewController.h"
 #import "RIAccountsController.h"
 #import "RIAccountsTableView.h"
@@ -34,10 +32,6 @@
 #pragma mark Creating elements
 
 - (void)createControlButtons {
-    FAKFontAwesome *settingsIcon = [FAKFontAwesome gearsIconWithSize:15];
-    UIBarButtonItem *settings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[settingsIcon] imageSize:CGSizeMake(22, 22)] style:UIBarButtonItemStyleDone target:self action:@selector(settingsPressed:)];
-    [self.navigationItem setLeftBarButtonItem:settings];
-    
     _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
     _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editPressed:)];
     _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccountPressed:)];
@@ -68,12 +62,6 @@
 
 #pragma mark Actions
 
-- (void)settingsPressed:(UIBarButtonItem *)sender {
-    RICertificatesViewController *c = [[RICertificatesViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
-    [self presentViewController:nc animated:YES completion:nil];
-}
-
 - (void)addAccountPressed:(UIBarButtonItem *)sender {
     __typeof(self) __weak weakSelf = self;
     RIEditAccountViewController *c = [[RIEditAccountViewController alloc] init];
@@ -100,6 +88,8 @@
     [_controller setRequiresReload:^{
         [weakSelf reloadData];
     }];
+    
+    [self setTitle:@"Accounts"];
 }
 
 #pragma mark Table view delegate methods

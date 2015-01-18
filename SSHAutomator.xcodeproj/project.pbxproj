@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
-		152FFB661A68777900F87169 /* RIHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB651A68777900F87169 /* RIHistory.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
-		156EC5C81A687D15009BB672 /* RICertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5C71A687D15009BB672 /* RICertificate.m */; };
-		156EC5CB1A687D15009BB672 /* RIJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5CA1A687D15009BB672 /* RIJob.m */; };
-		156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5CD1A687D16009BB672 /* RIAccount.m */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
 		156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D91A691121009BB672 /* RITableViewCell.m */; };
@@ -29,6 +25,22 @@
 		156EC60E1A694182009BB672 /* RITasksTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC60D1A694182009BB672 /* RITasksTableView.m */; };
 		156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6111A694325009BB672 /* RIEditTaskViewController.m */; };
 		156EC6161A6948D7009BB672 /* RIRunJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6151A6948D7009BB672 /* RIRunJob.m */; };
+		156EC61A1A69615E009BB672 /* RIConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6191A69615E009BB672 /* RIConsoleViewController.m */; };
+		156EC61E1A696BC3009BB672 /* RIUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC61D1A696BC3009BB672 /* RIUploaderViewController.m */; };
+		156EC62A1A6AA71F009BB672 /* RIAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6251A6AA71F009BB672 /* RIAccount.m */; };
+		156EC62B1A6AA71F009BB672 /* RICertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6271A6AA71F009BB672 /* RICertificate.m */; };
+		156EC62C1A6AA71F009BB672 /* RIJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6291A6AA71F009BB672 /* RIJob.m */; };
+		156EC6301A6AA774009BB672 /* uploader-done.html in Resources */ = {isa = PBXBuildFile; fileRef = 156EC62E1A6AA774009BB672 /* uploader-done.html */; };
+		156EC6311A6AA774009BB672 /* uploader-upload.html in Resources */ = {isa = PBXBuildFile; fileRef = 156EC62F1A6AA774009BB672 /* uploader-upload.html */; };
+		156EC6351A6AC0D8009BB672 /* RIEditCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6341A6AC0D8009BB672 /* RIEditCertificateViewController.m */; };
+		156EC6381A6BF6CC009BB672 /* RISelectCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6371A6BF6CC009BB672 /* RISelectCertificateViewController.m */; };
+		156EC63E1A6BF767009BB672 /* RIManageCertificatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC63D1A6BF767009BB672 /* RIManageCertificatesController.m */; };
+		156EC6411A6C28AC009BB672 /* RIHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6401A6C28AC009BB672 /* RIHistory.m */; };
+		156EC6451A6C3786009BB672 /* commands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 156EC6441A6C3786009BB672 /* commands.txt */; };
+		156EC6491A6C3867009BB672 /* RILinuxCommandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6481A6C3867009BB672 /* RILinuxCommandsViewController.m */; };
+		156EC64D1A6C38C2009BB672 /* RICommandsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC64C1A6C38C2009BB672 /* RICommandsController.m */; };
+		156EC6501A6C5015009BB672 /* RIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC64F1A6C5015009BB672 /* RIHistoryViewController.m */; };
+		156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6531A6C5051009BB672 /* RIHistoryController.m */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -59,16 +71,8 @@
 /* Begin PBXFileReference section */
 		152FFB5D1A68739300F87169 /* NSObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreData.h"; sourceTree = "<group>"; };
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
-		152FFB641A68777900F87169 /* RIHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistory.h; sourceTree = "<group>"; };
-		152FFB651A68777900F87169 /* RIHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistory.m; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
 		152FFB6E1A68777900F87169 /* RITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITask.m; sourceTree = "<group>"; };
-		156EC5C61A687D15009BB672 /* RICertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RICertificate.h; path = ../RICertificate.h; sourceTree = "<group>"; };
-		156EC5C71A687D15009BB672 /* RICertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RICertificate.m; path = ../RICertificate.m; sourceTree = "<group>"; };
-		156EC5C91A687D15009BB672 /* RIJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIJob.h; path = ../RIJob.h; sourceTree = "<group>"; };
-		156EC5CA1A687D15009BB672 /* RIJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIJob.m; path = ../RIJob.m; sourceTree = "<group>"; };
-		156EC5CC1A687D16009BB672 /* RIAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RIAccount.h; path = ../RIAccount.h; sourceTree = "<group>"; };
-		156EC5CD1A687D16009BB672 /* RIAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RIAccount.m; path = ../RIAccount.m; sourceTree = "<group>"; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
@@ -100,6 +104,35 @@
 		156EC6111A694325009BB672 /* RIEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditTaskViewController.m; sourceTree = "<group>"; };
 		156EC6141A6948D7009BB672 /* RIRunJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIRunJob.h; sourceTree = "<group>"; };
 		156EC6151A6948D7009BB672 /* RIRunJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIRunJob.m; sourceTree = "<group>"; };
+		156EC6181A69615E009BB672 /* RIConsoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIConsoleViewController.h; sourceTree = "<group>"; };
+		156EC6191A69615E009BB672 /* RIConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIConsoleViewController.m; sourceTree = "<group>"; };
+		156EC61C1A696BC3009BB672 /* RIUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIUploaderViewController.h; sourceTree = "<group>"; };
+		156EC61D1A696BC3009BB672 /* RIUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIUploaderViewController.m; sourceTree = "<group>"; };
+		156EC6241A6AA71F009BB672 /* RIAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccount.h; sourceTree = "<group>"; };
+		156EC6251A6AA71F009BB672 /* RIAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAccount.m; sourceTree = "<group>"; };
+		156EC6261A6AA71F009BB672 /* RICertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICertificate.h; sourceTree = "<group>"; };
+		156EC6271A6AA71F009BB672 /* RICertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICertificate.m; sourceTree = "<group>"; };
+		156EC6281A6AA71F009BB672 /* RIJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJob.h; sourceTree = "<group>"; };
+		156EC6291A6AA71F009BB672 /* RIJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJob.m; sourceTree = "<group>"; };
+		156EC62E1A6AA774009BB672 /* uploader-done.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "uploader-done.html"; sourceTree = "<group>"; };
+		156EC62F1A6AA774009BB672 /* uploader-upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "uploader-upload.html"; sourceTree = "<group>"; };
+		156EC6331A6AC0D8009BB672 /* RIEditCertificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIEditCertificateViewController.h; sourceTree = "<group>"; };
+		156EC6341A6AC0D8009BB672 /* RIEditCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditCertificateViewController.m; sourceTree = "<group>"; };
+		156EC6361A6BF6CC009BB672 /* RISelectCertificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RISelectCertificateViewController.h; sourceTree = "<group>"; };
+		156EC6371A6BF6CC009BB672 /* RISelectCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RISelectCertificateViewController.m; sourceTree = "<group>"; };
+		156EC63C1A6BF767009BB672 /* RIManageCertificatesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIManageCertificatesController.h; sourceTree = "<group>"; };
+		156EC63D1A6BF767009BB672 /* RIManageCertificatesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIManageCertificatesController.m; sourceTree = "<group>"; };
+		156EC63F1A6C28AC009BB672 /* RIHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistory.h; sourceTree = "<group>"; };
+		156EC6401A6C28AC009BB672 /* RIHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistory.m; sourceTree = "<group>"; };
+		156EC6441A6C3786009BB672 /* commands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = commands.txt; sourceTree = "<group>"; };
+		156EC6471A6C3867009BB672 /* RILinuxCommandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RILinuxCommandsViewController.h; sourceTree = "<group>"; };
+		156EC6481A6C3867009BB672 /* RILinuxCommandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RILinuxCommandsViewController.m; sourceTree = "<group>"; };
+		156EC64B1A6C38C2009BB672 /* RICommandsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICommandsController.h; sourceTree = "<group>"; };
+		156EC64C1A6C38C2009BB672 /* RICommandsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICommandsController.m; sourceTree = "<group>"; };
+		156EC64E1A6C5015009BB672 /* RIHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistoryViewController.h; sourceTree = "<group>"; };
+		156EC64F1A6C5015009BB672 /* RIHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistoryViewController.m; sourceTree = "<group>"; };
+		156EC6521A6C5051009BB672 /* RIHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistoryController.h; sourceTree = "<group>"; };
+		156EC6531A6C5051009BB672 /* RIHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistoryController.m; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,13 +185,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		152FF8641A685F0B00F87169 /* Thirdparty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Thirdparty;
-			sourceTree = SOURCE_ROOT;
-		};
 		152FFB5C1A68736B00F87169 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,16 +197,16 @@
 		152FFB601A68773F00F87169 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				156EC5CC1A687D16009BB672 /* RIAccount.h */,
-				156EC5CD1A687D16009BB672 /* RIAccount.m */,
-				156EC5C91A687D15009BB672 /* RIJob.h */,
-				156EC5CA1A687D15009BB672 /* RIJob.m */,
-				156EC5C61A687D15009BB672 /* RICertificate.h */,
-				156EC5C71A687D15009BB672 /* RICertificate.m */,
+				156EC6241A6AA71F009BB672 /* RIAccount.h */,
+				156EC6251A6AA71F009BB672 /* RIAccount.m */,
+				156EC6261A6AA71F009BB672 /* RICertificate.h */,
+				156EC6271A6AA71F009BB672 /* RICertificate.m */,
+				156EC6281A6AA71F009BB672 /* RIJob.h */,
+				156EC6291A6AA71F009BB672 /* RIJob.m */,
 				152FFB6D1A68777900F87169 /* RITask.h */,
 				152FFB6E1A68777900F87169 /* RITask.m */,
-				152FFB641A68777900F87169 /* RIHistory.h */,
-				152FFB651A68777900F87169 /* RIHistory.m */,
+				156EC63F1A6C28AC009BB672 /* RIHistory.h */,
+				156EC6401A6C28AC009BB672 /* RIHistory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -243,19 +269,21 @@
 		156EC5EE1A692502009BB672 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6391A6BF6D5009BB672 /* Select certificate */,
+				156EC6321A6AC084009BB672 /* Edit certificate */,
 				156EC5EF1A69253A009BB672 /* RICertificatesViewController.h */,
 				156EC5F01A69253A009BB672 /* RICertificatesViewController.m */,
 			);
 			name = Certificates;
 			sourceTree = "<group>";
 		};
-		156EC5F21A692595009BB672 /* Controllers */ = {
+		156EC5F21A692595009BB672 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
-				156EC5F31A6925BB009BB672 /* RICertificatesController.h */,
-				156EC5F41A6925BB009BB672 /* RICertificatesController.m */,
+				156EC63A1A6BF70E009BB672 /* Manage */,
+				156EC63B1A6BF715009BB672 /* Basic */,
 			);
-			name = Controllers;
+			name = Certificates;
 			sourceTree = "<group>";
 		};
 		156EC5F61A69285C009BB672 /* Certificates */ = {
@@ -322,6 +350,113 @@
 			name = Libs;
 			sourceTree = "<group>";
 		};
+		156EC6171A69613F009BB672 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6181A69615E009BB672 /* RIConsoleViewController.h */,
+				156EC6191A69615E009BB672 /* RIConsoleViewController.m */,
+			);
+			name = Console;
+			sourceTree = "<group>";
+		};
+		156EC61B1A696B92009BB672 /* Uploader */ = {
+			isa = PBXGroup;
+			children = (
+				156EC61C1A696BC3009BB672 /* RIUploaderViewController.h */,
+				156EC61D1A696BC3009BB672 /* RIUploaderViewController.m */,
+			);
+			name = Uploader;
+			sourceTree = "<group>";
+		};
+		156EC62D1A6AA774009BB672 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				156EC62E1A6AA774009BB672 /* uploader-done.html */,
+				156EC62F1A6AA774009BB672 /* uploader-upload.html */,
+			);
+			path = HTML;
+			sourceTree = SOURCE_ROOT;
+		};
+		156EC6321A6AC084009BB672 /* Edit certificate */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6331A6AC0D8009BB672 /* RIEditCertificateViewController.h */,
+				156EC6341A6AC0D8009BB672 /* RIEditCertificateViewController.m */,
+			);
+			name = "Edit certificate";
+			sourceTree = "<group>";
+		};
+		156EC6391A6BF6D5009BB672 /* Select certificate */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6361A6BF6CC009BB672 /* RISelectCertificateViewController.h */,
+				156EC6371A6BF6CC009BB672 /* RISelectCertificateViewController.m */,
+			);
+			name = "Select certificate";
+			sourceTree = "<group>";
+		};
+		156EC63A1A6BF70E009BB672 /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				156EC63C1A6BF767009BB672 /* RIManageCertificatesController.h */,
+				156EC63D1A6BF767009BB672 /* RIManageCertificatesController.m */,
+			);
+			name = Manage;
+			sourceTree = "<group>";
+		};
+		156EC63B1A6BF715009BB672 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				156EC5F31A6925BB009BB672 /* RICertificatesController.h */,
+				156EC5F41A6925BB009BB672 /* RICertificatesController.m */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
+		156EC6421A6C3178009BB672 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				156EC64E1A6C5015009BB672 /* RIHistoryViewController.h */,
+				156EC64F1A6C5015009BB672 /* RIHistoryViewController.m */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		156EC6431A6C3770009BB672 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6441A6C3786009BB672 /* commands.txt */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
+		156EC6461A6C383F009BB672 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6471A6C3867009BB672 /* RILinuxCommandsViewController.h */,
+				156EC6481A6C3867009BB672 /* RILinuxCommandsViewController.m */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
+		156EC64A1A6C3892009BB672 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				156EC64B1A6C38C2009BB672 /* RICommandsController.h */,
+				156EC64C1A6C38C2009BB672 /* RICommandsController.m */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
+		156EC6511A6C503F009BB672 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6521A6C5051009BB672 /* RIHistoryController.h */,
+				156EC6531A6C5051009BB672 /* RIHistoryController.m */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
 		15BC73651A683A9200CD8DFA = {
 			isa = PBXGroup;
 			children = (
@@ -347,7 +482,6 @@
 			isa = PBXGroup;
 			children = (
 				156EC5E81A691B37009BB672 /* Config */,
-				152FF8641A685F0B00F87169 /* Thirdparty */,
 				152FFB5C1A68736B00F87169 /* Categories */,
 				15BC73B01A68561C00CD8DFA /* Data */,
 				156EC6131A6948BB009BB672 /* Libs */,
@@ -362,6 +496,8 @@
 		15BC73711A683A9300CD8DFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6431A6C3770009BB672 /* Commands */,
+				156EC62D1A6AA774009BB672 /* HTML */,
 				15BC73811A683A9300CD8DFA /* Images.xcassets */,
 				15BC73831A683A9300CD8DFA /* LaunchScreen.xib */,
 				15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */,
@@ -392,6 +528,10 @@
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6461A6C383F009BB672 /* Commands */,
+				156EC6421A6C3178009BB672 /* History */,
+				156EC61B1A696B92009BB672 /* Uploader */,
+				156EC6171A69613F009BB672 /* Console */,
 				156EC5EE1A692502009BB672 /* Certificates */,
 				156EC6031A693FD0009BB672 /* Tasks */,
 				156EC5D21A688F7B009BB672 /* Jobs */,
@@ -425,7 +565,9 @@
 		15BC73A01A683BB800CD8DFA /* Data controllers */ = {
 			isa = PBXGroup;
 			children = (
-				156EC5F21A692595009BB672 /* Controllers */,
+				156EC6511A6C503F009BB672 /* History */,
+				156EC64A1A6C3892009BB672 /* Commands */,
+				156EC5F21A692595009BB672 /* Certificates */,
 				156EC6071A69404E009BB672 /* Tasks */,
 				156EC5DF1A691213009BB672 /* Jobs */,
 				15BC73A21A683BC500CD8DFA /* Accounts */,
@@ -620,7 +762,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */,
+				156EC6311A6AA774009BB672 /* uploader-upload.html in Resources */,
+				156EC6301A6AA774009BB672 /* uploader-done.html in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
+				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +833,11 @@
 				15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */,
 				15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */,
 				15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */,
+				156EC6411A6C28AC009BB672 /* RIHistory.m in Sources */,
+				156EC62B1A6AA71F009BB672 /* RICertificate.m in Sources */,
+				156EC63E1A6BF767009BB672 /* RIManageCertificatesController.m in Sources */,
 				156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */,
+				156EC6501A6C5015009BB672 /* RIHistoryViewController.m in Sources */,
 				156EC60E1A694182009BB672 /* RITasksTableView.m in Sources */,
 				152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */,
 				156EC5EB1A691B4A009BB672 /* RIConfig.m in Sources */,
@@ -697,25 +846,30 @@
 				152FFB6F1A68777900F87169 /* RITask.m in Sources */,
 				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
 				156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */,
+				156EC61A1A69615E009BB672 /* RIConsoleViewController.m in Sources */,
+				156EC62A1A6AA71F009BB672 /* RIAccount.m in Sources */,
+				156EC62C1A6AA71F009BB672 /* RIJob.m in Sources */,
+				156EC64D1A6C38C2009BB672 /* RICommandsController.m in Sources */,
 				156EC6021A693A2B009BB672 /* RIEditJobViewController.m in Sources */,
-				156EC5CB1A687D15009BB672 /* RIJob.m in Sources */,
 				156EC5E21A691227009BB672 /* RIJobsController.m in Sources */,
+				156EC6351A6AC0D8009BB672 /* RIEditCertificateViewController.m in Sources */,
 				156EC6061A694002009BB672 /* RITasksViewController.m in Sources */,
 				156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
-				156EC5CE1A687D16009BB672 /* RIAccount.m in Sources */,
+				156EC6381A6BF6CC009BB672 /* RISelectCertificateViewController.m in Sources */,
+				156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */,
 				156EC60A1A694065009BB672 /* RITasksController.m in Sources */,
 				156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */,
 				15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */,
 				15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */,
 				156EC5F11A69253A009BB672 /* RICertificatesViewController.m in Sources */,
-				152FFB661A68777900F87169 /* RIHistory.m in Sources */,
 				156EC5DE1A6911A2009BB672 /* RITableViewController.m in Sources */,
 				156EC5F51A6925BB009BB672 /* RICertificatesController.m in Sources */,
+				156EC61E1A696BC3009BB672 /* RIUploaderViewController.m in Sources */,
 				15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */,
-				156EC5C81A687D15009BB672 /* RICertificate.m in Sources */,
 				156EC5E61A691252009BB672 /* RIJobsTableView.m in Sources */,
 				15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */,
+				156EC6491A6C3867009BB672 /* RILinuxCommandsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

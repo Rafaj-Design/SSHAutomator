@@ -7,20 +7,20 @@
 //
 
 #import "RICertificatesViewController.h"
-#import "RICertificatesController.h"
+#import "RIUploaderViewController.h"
+#import "RIEditCertificateViewController.h"
+#import "RIManageCertificatesController.h"
 #import "RICertificatesTableView.h"
-#import "GCDWebUploader.h"
+#import "NSObject+CoreData.h"
 
 
-@interface RICertificatesViewController () <UITableViewDelegate, GCDWebUploaderDelegate>
+@interface RICertificatesViewController () <UITableViewDelegate>
 
-@property (nonatomic, readonly) RICertificatesController *controller;
+@property (nonatomic, readonly) RIManageCertificatesController *controller;
 @property (nonatomic, readonly) RICertificatesTableView *tableView;
 
 @property (nonatomic, readonly) UIBarButtonItem *editButton;
 @property (nonatomic, readonly) UIBarButtonItem *doneButton;
-
-@property (nonatomic, readonly) GCDWebUploader *webUploader;
 
 @end
 
@@ -29,24 +29,6 @@
 
 
 #pragma mark Creating elements
-
-- (void)createUploader {
-    NSString *dirPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    dirPath = [dirPath stringByAppendingPathComponent:@"certificates"];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL isDir = YES;
-    BOOL pathExists = [fileManager fileExistsAtPath:dirPath isDirectory:&isDir];
-    if (!pathExists) [fileManager createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:nil];
-    
-    _webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:dirPath];
-    [_webUploader setAllowHiddenItems:NO];
-    [_webUploader setAllowedFileExtensions:@[@"pem"]];
-    [_webUploader setDelegate:self];
-    [_webUploader start];
-    
-    [_controller setUploaderUrlString:_webUploader.serverURL.absoluteString];
-}
 
 - (void)createControlButtons {
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
@@ -70,7 +52,6 @@
     
     [self createTableView];
     [self createControlButtons];
-    [self createUploader];
 }
 
 #pragma mark Settings
@@ -96,35 +77,41 @@
 - (void)setup {
     [super setup];
     
-    _controller = [[RICertificatesController alloc] init];
+    _controller = [[RIManageCertificatesController alloc] init];
 }
 
 #pragma mark Table view delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    __weak typeof(self) weakSelf = self;
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        RIUploaderViewController *c = [[RIUploaderViewController alloc] init];
+        [c setFileUploaded:^(NSString *content, NSString *fileName) {
+            RICertificate *cert = [weakSelf.coreData newCertificate];
+            [cert setContent:content];
+            [cert setName:fileName];
+            [weakSelf.coreData saveContext];
+            
+            [weakSelf reloadData];
+        }];
+        [self.navigationController pushViewController:c animated:YES];
+    }
+    else {
+        RIEditCertificateViewController *c = [[RIEditCertificateViewController alloc] init];
+        [c setCertificate:[_controller certificateAtIndexPath:indexPath]];
+        [c setDismissController:^(RIEditCertificateViewController *controller, RICertificate *certificate) {
+            [weakSelf.tableView reloadData];
+            [controller dismissViewControllerAnimated:YES completion:nil];
+        }];
+        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
+        [self presentViewController:nc animated:YES completion:nil];
+    }
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleDelete;
-}
-
-#pragma mark Web uploader delegate
-
-- (void)webUploader:(GCDWebUploader *)uploader didCreateDirectoryAtPath:(NSString *)path {
-    
-}
-
-- (void)webUploader:(GCDWebUploader *)uploader didUploadFileAtPath:(NSString *)path {
-    [self reloadData];
-}
-
-- (void)webUploader:(GCDWebUploader *)uploader didDeleteItemAtPath:(NSString *)path {
-    [self reloadData];
-}
-
-- (void)webUploader:(GCDWebUploader *)uploader didMoveItemFromPath:(NSString *)fromPath toPath:(NSString *)toPath {
-    [self reloadData];
+    return UITableViewCellEditingStyleNone;
 }
 
 

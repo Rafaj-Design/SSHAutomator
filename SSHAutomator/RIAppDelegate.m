@@ -8,7 +8,9 @@
 
 #import "RIAppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
+#import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIAccountsViewController.h"
+#import "RILinuxCommandsViewController.h"
 #import "RIConfig.h"
 
 
@@ -36,8 +38,18 @@
     
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:16]} forState:UIControlStateNormal];
     
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[RIAccountsViewController alloc] init]];
-    [_window setRootViewController:nc];
+    FAKFontAwesome *icon = [FAKFontAwesome databaseIconWithSize:20];
+    UINavigationController *accountsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[RIAccountsViewController alloc] init]];
+    [accountsNavigationController.tabBarItem setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
+    
+    icon = [FAKFontAwesome terminalIconWithSize:20];
+    UINavigationController *commandsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[RILinuxCommandsViewController alloc] init]];
+    [commandsNavigationController.tabBarItem setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[accountsNavigationController, commandsNavigationController]];
+    
+    [_window setRootViewController:tabBarController];
     [_window makeKeyAndVisible];
     
     return YES;
