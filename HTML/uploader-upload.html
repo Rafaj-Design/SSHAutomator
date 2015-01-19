@@ -1,7 +1,48 @@
 <html>
+<style>
+form {
+	width: 300px;
+	margin-top: 56px;
+	margin-left: auto;
+	margin-right: auto;
+	border: dashed 3px #dfdfdf;
+	border-radius: 15px;
+	padding: 56px;
+	text-align: center;
+	font-family: sans-serif;
+}
+h1 {
+	margin-bottom: 26px;
+	color: #64A10D;
+}
+button {
+	border: none;
+	border-radius: 5px;
+	background-color: #64A10D;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: white;
+}
+label {
+	display: none;
+}
+input {
+	width: 100%;
+	border: solid 1px #ededed;
+	padding: 4px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-radius: 5px;
+	margin-bottom: 16px;
+}
+</style>
 <body>
 	<form name="input" action="/" method="post" enctype="multipart/form-data">
-		<p>
+		<h1>SSH Automator</h1>
+		<p class="upload">
 			<label>File:</label>
 			<input type="file" name="file" />
 		</p>
