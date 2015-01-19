@@ -69,6 +69,8 @@
         _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
         [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
         
+        [self removeTemporaryKeyFile];
+        
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             _success(_log, _connectionTime, _executionTime);
         });
@@ -79,6 +81,8 @@
     if (_failure) {
         _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
         [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
+        
+        [self removeTemporaryKeyFile];
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             RIHistory *history = [self.coreData newHistoryForJob:_job];
@@ -93,6 +97,18 @@
 
 #pragma mark Settings
 
+- (void)removeTemporaryKeyFile {
+    NSString *path = [self keyPath];
+    NSFileManager *m = [NSFileManager defaultManager];
+    [m removeItemAtPath:path error:nil];
+}
+
+- (NSString *)keyPath {
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    path = [path stringByAppendingPathComponent:@"key.pem"];
+    return path;
+}
+
 - (void)run:(RIJob *)job {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         _job = job;
@@ -106,12 +122,13 @@
         _session = [NMSSHSession connectToHost:_account.host port:_account.port.intValue withUsername:_account.user];
         [_session setDelegate:self];
         if (_session.isConnected) {
-            
             _connectionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
             [self log:[NSString stringWithFormat:@"Connection time: %f", _connectionTime]];
             _startDate = [NSDate date]; // Reset timer for execution
             if (_account.certificate) {
-                [_session authenticateByPublicKey:nil privateKey:_account.certificate.content andPassword:nil];
+                NSString *path = [self keyPath];
+                [_account.certificate.content writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                [_session authenticateByPublicKey:nil privateKey:path andPassword:_account.password];
             }
             else {
                 [_session authenticateByPassword:_account.password];
