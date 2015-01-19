@@ -250,6 +250,7 @@
 		156EC5EE1A692502009BB672 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
+				156EC61B1A696B92009BB672 /* Uploader */,
 				156EC6391A6BF6D5009BB672 /* Select certificate */,
 				156EC6321A6AC084009BB672 /* Edit certificate */,
 				156EC5EF1A69253A009BB672 /* RICertificatesViewController.h */,
@@ -510,7 +511,6 @@
 			children = (
 				156EC6461A6C383F009BB672 /* Commands */,
 				156EC6421A6C3178009BB672 /* History */,
-				156EC61B1A696B92009BB672 /* Uploader */,
 				156EC6171A69613F009BB672 /* Console */,
 				156EC5EE1A692502009BB672 /* Certificates */,
 				156EC6031A693FD0009BB672 /* Tasks */,

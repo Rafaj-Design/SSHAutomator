@@ -32,10 +32,12 @@
 #pragma mark Creating elements
 
 - (void)createUrlLabel {
-    _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 150, (self.view.frame.size.width - 40), 40)];
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 150, (self.view.frame.size.width - 40), 60)];
     [_label setTextAlignment:NSTextAlignmentCenter];
     [_label setTextColor:[UIColor darkTextColor]];
     [_label setBackgroundColor:[UIColor clearColor]];
+    [_label setNumberOfLines:5];
+    [_label setLineBreakMode:NSLineBreakByWordWrapping];
     [self.view addSubview:_label];
     
     [self updateLabel];
@@ -53,7 +55,7 @@
 #pragma mark Settings
 
 - (void)updateLabel {
-    [_label setText:[NSString stringWithFormat:@"Visit %@:8888 in your web browser", [self getIPAddress]]];
+    [_label setText:[NSString stringWithFormat:@"Visit http://%@:8888 in your web browser", [self getIPAddress]]];
 }
 
 #pragma mark Initialization
