@@ -41,6 +41,7 @@
 		156EC64D1A6C38C2009BB672 /* RICommandsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC64C1A6C38C2009BB672 /* RICommandsController.m */; };
 		156EC6501A6C5015009BB672 /* RIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC64F1A6C5015009BB672 /* RIHistoryViewController.m */; };
 		156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6531A6C5051009BB672 /* RIHistoryController.m */; };
+		156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156EC6661A6DBD4B009BB672 /* Assets.xcassets */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -122,6 +123,7 @@
 		156EC64F1A6C5015009BB672 /* RIHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistoryViewController.m; sourceTree = "<group>"; };
 		156EC6521A6C5051009BB672 /* RIHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistoryController.h; sourceTree = "<group>"; };
 		156EC6531A6C5051009BB672 /* RIHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistoryController.m; sourceTree = "<group>"; };
+		156EC6661A6DBD4B009BB672 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				156EC6431A6C3770009BB672 /* Commands */,
 				156EC62D1A6AA774009BB672 /* HTML */,
 				15BC73811A683A9300CD8DFA /* Images.xcassets */,
+				156EC6661A6DBD4B009BB672 /* Assets.xcassets */,
 				15BC73831A683A9300CD8DFA /* LaunchScreen.xib */,
 				15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */,
 				15BC73721A683A9300CD8DFA /* Info.plist */,
@@ -723,6 +726,7 @@
 				156EC6311A6AA774009BB672 /* uploader-upload.html in Resources */,
 				156EC6301A6AA774009BB672 /* uploader-done.html in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
+				156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */,
 				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
