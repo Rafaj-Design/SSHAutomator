@@ -32,7 +32,7 @@
 #pragma mark Creating elements
 
 - (void)createUrlLabel {
-    _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 150, (self.view.frame.size.width - 40), 60)];
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 90, (self.view.frame.size.width - 40), 60)];
     [_label setTextAlignment:NSTextAlignmentCenter];
     [_label setTextColor:[UIColor darkTextColor]];
     [_label setBackgroundColor:[UIColor clearColor]];
@@ -43,6 +43,16 @@
     [self updateLabel];
 }
 
+- (void)createImacImage {
+    UIImage *img = [UIImage imageNamed:@"upload-imac"];
+    UIImageView *iv = [[UIImageView alloc] initWithImage:img];
+    CGRect r = iv.frame;
+    r.origin.x = ((self.view.frame.size.width - r.size.width) / 2);
+    r.origin.y = 190;
+    [iv setFrame:r];
+    [self.view addSubview:iv];
+}
+
 - (void)createAllElements {
     [super createAllElements];
     
@@ -50,6 +60,7 @@
     [self setTitle:@"Upload"];
     
     [self createUrlLabel];
+    [self createImacImage];
 }
 
 #pragma mark Settings
