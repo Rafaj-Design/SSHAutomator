@@ -141,6 +141,14 @@
     }
 }
 
+- (void)clearHistoryForJob:(RIJob *)job {
+    NSArray *arr = [self historyForJob:job];
+    for (RIHistory *h in arr) {
+        [self.managedObjectContext deleteObject:h];
+    }
+    [self saveContext];
+}
+
 #pragma mark Certificates
 
 - (RICertificate *)newCertificate {

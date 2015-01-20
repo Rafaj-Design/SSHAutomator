@@ -25,6 +25,11 @@
 
 #pragma mark Creating elements
 
+- (void)createClearButton {
+    UIBarButtonItem *clear = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(clearHistory:)];
+    [self.navigationItem setRightBarButtonItem:clear];
+}
+
 - (void)createTableView {
     _tableView = [[RITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
@@ -37,6 +42,7 @@
     [super createAllElements];
     
     [self createTableView];
+    [self createClearButton];
 }
 
 #pragma mark Settings
@@ -52,6 +58,18 @@
 }
 
 #pragma mark Actions
+
+- (void)clearHistory:(UIBarButtonItem *)sender {
+    [_controller clearHistory];
+    [self reloadData];
+    [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(pop) userInfo:nil repeats:NO];
+}
+
+#pragma mark Navigation
+
+- (void)pop {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark Initialization
 

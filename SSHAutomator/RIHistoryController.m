@@ -33,6 +33,10 @@
     return _data;
 }
 
+- (void)clearHistory {
+    [self.coreData clearHistoryForJob:_job];
+}
+
 #pragma mark Settings
 
 - (void)setJob:(RIJob *)job {

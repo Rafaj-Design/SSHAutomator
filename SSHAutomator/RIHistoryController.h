@@ -20,6 +20,8 @@
 - (RIHistory *)historyAtIndexPath:(NSIndexPath *)indexPath;
 - (NSArray *)history;
 
+- (void)clearHistory;
+
 - (void)reloadData;
 
 

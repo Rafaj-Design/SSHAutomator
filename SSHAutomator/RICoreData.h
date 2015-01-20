@@ -33,6 +33,7 @@
 
 - (RIHistory *)newHistoryForJob:(RIJob *)job;
 - (NSArray *)historyForJob:(RIJob *)job;
+- (void)clearHistoryForJob:(RIJob *)job;
 
 - (RICertificate *)newCertificate;
 - (NSArray *)certificates;

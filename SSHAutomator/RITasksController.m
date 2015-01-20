@@ -7,6 +7,7 @@
 //
 
 #import "RITasksController.h"
+#import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RITableView.h"
 #import "RITableViewCell.h"
 #import "NSObject+CoreData.h"
@@ -82,10 +83,13 @@
         
         if (indexPath.row == 0) {
             [cell.textLabel setText:@"Run"];
-            
+            FAKFontAwesome *icon = [FAKFontAwesome playIconWithSize:20];
+            [cell.imageView setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
         }
         else {
             [cell.textLabel setText:@"History"];
+            FAKFontAwesome *icon = [FAKFontAwesome historyIconWithSize:20];
+            [cell.imageView setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
         }
         
         return cell;
