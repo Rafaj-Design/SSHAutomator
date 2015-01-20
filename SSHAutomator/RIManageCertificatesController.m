@@ -7,6 +7,7 @@
 //
 
 #import "RIManageCertificatesController.h"
+#import "NSObject+CoreData.h"
 #import "RITableViewCell.h"
 #import "RICertificate.h"
 
@@ -64,6 +65,9 @@
             
             break;
         case UITableViewCellEditingStyleDelete: {
+            RICertificate *object = self.data[indexPath.row];
+            [self.coreData.managedObjectContext deleteObject:object];
+            [self.coreData saveContext];
             if (self.requiresReload) {
                 self.requiresReload();
             }

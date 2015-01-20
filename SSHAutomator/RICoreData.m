@@ -162,7 +162,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Certificates" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     [fetchRequest setSortDescriptors:@[sort]];
     
     NSError *error = nil;

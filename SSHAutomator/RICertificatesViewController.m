@@ -78,7 +78,11 @@
 - (void)setup {
     [super setup];
     
+    __weak typeof(self) weakSelf = self;
     _controller = [[RIManageCertificatesController alloc] init];
+    [_controller setRequiresReload:^{
+        [weakSelf reloadData];
+    }];
 }
 
 #pragma mark Table view delegate methods
@@ -93,7 +97,7 @@
             RICertificate *cert = [weakSelf.coreData newCertificate];
             [cert setContent:content];
             [cert setName:fileName];
-            [weakSelf.coreData saveContext];
+            [content.coreData saveContext];
             
             [weakSelf reloadData];
         }];
@@ -112,7 +116,7 @@
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleNone;
+    return UITableViewCellEditingStyleDelete;
 }
 
 

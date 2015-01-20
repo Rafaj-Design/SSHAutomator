@@ -42,6 +42,7 @@
 		156EC6501A6C5015009BB672 /* RIHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC64F1A6C5015009BB672 /* RIHistoryViewController.m */; };
 		156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6531A6C5051009BB672 /* RIHistoryController.m */; };
 		156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156EC6661A6DBD4B009BB672 /* Assets.xcassets */; };
+		156EC6691A6E65FB009BB672 /* uploader-error.html in Resources */ = {isa = PBXBuildFile; fileRef = 156EC6681A6E65FB009BB672 /* uploader-error.html */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -124,6 +125,7 @@
 		156EC6521A6C5051009BB672 /* RIHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIHistoryController.h; sourceTree = "<group>"; };
 		156EC6531A6C5051009BB672 /* RIHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistoryController.m; sourceTree = "<group>"; };
 		156EC6661A6DBD4B009BB672 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		156EC6681A6E65FB009BB672 /* uploader-error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "uploader-error.html"; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -291,6 +293,8 @@
 		156EC6031A693FD0009BB672 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6171A69613F009BB672 /* Console */,
+				156EC6421A6C3178009BB672 /* History */,
 				156EC60F1A694303009BB672 /* Edit task */,
 				156EC6041A694002009BB672 /* RITasksViewController.h */,
 				156EC6051A694002009BB672 /* RITasksViewController.m */,
@@ -355,6 +359,7 @@
 		156EC62D1A6AA774009BB672 /* HTML */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6681A6E65FB009BB672 /* uploader-error.html */,
 				156EC62E1A6AA774009BB672 /* uploader-done.html */,
 				156EC62F1A6AA774009BB672 /* uploader-upload.html */,
 			);
@@ -512,13 +517,11 @@
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				156EC6461A6C383F009BB672 /* Commands */,
-				156EC6421A6C3178009BB672 /* History */,
-				156EC6171A69613F009BB672 /* Console */,
 				156EC5EE1A692502009BB672 /* Certificates */,
 				156EC6031A693FD0009BB672 /* Tasks */,
 				156EC5D21A688F7B009BB672 /* Jobs */,
 				15BC739C1A683B4C00CD8DFA /* Accounts */,
+				156EC6461A6C383F009BB672 /* Commands */,
 				15BC739B1A683B4200CD8DFA /* Basic */,
 			);
 			name = "View controllers";
@@ -726,6 +729,7 @@
 				156EC6311A6AA774009BB672 /* uploader-upload.html in Resources */,
 				156EC6301A6AA774009BB672 /* uploader-done.html in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
+				156EC6691A6E65FB009BB672 /* uploader-error.html in Resources */,
 				156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */,
 				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
 			);

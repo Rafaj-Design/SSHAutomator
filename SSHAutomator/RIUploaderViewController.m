@@ -66,13 +66,19 @@
 #pragma mark Settings
 
 - (void)updateLabel {
-    [_label setText:[NSString stringWithFormat:@"Visit http://%@:8888 in your web browser", [self getIPAddress]]];
+    NSString *ip = [self getIPAddress];
+    if (ip) {
+        [_label setText:[NSString stringWithFormat:@"Visit http://%@:8888 in your web browser.", ip]];
+    }
+    else {
+        [_label setText:@"Please connect to the same WiFi network your computer is on."];
+    }
 }
 
 #pragma mark Initialization
 
 - (NSString *)getIPAddress {
-    NSString *address = @"error";
+    NSString *address = nil;
     struct ifaddrs *interfaces = NULL;
     struct ifaddrs *temp_addr = NULL;
     int success = 0;
@@ -97,6 +103,24 @@
     return address;
 }
 
+- (GCDWebServerDataResponse *)responseForFile:(NSString *)file {
+    NSString *path = [[NSBundle mainBundle] pathForResource:file ofType:@"html"];
+    NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    return [GCDWebServerDataResponse responseWithHTML:html];
+}
+
+- (GCDWebServerDataResponse *)returnDone {
+    return [self responseForFile:@"uploader-done"];
+}
+
+- (GCDWebServerDataResponse *)returnUpload {
+    return [self responseForFile:@"uploader-upload"];
+}
+
+- (GCDWebServerDataResponse *)returnError {
+    return [self responseForFile:@"uploader-error"];
+}
+
 - (void)setupWebServer {
     _reachability = [Reachability reachabilityForLocalWiFi];
     
@@ -104,9 +128,7 @@
     
     __weak typeof(self) weakSelf = self;
     [_webServer addDefaultHandlerForMethod:@"GET" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse *(GCDWebServerRequest *request) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"uploader-upload" ofType:@"html"];
-        NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        return [GCDWebServerDataResponse responseWithHTML:html];
+        return [weakSelf returnUpload];
     }];
     
     [_webServer addHandlerForMethod:@"POST" path:@"/" requestClass:[GCDWebServerMultiPartFormRequest class] processBlock:^GCDWebServerResponse *(GCDWebServerRequest *request) {
@@ -117,29 +139,27 @@
                 if (weakSelf.fileUploaded) {
                     weakSelf.fileUploaded(content, file.fileName);
                 }
-                
-                NSString *path = [[NSBundle mainBundle] pathForResource:@"uploader-done" ofType:@"html"];
-                NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-                return [GCDWebServerDataResponse responseWithHTML:html];
+                return [weakSelf returnDone];
+            }
+            else {
+                return [weakSelf returnError];
             }
         }
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"uploader-upload" ofType:@"html"];
-        NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        return [GCDWebServerDataResponse responseWithHTML:html];
+        return [weakSelf returnUpload];
     }];
     
-    BOOL ok = [_webServer startWithPort:8888 bonjourName:nil];
+    [_webServer startWithPort:8888 bonjourName:nil];
     
     [_reachability setReachableBlock:^void (Reachability * reachability) {
         [weakSelf.webServer startWithPort:8888 bonjourName:nil];
         [weakSelf updateLabel];
     }];
     [_reachability setUnreachableBlock:^void (Reachability * reachability) {
-        
+        [weakSelf updateLabel];
     }];
-    [self updateLabel];
-    
     [_reachability startNotifier];
+    
+    [self updateLabel];
 }
 
 - (void)setup {
