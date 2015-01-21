@@ -974,7 +974,7 @@
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8DE82982-C128-4E90-A941-5001D32DFC4C";
 			};
 			name = Enterprise;
 		};
