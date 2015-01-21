@@ -1,4 +1,5 @@
 PODS:
+  - DLSFTPClient (1.0.5)
   - FontAwesomeKit (2.1.8):
     - FontAwesomeKit/Core
     - FontAwesomeKit/FontAwesome
@@ -28,6 +29,7 @@ PODS:
   - REValidation (0.1.4)
 
 DEPENDENCIES:
+  - DLSFTPClient
   - FontAwesomeKit (~> 2.1.0)
   - GCDWebServer (~> 3.0)
   - GCDWebServer/WebUploader (~> 3.0)
@@ -36,6 +38,7 @@ DEPENDENCIES:
   - RETableViewManager
 
 SPEC CHECKSUMS:
+  DLSFTPClient: f893396f5216487b318194adc0199a0966e812dc
   FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
   GCDWebServer: 285fde9951ab2cd87c2d9d74735fee977a16fe04
   NMSSH: 6075839f1d4415ce55bf5db62fa1178888e12ae5

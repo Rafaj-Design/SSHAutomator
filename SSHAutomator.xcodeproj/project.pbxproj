@@ -48,6 +48,8 @@
 		156EC67B1A6E90BA009BB672 /* RIIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC67A1A6E90BA009BB672 /* RIIconCollectionViewCell.m */; };
 		156EC67F1A6EBF50009BB672 /* RIBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC67E1A6EBF50009BB672 /* RIBrowserViewController.m */; };
 		156EC6831A6EBFFE009BB672 /* RIBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6821A6EBFFE009BB672 /* RIBrowserController.m */; };
+		156EC6871A6FA903009BB672 /* RIBrowserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6861A6FA903009BB672 /* RIBrowserTableViewCell.m */; };
+		156EC68B1A6FBD7C009BB672 /* RIPathLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC68A1A6FBD7C009BB672 /* RIPathLabel.m */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -141,6 +143,10 @@
 		156EC67E1A6EBF50009BB672 /* RIBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIBrowserViewController.m; sourceTree = "<group>"; };
 		156EC6811A6EBFFE009BB672 /* RIBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIBrowserController.h; sourceTree = "<group>"; };
 		156EC6821A6EBFFE009BB672 /* RIBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIBrowserController.m; sourceTree = "<group>"; };
+		156EC6851A6FA903009BB672 /* RIBrowserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIBrowserTableViewCell.h; sourceTree = "<group>"; };
+		156EC6861A6FA903009BB672 /* RIBrowserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIBrowserTableViewCell.m; sourceTree = "<group>"; };
+		156EC6891A6FBD7C009BB672 /* RIPathLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIPathLabel.h; sourceTree = "<group>"; };
+		156EC68A1A6FBD7C009BB672 /* RIPathLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIPathLabel.m; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 		156EC5D61A691103009BB672 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6841A6FA8D1009BB672 /* File browser */,
 				156EC6781A6E90A2009BB672 /* Icon */,
 				156EC5D71A69110B009BB672 /* Basic */,
 			);
@@ -507,6 +514,24 @@
 			name = Browser;
 			sourceTree = "<group>";
 		};
+		156EC6841A6FA8D1009BB672 /* File browser */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6851A6FA903009BB672 /* RIBrowserTableViewCell.h */,
+				156EC6861A6FA903009BB672 /* RIBrowserTableViewCell.m */,
+			);
+			name = "File browser";
+			sourceTree = "<group>";
+		};
+		156EC6881A6FBD64009BB672 /* Path label */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6891A6FBD7C009BB672 /* RIPathLabel.h */,
+				156EC68A1A6FBD7C009BB672 /* RIPathLabel.m */,
+			);
+			name = "Path label";
+			sourceTree = "<group>";
+		};
 		15BC73651A683A9200CD8DFA = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +662,7 @@
 		15BC73A61A683E3900CD8DFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6881A6FBD64009BB672 /* Path label */,
 				156EC6711A6E8D86009BB672 /* Icons colection view */,
 				156EC5D61A691103009BB672 /* Cells */,
 				15BC73A71A683E4800CD8DFA /* Table view */,
@@ -880,11 +906,13 @@
 				156EC5E21A691227009BB672 /* RIJobsController.m in Sources */,
 				156EC67F1A6EBF50009BB672 /* RIBrowserViewController.m in Sources */,
 				156EC6351A6AC0D8009BB672 /* RIEditCertificateViewController.m in Sources */,
+				156EC6871A6FA903009BB672 /* RIBrowserTableViewCell.m in Sources */,
 				156EC6061A694002009BB672 /* RITasksViewController.m in Sources */,
 				156EC6741A6E8DBF009BB672 /* RICollectionView.m in Sources */,
 				156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
 				156EC6381A6BF6CC009BB672 /* RISelectCertificateViewController.m in Sources */,
+				156EC68B1A6FBD7C009BB672 /* RIPathLabel.m in Sources */,
 				156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */,
 				156EC60A1A694065009BB672 /* RITasksController.m in Sources */,
 				156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */,

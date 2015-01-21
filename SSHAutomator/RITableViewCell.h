@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface RITableViewCell : UITableViewCell
+
+- (void)setup;
+- (void)createAllElements;
+
 
 @end

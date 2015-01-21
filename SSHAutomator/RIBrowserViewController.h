@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
 //
 
-#import "RITableViewController.h"
+#import "RIViewController.h"
 
 
 @class RIAccount;
 
-@interface RIBrowserViewController : RITableViewController
+@interface RIBrowserViewController : RIViewController
 
 @property (nonatomic, copy) void (^insertPath)(NSString *path);
 

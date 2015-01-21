@@ -9,25 +9,24 @@
 #import <UIKit/UIKit.h>
 
 
-@class RIAccount;
+@class NMSSHSession, RIAccount, DLSFTPFile;
 
 @interface RIBrowserController : NSObject <UITableViewDataSource>
 
+@property (nonatomic, readonly) NMSSHSession *session;
+
 @property (nonatomic, copy) void (^pathChanged)(NSString *path);
-@property (nonatomic, copy) void (^fileSelected)(NSString *filePath);
 @property (nonatomic, copy) void (^loginFailed)(NSError *error);
+@property (nonatomic, copy) void (^failure)(NSError *error);
 @property (nonatomic, copy) void (^requiresReload)();
 
 @property (nonatomic, strong) RIAccount *account;
 @property (nonatomic, strong) NSString *currentPath;
 
-@property (nonatomic, readonly) NSArray *foldersData;
-@property (nonatomic, readonly) NSArray *filesData;
-
-- (NSDictionary *)fileAtIndexPath:(NSIndexPath *)indexPath;
-- (NSDictionary *)folderAtIndexPath:(NSIndexPath *)indexPath;
+- (DLSFTPFile *)fileAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void)goTo:(NSString *)folder;
+- (void)reloadData;
 
 
 @end

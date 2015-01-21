@@ -7,7 +7,10 @@
 //
 
 #import "RIBrowserViewController.h"
+#import <DLSFTPClient/DLSFTPFile.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
+#import "RIBrowserTableViewCell.h"
+#import "RIPathLabel.h"
 #import "RIBrowserController.h"
 
 
@@ -15,7 +18,11 @@
 
 @property (nonatomic, readonly) RIBrowserController *controller;
 
+@property (nonatomic, readonly) UITableView *tableView;
+
+@property (nonatomic, readonly) RIPathLabel *pathLabel;
 @property (nonatomic, readonly) UIToolbar *bottomToolbar;
+//@property (nonatomic, readonly) UIView *emptyFooter;
 
 @end
 
@@ -32,11 +39,17 @@
     [self.navigationItem setRightBarButtonItem:loading animated:YES];
 }
 
+- (void)createReloadButton {
+    UIBarButtonItem *loading = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadData)];
+    [self.navigationItem setRightBarButtonItem:loading animated:YES];
+}
+
 - (void)createControlButtons {
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(didClickCloseButton:)];
     [self.navigationItem setLeftBarButtonItem:close];
     
-    _bottomToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    _bottomToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 44), self.view.frame.size.width, 44)];
+    [_bottomToolbar setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
     
     FAKFontAwesome *icon = [FAKFontAwesome editIconWithSize:20];
     UIBarButtonItem *insert = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)] style:UIBarButtonItemStyleDone target:self action:@selector(didClickInsertButton:)];
@@ -47,9 +60,46 @@
     UIBarButtonItem *copy = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)] style:UIBarButtonItemStyleDone target:self action:@selector(didClickCopyButton:)];
     
     [_bottomToolbar setItems:@[insert, flexi, copy]];
+    [self.view addSubview:_bottomToolbar];
+}
+
+- (void)createPathLabel {
+    CGRect r = self.view.bounds;
+    
+    r.size.height = 36;
+    _pathLabel = [[RIPathLabel alloc] initWithFrame:r];
+    [_pathLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [_pathLabel setText:@"Loading ..."];
+    [self.view addSubview:_pathLabel];
+}
+
+- (void)createTableView {
+    CGRect r = self.view.bounds;
+    r.origin.y += 36;
+    r.size.height -= (36 + 44);
+    _tableView = [[UITableView alloc] initWithFrame:r style:UITableViewStylePlain];
+    [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [_tableView setDelegate:self];
+    [_tableView setDataSource:_controller];
+    [self.view addSubview:_tableView];
+}
+
+- (void)createAllElements {
+    [super createAllElements];
+    
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    
+    [self createTableView];
+    [self createPathLabel];
+    [self createControlButtons];
 }
 
 #pragma mark Settings
+
+- (void)reloadData {
+    [self createPreloader];
+    [_controller reloadData];
+}
 
 - (void)setAccount:(RIAccount *)account {
     _account = account;
@@ -61,11 +111,15 @@
     _controller = [[RIBrowserController alloc] init];
     [_controller setRequiresReload:^{
         [weakSelf.tableView reloadData];
-        [weakSelf.navigationItem setRightBarButtonItem:nil animated:YES];
+        [weakSelf.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        [weakSelf createReloadButton];
+    }];
+    [_controller setPathChanged:^(NSString *path) {
+        [weakSelf.pathLabel setText:path];
     }];
     [_controller setAccount:_account];
     
-    [self.tableView setDataSource:_controller];
+    [_tableView setDataSource:_controller];
 }
 
 #pragma mark Actions
@@ -90,37 +144,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self createControlButtons];
 }
 
 #pragma mark Table view delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DLSFTPFile *file = [_controller fileAtIndexPath:indexPath];
+    if (file.attributes[NSFileType] == NSFileTypeDirectory) {
         [self createPreloader];
-        
-        NSDictionary *d = [_controller folderAtIndexPath:indexPath];
-        [_controller goTo:d[@"name"]];
+        if ([file.filename isEqualToString:@".."]) {
+            [_controller goTo:@".."];
+        }
+        else {
+            [_controller setCurrentPath:file.path];
+        }
     }
     else {
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        [cell setSelected:!cell.selected animated:YES];
+//        for (RIBrowserItem *i in _controller.filesData) {
+//            [i setSelected:NO];
+//        }
+//        RIBrowserItem *object = [_controller fileAtIndexPath:indexPath];
+//        [object setSelected:!object.isSelected];
+        [tableView reloadData];
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section == 1 && _controller.foldersData.count > 0) {
-        return 44;
-    }
-    return 0;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return (section == 0) ? nil : _bottomToolbar;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    return 44;
+//}
+//
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+//    if (!_emptyFooter) {
+//        _emptyFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, (self.view.frame.size.width), 44)];
+//        [_emptyFooter setBackgroundColor:[UIColor whiteColor]];
+//    }
+//    return (section == 0) ? nil : _emptyFooter;
+//}
 
 
 @end

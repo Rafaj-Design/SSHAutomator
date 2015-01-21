@@ -6,6 +6,12 @@
 // project.
 
 
+// DLSFTPClient
+#define COCOAPODS_POD_AVAILABLE_DLSFTPClient
+#define COCOAPODS_VERSION_MAJOR_DLSFTPClient 1
+#define COCOAPODS_VERSION_MINOR_DLSFTPClient 0
+#define COCOAPODS_VERSION_PATCH_DLSFTPClient 5
+
 // FontAwesomeKit
 #define COCOAPODS_POD_AVAILABLE_FontAwesomeKit
 #define COCOAPODS_VERSION_MAJOR_FontAwesomeKit 2
