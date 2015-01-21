@@ -9,6 +9,7 @@
 #import "RIIconsController.h"
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIIconCollectionViewCell.h"
+#import "RIConfig.h"
 
 
 @interface RIIconsController ()
@@ -66,8 +67,8 @@ NSString *const RIIconsControllerCellIdentifier = @"RIIconsControllerCellIdentif
     if (index > 0) {
         index--;
         NSString *code = _data[index];
-        FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:code size:30];
-        [cell setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(90, 90)]];
+        FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:code size:26];
+        [cell setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(80, 80)]];
     }
     return cell;
 }

@@ -22,7 +22,6 @@
 
 @property (nonatomic, readonly) RIPathLabel *pathLabel;
 @property (nonatomic, readonly) UIToolbar *bottomToolbar;
-//@property (nonatomic, readonly) UIView *emptyFooter;
 
 @end
 
@@ -101,6 +100,11 @@
     [_controller reloadData];
 }
 
+- (void)showError:(NSError *)error {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alert show];
+}
+
 - (void)setAccount:(RIAccount *)account {
     _account = account;
     
@@ -117,6 +121,13 @@
     [_controller setPathChanged:^(NSString *path) {
         [weakSelf.pathLabel setText:path];
     }];
+    [_controller setLoginFailed:^(NSError *error) {
+        [weakSelf showError:error];
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [_controller setFailure:^(NSError *error) {
+        [weakSelf showError:error];
+    }];
     [_controller setAccount:_account];
     
     [_tableView setDataSource:_controller];
@@ -130,13 +141,13 @@
 
 - (void)didClickInsertButton:(UIBarButtonItem *)sender {
     if (_insertPath) {
-        _insertPath(_controller.currentPath);
+        _insertPath(_pathLabel.text);
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didClickCopyButton:(UIBarButtonItem *)sender {
-    [[UIPasteboard generalPasteboard] setString:_controller.currentPath];
+    [[UIPasteboard generalPasteboard] setString:_pathLabel.text];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -162,26 +173,10 @@
         }
     }
     else {
-//        for (RIBrowserItem *i in _controller.filesData) {
-//            [i setSelected:NO];
-//        }
-//        RIBrowserItem *object = [_controller fileAtIndexPath:indexPath];
-//        [object setSelected:!object.isSelected];
+        [_pathLabel setText:file.path];
         [tableView reloadData];
     }
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-//    return 44;
-//}
-//
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-//    if (!_emptyFooter) {
-//        _emptyFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, (self.view.frame.size.width), 44)];
-//        [_emptyFooter setBackgroundColor:[UIColor whiteColor]];
-//    }
-//    return (section == 0) ? nil : _emptyFooter;
-//}
 
 
 @end

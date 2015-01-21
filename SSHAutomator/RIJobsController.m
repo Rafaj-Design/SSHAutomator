@@ -10,6 +10,7 @@
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RITableView.h"
 #import "RITableViewCell.h"
+#import "RIConfig.h"
 #import "NSObject+CoreData.h"
 
 
@@ -68,7 +69,8 @@
     
     UIImage *img = nil;
     if (object.icon) {
-        FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:object.icon size:20];
+        FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:object.icon size:18];
+        [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
         img = [UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(20, 20)];
     }
     [cell.imageView setImage:img];

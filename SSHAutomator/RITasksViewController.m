@@ -7,6 +7,7 @@
 //
 
 #import "RITasksViewController.h"
+#import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIEditTaskViewController.h"
 #import "RITasksViewController.h"
 #import "RIConsoleViewController.h"

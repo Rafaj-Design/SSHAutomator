@@ -152,6 +152,7 @@
     
     __typeof(self) __weak weakSelf = self;
     DLSFTPClientSuccessBlock successBlock = ^{
+        [weakSelf pathDidChange];
         [weakSelf reloadData];
     };
     DLSFTPClientFailureBlock failureBlock = ^(NSError *error) {

@@ -25,7 +25,7 @@
 }
 
 + (UIColor *)lightMainColor {
-    return [UIColor colorWithRed:(74.0f / 255.0f) green:(166.0f / 255.0f) blue:(230.0f / 255.0f) alpha:1];
+    return [UIColor colorWithRed:(154.0f / 255.0f) green:(208.0f / 255.0f) blue:(156.0f / 255.0f) alpha:1];
 }
 
 + (UIColor *)textColor {
@@ -45,7 +45,7 @@
 }
 
 + (UIColor *)dangerColor {
-    return [UIColor colorWithRed:(235.0f / 255.0f) green:(70.0f / 255.0f) blue:(50.0f / 255.0f) alpha:1];
+    return [UIColor colorWithRed:(254.0f / 255.0f) green:(205.0f / 255.0f) blue:(190.0f / 255.0f) alpha:1];
 }
 
 

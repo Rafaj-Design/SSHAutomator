@@ -50,6 +50,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:20]}];
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:16]} forState:UIControlStateNormal];
     [[UITabBar appearance] setTintColor:[RIConfig mainColor]];
+    [[UITableViewCell appearance] setTintColor:[RIConfig mainColor]];
     
     FAKFontAwesome *icon = [FAKFontAwesome databaseIconWithSize:20];
     UINavigationController *accountsNavigationController = [self tabBarElementWithIcon:icon andController:[[RIAccountsViewController alloc] init]];

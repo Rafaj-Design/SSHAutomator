@@ -12,6 +12,7 @@
 #import "RIIconsViewController.h"
 #import "RIIconsController.h"
 #import "RIJob.h"
+#import "RIConfig.h"
 #import "NSObject+CoreData.h"
 
 
@@ -39,6 +40,7 @@
     if (_temporaryIcon) {
         //[_icon setValue:@""];
         FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:_temporaryIcon size:20];
+        [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
         [_icon setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(50, 50)]];
         [_icon reloadRowWithAnimation:UITableViewRowAnimationNone];
     }

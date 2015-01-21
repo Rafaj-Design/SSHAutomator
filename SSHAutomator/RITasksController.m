@@ -10,12 +10,16 @@
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RITableView.h"
 #import "RITableViewCell.h"
+#import "RIConfig.h"
 #import "NSObject+CoreData.h"
 
 
 @interface RITasksController ()
 
 @property (nonatomic, readonly) NSArray *data;
+
+@property (nonatomic, readonly) UIImage *disabledImage;
+@property (nonatomic, readonly) UIImage *enabledImage;
 
 @end
 
@@ -46,6 +50,14 @@
 }
 
 - (void)setJob:(RIJob *)job {
+    FAKFontAwesome *icon = [FAKFontAwesome circleIconWithSize:14];
+    [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig lightMainColor]];
+    _enabledImage = [icon imageWithSize:CGSizeMake(26, 26)];
+    
+    icon = [FAKFontAwesome circleIconWithSize:14];
+    [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig dangerColor]];
+    _disabledImage = [icon imageWithSize:CGSizeMake(26, 26)];
+    
     _job = job;
     [self reloadData];
 }
@@ -84,11 +96,13 @@
         if (indexPath.row == 0) {
             [cell.textLabel setText:@"Run"];
             FAKFontAwesome *icon = [FAKFontAwesome playIconWithSize:20];
+            [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
             [cell.imageView setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
         }
         else {
             [cell.textLabel setText:@"History"];
             FAKFontAwesome *icon = [FAKFontAwesome historyIconWithSize:20];
+            [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
             [cell.imageView setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
         }
         
@@ -106,6 +120,12 @@
         [cell.textLabel setText:object.command];
         
         [cell.textLabel setTextColor:(object.enabled ? [UIColor darkTextColor] : [UIColor grayColor])];
+        if (object.enabled) {
+            [cell.imageView setImage:_enabledImage];
+        }
+        else {
+            [cell.imageView setImage:_disabledImage];
+        }
         
         return cell;
     }
