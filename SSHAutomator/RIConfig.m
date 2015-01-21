@@ -21,7 +21,7 @@
 #pragma mark Colors
 
 + (UIColor *)mainColor {
-    return [UIColor colorWithRed:(32.0f / 255.0f) green:(131.0f / 255.0f) blue:(203.0f / 255.0f) alpha:1];
+    return [UIColor colorWithRed:(100.0f / 255.0f) green:(161.0f / 255.0f) blue:(13.0f / 255.0f) alpha:1];
 }
 
 + (UIColor *)lightMainColor {

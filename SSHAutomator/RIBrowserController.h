@@ -16,6 +16,7 @@
 @property (nonatomic, readonly) NMSSHSession *session;
 
 @property (nonatomic, copy) void (^pathChanged)(NSString *path);
+@property (nonatomic, copy) void (^pathSelected)(NSString *path);
 @property (nonatomic, copy) void (^loginFailed)(NSError *error);
 @property (nonatomic, copy) void (^failure)(NSError *error);
 @property (nonatomic, copy) void (^requiresReload)();

@@ -22,6 +22,19 @@
 @implementation RIAppDelegate
 
 
+#pragma mark Helper methods
+
+- (UINavigationController *)tabBarElementWithIcon:(FAKFontAwesome *)icon andController:(UIViewController *)controller {
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:controller];
+    [icon addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor]];
+    [nc.tabBarItem setImage:[[icon imageWithSize:CGSizeMake(22, 22)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
+    [nc.tabBarItem setSelectedImage:[[icon imageWithSize:CGSizeMake(22, 22)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    return nc;
+}
+
+#pragma mark Application delegate methods
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -35,16 +48,14 @@
     [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];
     [[UINavigationBar appearance] setTintColor:[RIConfig lightTextColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:20]}];
-    
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:16]} forState:UIControlStateNormal];
+    [[UITabBar appearance] setTintColor:[RIConfig mainColor]];
     
-    UINavigationController *accountsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[RIAccountsViewController alloc] init]];
     FAKFontAwesome *icon = [FAKFontAwesome databaseIconWithSize:20];
-    [accountsNavigationController.tabBarItem setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
+    UINavigationController *accountsNavigationController = [self tabBarElementWithIcon:icon andController:[[RIAccountsViewController alloc] init]];
     
-    UINavigationController *commandsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[RILinuxCommandsViewController alloc] init]];
     icon = [FAKFontAwesome terminalIconWithSize:20];
-    [commandsNavigationController.tabBarItem setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
+    UINavigationController *commandsNavigationController = [self tabBarElementWithIcon:icon andController:[[RILinuxCommandsViewController alloc] init]];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     [tabBarController setViewControllers:@[accountsNavigationController, commandsNavigationController]];
