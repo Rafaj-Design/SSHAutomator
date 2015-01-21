@@ -7,31 +7,65 @@
 //
 
 #import "RIIconsViewController.h"
+#import "RICollectionView.h"
+#import "RIIconsController.h"
+#import "RIIconCollectionViewCell.h"
 
-@interface RIIconsViewController ()
+
+@interface RIIconsViewController () <UICollectionViewDelegate>
+
+@property (nonatomic, readonly) RICollectionView *collectionView;
+@property (nonatomic, readonly) RIIconsController *controller;
 
 @end
 
+
 @implementation RIIconsViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+#pragma mark Creating elements
+
+- (void)createCollectionView {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    [layout setSectionInset:UIEdgeInsetsMake(16, 10, 16, 10)];
+    
+    _collectionView = [[RICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    [_collectionView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [_collectionView setDataSource:_controller];
+    [_collectionView setDelegate:self];
+    
+    [_collectionView registerClass:[RIIconCollectionViewCell class] forCellWithReuseIdentifier:RIIconsControllerCellIdentifier];
+    [_collectionView setBackgroundColor:[UIColor clearColor]];
+    
+    [self.view addSubview:_collectionView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)createAllElements {
+    [super createAllElements];
+    
+    [self createCollectionView];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark Initialization
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setup {
+    [super setup];
+    
+    [self setTitle:@"Select icon"];
+    
+    _controller = [[RIIconsController alloc] init];
 }
-*/
+
+#pragma mark Collection view data source methods
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    if (_didSelectIcon) {
+        _didSelectIcon([_controller codeForIconAtIndexPath:indexPath]);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

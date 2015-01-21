@@ -20,7 +20,7 @@
 #pragma mark Creating elements
 
 - (void)createAllElements {
-    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
 }
 
 #pragma mark View lifecycle

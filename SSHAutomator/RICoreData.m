@@ -113,6 +113,7 @@
 
 - (RIHistory *)newHistoryForJob:(RIJob *)job {
     RIHistory *object = [NSEntityDescription insertNewObjectForEntityForName:@"History" inManagedObjectContext:self.managedObjectContext];
+    [object setDate:[NSDate date]];
     [object setJob:job];
     return object;
 }

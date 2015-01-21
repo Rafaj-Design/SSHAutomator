@@ -25,6 +25,7 @@
 
 - (void)createConsoleView {
     _textView = [[UITextView alloc] initWithFrame:self.view.bounds];
+    [_textView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_textView setEditable:NO];
     [_textView setFont:[UIFont fontWithName:@"Courier" size:10]];
     [_textView setTextColor:[UIColor greenColor]];
@@ -50,10 +51,21 @@
 - (void)executeJob:(RIJob *)job {
     __typeof(self) __weak weakSelf = self;
     RIRunJob *executor = [[RIRunJob alloc] init];
+    
+    UIActivityIndicatorView *ai = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [ai startAnimating];
+    UIBarButtonItem *loading = [[UIBarButtonItem alloc] initWithCustomView:ai];
+    [self.navigationItem setRightBarButtonItem:loading animated:YES];
+    
     [executor setSuccess:^(NSString *log, NSTimeInterval connectionTime, NSTimeInterval executionTime) {
         [weakSelf.textView setText:log];
+        [weakSelf.navigationItem setRightBarButtonItem:nil animated:YES];
     }];
     [executor setFailure:^(NSString *log, NSTimeInterval connectionTime, NSTimeInterval executionTime) {
+        [weakSelf.textView setText:log];
+        [weakSelf.navigationItem setRightBarButtonItem:nil animated:YES];
+    }];
+    [executor setLogUpdated:^(NSString *log) {
         [weakSelf.textView setText:log];
     }];
     [executor run:job];

@@ -38,12 +38,12 @@
     
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: [RIConfig lightTextColor], NSFontAttributeName: [RIConfig systemFontOfSize:16]} forState:UIControlStateNormal];
     
-    FAKFontAwesome *icon = [FAKFontAwesome databaseIconWithSize:20];
     UINavigationController *accountsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[RIAccountsViewController alloc] init]];
+    FAKFontAwesome *icon = [FAKFontAwesome databaseIconWithSize:20];
     [accountsNavigationController.tabBarItem setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
     
-    icon = [FAKFontAwesome terminalIconWithSize:20];
     UINavigationController *commandsNavigationController = [[UINavigationController alloc] initWithRootViewController:[[RILinuxCommandsViewController alloc] init]];
+    icon = [FAKFontAwesome terminalIconWithSize:20];
     [commandsNavigationController.tabBarItem setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];

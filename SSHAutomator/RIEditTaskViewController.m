@@ -8,6 +8,7 @@
 
 #import "RIEditTaskViewController.h"
 #import <RETableViewManager/RETableViewManager.h>
+#import "RIBrowserViewController.h"
 #import "RITask.h"
 #import "NSObject+CoreData.h"
 
@@ -45,8 +46,9 @@
     UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
     [self.navigationItem setLeftBarButtonItem:cancel];
     
+    UIBarButtonItem *browser = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(browsePressed:)];
     UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(savePressed:)];
-    [self.navigationItem setRightBarButtonItem:save];
+    [self.navigationItem setRightBarButtonItems:@[save, browser]];
 }
 
 - (void)createTableElements {
@@ -58,9 +60,10 @@
     _taskEnabled = [REBoolItem itemWithTitle:@"Enabled" value:YES];
     [section addItem:_taskEnabled];
     
-    _taskCommand = [RELongTextItem itemWithTitle:nil value:nil placeholder:@"Command, for example: \"ls -a ./\""];
+    _taskCommand = [RELongTextItem itemWithTitle:nil value:nil placeholder:@"Commands, for example: \n\ncd /var/www/html\npwd\nls -a ./"];
     [_taskCommand setValidators:@[@"presence"]];
     [_taskCommand setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    [_taskCommand setAutocorrectionType:UITextAutocorrectionTypeNo];
     [_taskCommand setCellHeight:250];
     [section addItem:_taskCommand];
 
@@ -81,6 +84,19 @@
 }
 
 #pragma mark Actions
+
+- (void)browsePressed:(UIBarButtonItem *)sender {
+    __typeof(self) __weak weakSelf = self;
+    RIBrowserViewController *c = [[RIBrowserViewController alloc] init];
+    [c setInsertPath:^(NSString *path) {
+        [weakSelf.taskCommand setValue:[weakSelf.taskCommand.value stringByAppendingString:path]];
+        [weakSelf.taskCommand reloadRowWithAnimation:UITableViewRowAnimationNone];
+    }];
+    [c setAccount:_job.account];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:c];
+    [nc.navigationController setToolbarHidden:NO];
+    [self presentViewController:nc animated:YES completion:nil];
+}
 
 - (void)closePressed:(UIBarButtonItem *)sender {
     if (_dismissController) {

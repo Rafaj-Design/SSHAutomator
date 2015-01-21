@@ -8,6 +8,9 @@
 
 #import "RIEditJobViewController.h"
 #import <RETableViewManager/RETableViewManager.h>
+#import <FontAwesomeKit/FAKFontAwesome.h>
+#import "RIIconsViewController.h"
+#import "RIIconsController.h"
 #import "RIJob.h"
 #import "NSObject+CoreData.h"
 
@@ -16,7 +19,10 @@
 
 @property (nonatomic, readonly) RETableViewManager *manager;
 
+@property (nonatomic, readonly) RETableViewItem *icon;
 @property (nonatomic, readonly) RETextItem *jobName;
+
+@property (nonatomic) NSString *temporaryIcon;
 
 @end
 
@@ -30,10 +36,21 @@
     if (_job) {
         [_jobName setValue:_job.name];
     }
+    if (_temporaryIcon) {
+        //[_icon setValue:@""];
+        FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:_temporaryIcon size:20];
+        [_icon setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(50, 50)]];
+        [_icon reloadRowWithAnimation:UITableViewRowAnimationNone];
+    }
+    else {
+        //[_icon setValue:@"No icon"];
+        [_icon setImage:nil];
+    }
 }
 
 - (void)setJob:(RIJob *)job {
     _job = job;
+    _temporaryIcon = _job.icon;
     [self assignValues];
 }
 
@@ -48,12 +65,26 @@
 }
 
 - (void)createTableElements {
-    //__typeof(self) __weak weakSelf = self;
+    __typeof(self) __weak weakSelf = self;
     
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
     
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Job details"];
     [_manager addSection:section];
+    
+    _icon = [RETableViewItem itemWithTitle:@"Icon" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+        [item deselectRowAnimated:YES];
+        
+        // Present options
+        RIIconsViewController *c = [[RIIconsViewController alloc] init];
+        [c setDidSelectIcon:^(NSString *iconCode) {
+            [weakSelf setTemporaryIcon:iconCode];
+            [weakSelf assignValues];
+            [weakSelf.icon reloadRowWithAnimation:UITableViewRowAnimationNone];
+        }];
+        [weakSelf.navigationController pushViewController:c animated:YES];
+    }];
+    [section addItem:_icon];
     
     _jobName = [RETextItem itemWithTitle:@"Name" value:nil placeholder:@"Account name"];
     [_jobName setValidators:@[@"presence", @"length(1, 999)"]];
@@ -74,6 +105,12 @@
     [super viewDidLoad];
     
     [self createAllElements];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self assignValues];
 }
 
 #pragma mark Actions
@@ -99,6 +136,7 @@
         if (!_job) {
             _job = [self.coreData newJobForAccount:_account];
         }
+        [_job setIcon:_temporaryIcon];
         [_job setName:_jobName.value];
         [self.coreData saveContext];
         if (_dismissController) {

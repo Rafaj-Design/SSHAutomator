@@ -43,6 +43,11 @@
 		156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6531A6C5051009BB672 /* RIHistoryController.m */; };
 		156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156EC6661A6DBD4B009BB672 /* Assets.xcassets */; };
 		156EC6691A6E65FB009BB672 /* uploader-error.html in Resources */ = {isa = PBXBuildFile; fileRef = 156EC6681A6E65FB009BB672 /* uploader-error.html */; };
+		156EC6741A6E8DBF009BB672 /* RICollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6731A6E8DBF009BB672 /* RICollectionView.m */; };
+		156EC6771A6E8E53009BB672 /* RIIconsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6761A6E8E53009BB672 /* RIIconsController.m */; };
+		156EC67B1A6E90BA009BB672 /* RIIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC67A1A6E90BA009BB672 /* RIIconCollectionViewCell.m */; };
+		156EC67F1A6EBF50009BB672 /* RIBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC67E1A6EBF50009BB672 /* RIBrowserViewController.m */; };
+		156EC6831A6EBFFE009BB672 /* RIBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC6821A6EBFFE009BB672 /* RIBrowserController.m */; };
 		15BC73741A683A9300CD8DFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73731A683A9300CD8DFA /* main.m */; };
 		15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73761A683A9300CD8DFA /* RIAppDelegate.m */; };
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
@@ -126,6 +131,16 @@
 		156EC6531A6C5051009BB672 /* RIHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIHistoryController.m; sourceTree = "<group>"; };
 		156EC6661A6DBD4B009BB672 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156EC6681A6E65FB009BB672 /* uploader-error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "uploader-error.html"; sourceTree = "<group>"; };
+		156EC6721A6E8DBF009BB672 /* RICollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICollectionView.h; sourceTree = "<group>"; };
+		156EC6731A6E8DBF009BB672 /* RICollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICollectionView.m; sourceTree = "<group>"; };
+		156EC6751A6E8E53009BB672 /* RIIconsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconsController.h; sourceTree = "<group>"; };
+		156EC6761A6E8E53009BB672 /* RIIconsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconsController.m; sourceTree = "<group>"; };
+		156EC6791A6E90BA009BB672 /* RIIconCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconCollectionViewCell.h; sourceTree = "<group>"; };
+		156EC67A1A6E90BA009BB672 /* RIIconCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconCollectionViewCell.m; sourceTree = "<group>"; };
+		156EC67D1A6EBF50009BB672 /* RIBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIBrowserViewController.h; sourceTree = "<group>"; };
+		156EC67E1A6EBF50009BB672 /* RIBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIBrowserViewController.m; sourceTree = "<group>"; };
+		156EC6811A6EBFFE009BB672 /* RIBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIBrowserController.h; sourceTree = "<group>"; };
+		156EC6821A6EBFFE009BB672 /* RIBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIBrowserController.m; sourceTree = "<group>"; };
 		15BC736E1A683A9300CD8DFA /* SSHAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSHAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BC73721A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15BC73731A683A9300CD8DFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -199,8 +214,8 @@
 		156EC5D21A688F7B009BB672 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
-				156EC5FF1A6939E9009BB672 /* Edit job */,
 				15BC73B91A685BFB00CD8DFA /* Icons */,
+				156EC5FF1A6939E9009BB672 /* Edit job */,
 				156EC5D31A688FA8009BB672 /* RIJobsViewController.h */,
 				156EC5D41A688FA8009BB672 /* RIJobsViewController.m */,
 			);
@@ -210,6 +225,7 @@
 		156EC5D61A691103009BB672 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6781A6E90A2009BB672 /* Icon */,
 				156EC5D71A69110B009BB672 /* Basic */,
 			);
 			name = Cells;
@@ -446,6 +462,51 @@
 			name = History;
 			sourceTree = "<group>";
 		};
+		156EC6701A6E8D70009BB672 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6751A6E8E53009BB672 /* RIIconsController.h */,
+				156EC6761A6E8E53009BB672 /* RIIconsController.m */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		156EC6711A6E8D86009BB672 /* Icons colection view */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6721A6E8DBF009BB672 /* RICollectionView.h */,
+				156EC6731A6E8DBF009BB672 /* RICollectionView.m */,
+			);
+			name = "Icons colection view";
+			sourceTree = "<group>";
+		};
+		156EC6781A6E90A2009BB672 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6791A6E90BA009BB672 /* RIIconCollectionViewCell.h */,
+				156EC67A1A6E90BA009BB672 /* RIIconCollectionViewCell.m */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		156EC67C1A6EBF21009BB672 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				156EC67D1A6EBF50009BB672 /* RIBrowserViewController.h */,
+				156EC67E1A6EBF50009BB672 /* RIBrowserViewController.m */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
+		156EC6801A6EBFCD009BB672 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				156EC6811A6EBFFE009BB672 /* RIBrowserController.h */,
+				156EC6821A6EBFFE009BB672 /* RIBrowserController.m */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
 		15BC73651A683A9200CD8DFA = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +578,7 @@
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				156EC67C1A6EBF21009BB672 /* Browser */,
 				156EC5EE1A692502009BB672 /* Certificates */,
 				156EC6031A693FD0009BB672 /* Tasks */,
 				156EC5D21A688F7B009BB672 /* Jobs */,
@@ -551,6 +613,8 @@
 		15BC73A01A683BB800CD8DFA /* Data controllers */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6701A6E8D70009BB672 /* Icons */,
+				156EC6801A6EBFCD009BB672 /* Browser */,
 				156EC6511A6C503F009BB672 /* History */,
 				156EC64A1A6C3892009BB672 /* Commands */,
 				156EC5F21A692595009BB672 /* Certificates */,
@@ -573,6 +637,7 @@
 		15BC73A61A683E3900CD8DFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				156EC6711A6E8D86009BB672 /* Icons colection view */,
 				156EC5D61A691103009BB672 /* Cells */,
 				15BC73A71A683E4800CD8DFA /* Table view */,
 			);
@@ -699,6 +764,7 @@
 				TargetAttributes = {
 					15BC736D1A683A9300CD8DFA = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = BZCFE4ZBF8;
 					};
 				};
 			};
@@ -805,14 +871,17 @@
 				152FFB6F1A68777900F87169 /* RITask.m in Sources */,
 				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
 				156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */,
+				156EC6831A6EBFFE009BB672 /* RIBrowserController.m in Sources */,
 				156EC61A1A69615E009BB672 /* RIConsoleViewController.m in Sources */,
 				156EC62A1A6AA71F009BB672 /* RIAccount.m in Sources */,
 				156EC62C1A6AA71F009BB672 /* RIJob.m in Sources */,
 				156EC64D1A6C38C2009BB672 /* RICommandsController.m in Sources */,
 				156EC6021A693A2B009BB672 /* RIEditJobViewController.m in Sources */,
 				156EC5E21A691227009BB672 /* RIJobsController.m in Sources */,
+				156EC67F1A6EBF50009BB672 /* RIBrowserViewController.m in Sources */,
 				156EC6351A6AC0D8009BB672 /* RIEditCertificateViewController.m in Sources */,
 				156EC6061A694002009BB672 /* RITasksViewController.m in Sources */,
+				156EC6741A6E8DBF009BB672 /* RICollectionView.m in Sources */,
 				156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
 				156EC6381A6BF6CC009BB672 /* RISelectCertificateViewController.m in Sources */,
@@ -827,7 +896,9 @@
 				156EC61E1A696BC3009BB672 /* RIUploaderViewController.m in Sources */,
 				15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */,
 				156EC5E61A691252009BB672 /* RIJobsTableView.m in Sources */,
+				156EC67B1A6E90BA009BB672 /* RIIconCollectionViewCell.m in Sources */,
 				15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */,
+				156EC6771A6E8E53009BB672 /* RIIconsController.m in Sources */,
 				156EC6491A6C3867009BB672 /* RILinuxCommandsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,7 +958,8 @@
 			baseConfigurationReference = 62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fuerte Int Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
@@ -902,7 +974,7 @@
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8DE82982-C128-4E90-A941-5001D32DFC4C";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Enterprise;
 		};
@@ -989,6 +1061,7 @@
 			baseConfigurationReference = DF2DA2B31CCC993EFA094AF9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1004,6 +1077,7 @@
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1012,6 +1086,8 @@
 			baseConfigurationReference = 62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
@@ -1026,6 +1102,7 @@
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

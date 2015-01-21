@@ -7,6 +7,7 @@
 //
 
 #import "RIJobsController.h"
+#import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RITableView.h"
 #import "RITableViewCell.h"
 #import "NSObject+CoreData.h"
@@ -64,6 +65,13 @@
     
     RIJob *object = _data[indexPath.row];
     [cell.textLabel setText:object.name];
+    
+    UIImage *img = nil;
+    if (object.icon) {
+        FAKFontAwesome *icon = [FAKFontAwesome iconWithCode:object.icon size:20];
+        img = [UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(20, 20)];
+    }
+    [cell.imageView setImage:img];
     
     return cell;
 }

@@ -92,6 +92,7 @@
     _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:@"my.example-host.com"];
     [_serverHost setValidators:@[@"presence"]];
     [_serverHost setKeyboardType:UIKeyboardTypeURL];
+    [_serverHost setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_serverHost];
     
     _serverPort = [RENumberItem itemWithTitle:@"Port" value:@"22" placeholder:@"22" format:@"XXXXXXXX"];
@@ -101,6 +102,7 @@
     _serverUser = [RETextItem itemWithTitle:@"User" value:nil placeholder:@"ec2-user"];
     [_serverUser setValidators:@[@"presence"]];
     [_serverUser setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    [_serverUser setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_serverUser];
     
     _serverPassword = [RETextItem itemWithTitle:@"Password" value:nil placeholder:@"password"];

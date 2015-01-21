@@ -11,7 +11,7 @@
 #import "NSObject+CoreData.h"
 
 
-@interface RIRunJob () <NMSSHSessionDelegate>
+@interface RIRunJob () <NMSSHSessionDelegate, NMSSHChannelDelegate>
 
 @property (nonatomic, readonly) NMSSHSession *session;
 
@@ -50,49 +50,49 @@
         
         _log = [_log stringByAppendingFormat:@"%@: %@\n", dateString, log];
         
-        [self logUpdated];
+        [self doLogUpdated];
     }
 }
 
 #pragma mark Blocks
 
 - (void)doLogUpdated {
-    if (_logUpdated) {
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        if (_logUpdated) {
             _logUpdated(_log);
-        });
-    }
+        }
+    });
 }
 
 - (void)doSuccess {
-    if (_success) {
-        _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
-        [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
-        
-        [self removeTemporaryKeyFile];
-        
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        if (_success) {
+            _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
+            [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
+            
+            [self removeTemporaryKeyFile];
+            
             _success(_log, _connectionTime, _executionTime);
-        });
-    }
+        }
+    });
 }
 
 - (void)doFailure {
-    if (_failure) {
-        _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
-        [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
-        
-        [self removeTemporaryKeyFile];
-        
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        if (_failure) {
+            _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
+            [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
+            
+            [self removeTemporaryKeyFile];
+            
             RIHistory *history = [self.coreData newHistoryForJob:_job];
             [history setDate:[NSDate date]];
             [history setLog:_log];
             [self.coreData saveContext];
             
             _failure(_log, _connectionTime, _executionTime);
-        });
-    }
+        }
+    });
 }
 
 #pragma mark Settings
@@ -118,7 +118,7 @@
         _startDate = [NSDate date];
         
         [self log:@"Session started"];
-        [self log:[NSString stringWithFormat:@"Connecting to: %@@%@:%@", _account.user, _account.host, _account.port]];
+        [self log:[NSString stringWithFormat:@"Connecting to: %@@%@ port %@", _account.user, _account.host, _account.port]];
         _session = [NMSSHSession connectToHost:_account.host port:_account.port.intValue withUsername:_account.user];
         [_session setDelegate:self];
         if (_session.isConnected) {
@@ -135,42 +135,62 @@
             }
             if (_session.isAuthorized) {
                 [self log:@"Authentication succeeded"];
-                NSString *command = @"";
-                for (RITask *task in _tasks) {
-                    command = [command stringByAppendingFormat:@"%@\n", task.command];
-                }
-                NSError *error = nil;
-                [self log:command];
-                NSString *response = [_session.channel execute:command error:&error];
-                if (!error) {
-                    [self log:response];
-                    [self log:@"Job succeeded"];
-                    
-                    [self doSuccess];
+                
+                NSError *shellError = nil;
+                [_session.channel startShell:&shellError];
+                [_session.channel setDelegate:self];
+                [_session.channel setRequestPty:YES];
+                if(!shellError) {
+                    [self log:@"Started Shell"];
+                    [self log:nil];
+                    [self log:nil];
+                    BOOL ok = YES;
+                    for (RITask *task in _tasks) {
+                        if (task.enabled) {
+                            NSError *err = nil;
+                            [self log:task.command];
+                            NSString *response = [_session.channel execute:[NSString stringWithFormat:@"%@\n", task.command] error:&err];
+                            if (response && response.length > 0) [self log:response];
+                            if (err) {
+                                ok = NO;
+                                [self log:err.localizedDescription];
+                                break;
+                            }
+                            [self log:nil];
+                        }
+                    }
+                    if (ok) {
+                        //[_session.channel closeShell];
+                        [self log:@"Job succeeded"];
+                        [self doSuccess];
+                    }
+                    else {
+                        [self log:@"Job failed"];
+                        [self doFailure];
+                    }
                 }
                 else {
-                    [self log:error.localizedDescription];
+                    [self log:shellError.localizedDescription];
                     [self log:@"Job failed"];
                     [self doFailure];
                 }
+                
                 [self log:nil];
                 
                 _logUpdated = nil;
                 
                 dispatch_async(dispatch_get_main_queue(), ^(void) {
                     RIHistory *history = [self.coreData newHistoryForJob:_job];
-                    [history setCommand:command];
                     [history setLog:_log];
                     [self.coreData saveContext];
                 });
-                return;
             }
             else {
                 _logUpdated = nil;
                 [self log:@"Authentication failed"];
                 [self doFailure];
             }
-            [_session disconnect];
+            //[_session disconnect];
         }
         else {
             _logUpdated = nil;
@@ -178,6 +198,16 @@
             [self doFailure];
         }
     });
+}
+
+#pragma mark Channel delegate methods
+
+- (void)channel:(NMSSHChannel *)channel didReadData:(NSString *)message {
+    [self log:message];
+}
+
+- (void)channel:(NMSSHChannel *)channel didReadError:(NSString *)error {
+    [self log:error];
 }
 
 #pragma mark Session delegate methods

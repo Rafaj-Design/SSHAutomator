@@ -10,4 +10,7 @@
 
 @interface RITableViewController : UITableViewController
 
+- (void)setup;
+
+
 @end

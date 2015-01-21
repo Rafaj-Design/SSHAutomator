@@ -8,6 +8,10 @@
 
 #import "RIViewController.h"
 
+
 @interface RIIconsViewController : RIViewController
+
+@property (nonatomic, copy) void (^didSelectIcon)(NSString *code);
+
 
 @end

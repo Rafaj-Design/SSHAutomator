@@ -56,7 +56,6 @@
 - (void)createAllElements {
     [super createAllElements];
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self setTitle:@"Upload"];
     
     [self createUrlLabel];
