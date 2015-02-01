@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
+		1563C4B11A7E8C8400BE65EB /* WBA in Resources */ = {isa = PBXBuildFile; fileRef = 1563C4B01A7E8C8400BE65EB /* WBA */; };
+		1563C4B31A7E8F3000BE65EB /* WellBakedApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1563C42C1A7E4E2500BE65EB /* WellBakedApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1563C4B51A7E8F5300BE65EB /* WellBakedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1563C42C1A7E4E2500BE65EB /* WellBakedApp.framework */; };
+		1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
 		156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D91A691121009BB672 /* RITableViewCell.m */; };
@@ -55,7 +59,6 @@
 		15BC737A1A683A9300CD8DFA /* SSHAutomator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */; };
 		15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC737C1A683A9300CD8DFA /* RIViewController.m */; };
 		15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73811A683A9300CD8DFA /* Images.xcassets */; };
-		15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		15BC739F1A683B7D00CD8DFA /* RIAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */; };
 		15BC73A51A683BE400CD8DFA /* RIAccountsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73A41A683BE400CD8DFA /* RIAccountsController.m */; };
 		15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73A91A683F2200CD8DFA /* RITableView.m */; };
@@ -66,11 +69,27 @@
 		BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FEF6B7B0105015289E10E7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1563C4B41A7E8F3000BE65EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1563C4B31A7E8F3000BE65EB /* WellBakedApp.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		152FFB5D1A68739300F87169 /* NSObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreData.h"; sourceTree = "<group>"; };
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
 		152FFB6E1A68777900F87169 /* RITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITask.m; sourceTree = "<group>"; };
+		1563C42C1A7E4E2500BE65EB /* WellBakedApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WellBakedApp.framework; path = ../WBAFramework/Product/WellBakedApp.framework; sourceTree = "<group>"; };
+		1563C4B01A7E8C8400BE65EB /* WBA */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WBA; sourceTree = SOURCE_ROOT; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
@@ -185,6 +204,7 @@
 			files = (
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
+				1563C4B51A7E8F5300BE65EB /* WellBakedApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +590,7 @@
 		15BC73711A683A9300CD8DFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1563C4B01A7E8C8400BE65EB /* WBA */,
 				156EC6431A6C3770009BB672 /* Commands */,
 				156EC62D1A6AA774009BB672 /* HTML */,
 				15BC73811A683A9300CD8DFA /* Images.xcassets */,
@@ -740,6 +761,7 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1563C42C1A7E4E2500BE65EB /* WellBakedApp.framework */,
 				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
 				D9FEF6B7B0105015289E10E7 /* libPods.a */,
 			);
@@ -768,6 +790,7 @@
 				15BC736C1A683A9300CD8DFA /* Resources */,
 				D9DE8AE141BD3AA264B46DD6 /* Copy Pods Resources */,
 				156EC5CF1A68877B009BB672 /* ShellScript */,
+				1563C4B41A7E8F3000BE65EB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -817,11 +840,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15BC73851A683A9300CD8DFA /* LaunchScreen.xib in Resources */,
+				1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */,
 				156EC6311A6AA774009BB672 /* uploader-upload.html in Resources */,
 				156EC6301A6AA774009BB672 /* uploader-done.html in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
 				156EC6691A6E65FB009BB672 /* uploader-error.html in Resources */,
+				1563C4B11A7E8C8400BE65EB /* WBA in Resources */,
 				156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */,
 				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
 			);
@@ -992,6 +1016,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
 					"$(PROJECT_DIR)",
+					/Projects/iOS/WBAFramework/Product,
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1095,6 +1120,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
 					"$(PROJECT_DIR)",
+					/Projects/iOS/WBAFramework/Product,
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1120,6 +1146,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
 					"$(PROJECT_DIR)",
+					/Projects/iOS/WBAFramework/Product,
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

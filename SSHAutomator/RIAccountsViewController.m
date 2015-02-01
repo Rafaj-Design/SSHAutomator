@@ -7,11 +7,13 @@
 //
 
 #import "RIAccountsViewController.h"
+#import <WellBakedApp/WellBakedApp.h>
 #import "RIEditAccountViewController.h"
 #import "RIJobsViewController.h"
 #import "RIAccountsController.h"
 #import "RIAccountsTableView.h"
 #import "RIConfig.h"
+#import <WellBakedApp/UILabel+WBA.h>
 
 
 @interface RIAccountsViewController () <UITableViewDelegate>
@@ -90,7 +92,8 @@
         [weakSelf reloadData];
     }];
     
-    [self setTitle:@"Accounts"];
+    
+    [self setTitle:WBAGet(@"RITitleAccounts")];
 }
 
 #pragma mark Table view delegate methods
