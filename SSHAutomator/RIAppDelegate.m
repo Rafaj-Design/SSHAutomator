@@ -9,10 +9,15 @@
 #import "RIAppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
-#import <WellBakedApp/WellBakedApp.h>
+//#import <WellBakedApp/WellBakedApp.h>
 #import "RIAccountsViewController.h"
 #import "RILinuxCommandsViewController.h"
 #import "RIConfig.h"
+
+#import "WBAMain.h"
+#import "WBAData.h"
+#import "WBATranslations.h"
+#import "WBACache.h"
 
 
 @interface RIAppDelegate ()
@@ -45,22 +50,52 @@
     // Core Data
     _coreData = [[RICoreData alloc] init];
     
-    // WellBakedApp
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"WBA/cs" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSError *err = nil;
-    NSDictionary *translations = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
-    //NSAssert1((err != nil), @"Basic localization loading failed: %@", err.localizedDescription);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // WellBakedApp
+    NSDictionary *translations;
+    if ([[WBAMain sharedWBA].translations isCachedData]) {
+        translations = [WBACache dataForProduct:WBACacheTypeTranslations];
+    }
+    else {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"WBA/full" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        NSError *err = nil;
+        translations = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
+        NSAssert1((err == nil), @"Basic localization loading failed: %@", err.localizedDescription);
+    }
     
     WBAData *basicData = [[WBAData alloc] init];
     [basicData setTranslations:translations];
+    [basicData setDefaultLanguageCode:@"en"];
+    
     [[WBAMain sharedWBA].translations setDidReceiveInfoFileResponse:^(NSDictionary *data, NSError *error) {
         NSLog(@"Info: %@ - %@", data, error.localizedDescription);
     }];
-    [[WBAMain sharedWBA] startWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://s3.amazonaws.com/admin.wellbakedapp.com/API_1.0/live/"]];
+    [[WBAMain sharedWBA].translations setDidReceiveLocalizationFileResponse:^(NSDictionary *data, NSError *error) {
+        NSLog(@"Localization: %@ - %@", data, error.localizedDescription);
+    }];
+    [[WBAMain sharedWBA] startWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://s3.amazonaws.com/admin.wellbakedapp.com/API_1.0/2/live/"]];
+    
     //[[WBAMain sharedWBA] setDebugMode:YES];
+    
     NSLog(@"Translations: %@", [WBAMain sharedWBA].data.translations);
+    
+    
+    
+    
+    
+    
+    
+    
     
     // Appearance
     [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];

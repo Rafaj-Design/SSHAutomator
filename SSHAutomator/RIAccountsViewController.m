@@ -7,13 +7,20 @@
 //
 
 #import "RIAccountsViewController.h"
-#import <WellBakedApp/WellBakedApp.h>
+//#import <WellBakedApp/WellBakedApp.h>
 #import "RIEditAccountViewController.h"
 #import "RIJobsViewController.h"
 #import "RIAccountsController.h"
 #import "RIAccountsTableView.h"
 #import "RIConfig.h"
-#import <WellBakedApp/UILabel+WBA.h>
+//#import <WellBakedApp/UILabel+WBA.h>
+
+
+#import "WBAMain.h"
+#import "WBATranslations.h"
+#import "WBAMacros.h"
+#import "UIViewController+WBA.h"
+
 
 
 @interface RIAccountsViewController () <UITableViewDelegate>
@@ -94,6 +101,7 @@
     
     
     [self setTitle:WBAGet(@"RITitleAccounts")];
+    [self registerTitleWithWBAKey:@"RITitleAccounts"];
 }
 
 #pragma mark Table view delegate methods

@@ -57,14 +57,6 @@
     return self;
 }
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 #pragma mark Memory management
 
 - (void)didReceiveMemoryWarning {
