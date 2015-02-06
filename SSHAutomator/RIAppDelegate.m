@@ -56,21 +56,6 @@
     
     
     // WellBakedApp
-    NSDictionary *translations;
-    if ([[WBAMain sharedWBA].translations isCachedData]) {
-        translations = [WBACache dataForProduct:WBACacheTypeTranslations];
-    }
-    else {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"WBA/full" ofType:@"json"];
-        NSData *data = [NSData dataWithContentsOfFile:path];
-        NSError *err = nil;
-        translations = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
-        NSAssert1((err == nil), @"Basic localization loading failed: %@", err.localizedDescription);
-    }
-    
-    WBAData *basicData = [[WBAData alloc] init];
-    [basicData setTranslations:translations];
-    [basicData setDefaultLanguageCode:@"cs"];
     
     [[WBAMain sharedWBA].translations setDidReceiveInfoFileResponse:^(NSDictionary *data, NSError *error) {
         NSLog(@"Info: %@ - %@", data, error.localizedDescription);
@@ -78,8 +63,9 @@
     [[WBAMain sharedWBA].translations setDidReceiveLocalizationFileResponse:^(NSDictionary *data, NSError *error) {
         NSLog(@"Localization: %@ - %@", data, error.localizedDescription);
     }];
-    [[WBAMain sharedWBA] startWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://api.wba2.com/1.0/2/2/"]];
-    // s3.amazonaws.com/admin.wellbakedapp.com/API_1.0/live/
+    
+    WBATranslationData *basicData = [[WBATranslationData alloc] initWithBundledWBALocalizationFileNamed:@"full.json" withDefaultLanguageCode:@"de"];
+    [[WBAMain sharedWBA] startTranslationsWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://api.wba2.com/1.0/2/2/"]];
     
     //[[WBAMain sharedWBA] setDebugMode:YES];
     
