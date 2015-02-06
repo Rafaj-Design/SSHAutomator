@@ -33,8 +33,12 @@
 #pragma mark Creating elements
 
 - (void)createControlButtons {
-    _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
-    _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editPressed:)];
+    _editButton = [[UIBarButtonItem alloc] initWithTitle:WBAGet(@"Edit") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
+    [_editButton registerTitleWithWBAKey:@"Edit"];
+    
+    _doneButton = [[UIBarButtonItem alloc] initWithTitle:WBAGet(@"Done") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
+    [_doneButton registerTitleWithWBAKey:@"Done"];
+    
     _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccountPressed:)];
     
     [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];
@@ -91,9 +95,8 @@
         [weakSelf reloadData];
     }];
     
-    
-    [self setTitle:WBAGet(@"RITitleAccounts")];
-    [self registerTitleWithWBAKey:@"RITitleAccounts"];
+    [self setTitle:WBAGet(@"Accounts")];
+    [self registerTitleWithWBAKey:@"Accounts"];
 }
 
 #pragma mark Table view delegate methods

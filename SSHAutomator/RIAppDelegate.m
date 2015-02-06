@@ -70,7 +70,7 @@
     
     WBAData *basicData = [[WBAData alloc] init];
     [basicData setTranslations:translations];
-    [basicData setDefaultLanguageCode:@"en"];
+    [basicData setDefaultLanguageCode:@"cs"];
     
     [[WBAMain sharedWBA].translations setDidReceiveInfoFileResponse:^(NSDictionary *data, NSError *error) {
         NSLog(@"Info: %@ - %@", data, error.localizedDescription);
