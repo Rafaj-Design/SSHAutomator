@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
-		153004A81A84FB7700BDB1C2 /* WBA2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153004A71A84FB7700BDB1C2 /* WBA2.framework */; };
+		153004B21A85039200BDB1C2 /* WBA2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153004B11A85039200BDB1C2 /* WBA2.framework */; };
 		1563C4B11A7E8C8400BE65EB /* WBA in Resources */ = {isa = PBXBuildFile; fileRef = 1563C4B01A7E8C8400BE65EB /* WBA */; };
 		1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
@@ -86,7 +86,7 @@
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
 		152FFB6E1A68777900F87169 /* RITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITask.m; sourceTree = "<group>"; };
-		153004A71A84FB7700BDB1C2 /* WBA2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WBA2.framework; sourceTree = "<group>"; };
+		153004B11A85039200BDB1C2 /* WBA2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WBA2.framework; sourceTree = "<group>"; };
 		1563C4B01A7E8C8400BE65EB /* WBA */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WBA; sourceTree = SOURCE_ROOT; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				153004A81A84FB7700BDB1C2 /* WBA2.framework in Frameworks */,
+				153004B21A85039200BDB1C2 /* WBA2.framework in Frameworks */,
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
 			);
@@ -767,7 +767,7 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				153004A71A84FB7700BDB1C2 /* WBA2.framework */,
+				153004B11A85039200BDB1C2 /* WBA2.framework */,
 				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
 				D9FEF6B7B0105015289E10E7 /* libPods.a */,
 			);
