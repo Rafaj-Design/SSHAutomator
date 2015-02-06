@@ -16,10 +16,10 @@ typedef NS_ENUM(NSInteger, WBABuild) {
     WBABuildCustom
 };
 
-typedef NS_ENUM(NSInteger, WBADataSourceOrigin) {
-    WBADataSourceOriginDefault,
-    WBADataSourceOriginCustom,
-    WBADataSourceOriginLocalOnly
+typedef NS_ENUM(NSInteger, WBATranslationDataSourceOrigin) {
+    WBATranslationDataSourceOriginDefault,
+    WBATranslationDataSourceOriginCustom,
+    WBATranslationDataSourceOriginLocalOnly
 };
 
 typedef NS_ENUM(NSInteger, WBADataType) {

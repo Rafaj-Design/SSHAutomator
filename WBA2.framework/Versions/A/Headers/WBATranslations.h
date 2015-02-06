@@ -21,7 +21,6 @@
 + (NSString *)get:(NSString *)key comment:(NSString *)comment;
 + (NSString *)get:(NSString *)key;
 
-- (BOOL)isCachedData;
 - (void)loadData;
 
 

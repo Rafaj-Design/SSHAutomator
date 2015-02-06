@@ -1,6 +1,5 @@
 //
 //  WBA2.h
-//  WBA2
 //
 //  Created by Ondrej Rafaj on 06/02/2015.
 //  Copyright (c) 2015 Ridiculous Innovations. All rights reserved.
@@ -18,7 +17,7 @@
 
 #import <WBA2/WBAMain.h>
 #import <WBA2/WBATranslations.h>
-#import <WBA2/WBAData.h>
+#import <WBA2/WBATranslationData.h>
 #import <WBA2/WBACache.h>
 #import <WBA2/WBASettings.h>
 

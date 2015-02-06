@@ -13,6 +13,9 @@
 
 + (void)saveData:(NSDictionary *)data forProduct:(WBACacheType)product;
 + (NSDictionary *)dataForProduct:(WBACacheType)product;
++ (BOOL)isCachedDataForProduct:(WBACacheType)product;
+
+
 
 
 @end
