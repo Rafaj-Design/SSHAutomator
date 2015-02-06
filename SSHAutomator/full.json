@@ -1,1 +1,61 @@
-{"hi":{"RITitleAccounts":"Hindi","key3":"This is key 2","key4":"Key 4","key5":"Key 5","Ok":"Ok","yoyoyoyoyoyo":"Yo man!","yayayayaya":"Yayaya man!","Cancel":"Cancel"},"de":{"RITitleAccounts":"Herman ze German"},"en":{"RITitleAccounts":"English","key3":"This is key 2","key4":"Key 4","key5":"Key 5","Ok":"Ok","yoyoyoyoyoyo":"Yo man!","yayayayaya":"Yayaya man!","Cancel":"Cancel"},"cs":{"RITitleAccounts":"Czech","key3":"","key4":"","key5":"","Ok":"","yoyoyoyoyoyo":"","yayayayaya":"","Cancel":""},"es":{"RITitleAccounts":"Spanish","key3":"","key4":"","key5":"","Ok":"","yoyoyoyoyoyo":"","yayayayaya":"","Cancel":"Cancel"},"it":{"RITitleAccounts":"Italian","key3":"","key4":"","key5":"","yoyoyoyoyoyo":"","yayayayaya":"","Cancel":"","Ok":""}}
+{
+    "de":
+    {
+        "Accounts":"Herman ze German"
+    },
+    "hi":
+    {
+        "key5":"Key 5",
+        "Cancel":"Cancel",
+        "yayayayaya":"Yayaya man!",
+        "key3":"This is key 2",
+        "yoyoyoyoyoyo":"Yo man!",
+        "key4":"Key 4",
+        "Accounts":"Hindi",
+        "Ok":"Ok"
+    },
+    "en":
+    {
+        "key5":"Key 5",
+        "Cancel":"Cancel",
+        "yayayayaya":"Yayaya man!",
+        "key3":"This is key 2",
+        "yoyoyoyoyoyo":"Yo man!",
+        "key4":"Key 4",
+        "Accounts":"English",
+        "Ok":"Ok"
+    },
+    "cs":
+    {
+        "key5":"",
+        "Cancel":"",
+        "yayayayaya":"",
+        "key3":"",
+        "yoyoyoyoyoyo":"",
+        "key4":"",
+        "Accounts":"Czech",
+        "Ok":""
+    },
+    "es":
+    {
+        "key5":"",
+        "Cancel":"Cancel",
+        "yayayayaya":"",
+        "key3":"",
+        "yoyoyoyoyoyo":"",
+        "key4":"",
+        "Accounts":"Spanish",
+        "Ok":""
+    },
+    "it":
+    {
+        "key5":"",
+        "Cancel":"",
+        "yayayayaya":"",
+        "key3":"",
+        "yoyoyoyoyoyo":"",
+        "key4":"",
+        "Accounts":"Italian",
+        "Ok":""
+    }
+}
