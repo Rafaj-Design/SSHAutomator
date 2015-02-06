@@ -9,15 +9,10 @@
 #import "RIAppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
-//#import <WellBakedApp/WellBakedApp.h>
+#import <WBA2/WBA2.h>
 #import "RIAccountsViewController.h"
 #import "RILinuxCommandsViewController.h"
 #import "RIConfig.h"
-
-#import "WBAMain.h"
-#import "WBAData.h"
-#import "WBATranslations.h"
-#import "WBACache.h"
 
 
 @interface RIAppDelegate ()

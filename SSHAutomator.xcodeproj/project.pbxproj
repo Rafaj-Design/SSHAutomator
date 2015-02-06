@@ -7,40 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		150ECEFC1A83BB30007274BE /* WBACache.m in Sources */ = {isa = PBXBuildFile; fileRef = 150ECEFB1A83BB30007274BE /* WBACache.m */; };
-		150ECEFF1A83E08E007274BE /* UIButton+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 150ECEFE1A83E08E007274BE /* UIButton+WBA.m */; };
-		150ECF021A83E09F007274BE /* UITextField+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 150ECF011A83E09F007274BE /* UITextField+WBA.m */; };
-		150ECF051A83E0AF007274BE /* UITextView+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 150ECF041A83E0AF007274BE /* UITextView+WBA.m */; };
-		150ECF081A83E0C7007274BE /* UIBarItem+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 150ECF071A83E0C7007274BE /* UIBarItem+WBA.m */; };
-		150ECF0B1A83E0DB007274BE /* UISearchBar+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 150ECF0A1A83E0DB007274BE /* UISearchBar+WBA.m */; };
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
+		153004A81A84FB7700BDB1C2 /* WBA2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153004A71A84FB7700BDB1C2 /* WBA2.framework */; };
 		1563C4B11A7E8C8400BE65EB /* WBA in Resources */ = {isa = PBXBuildFile; fileRef = 1563C4B01A7E8C8400BE65EB /* WBA */; };
 		1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
-		1563C4E41A7EBBF600BE65EB /* UILabel+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4CA1A7EBBF600BE65EB /* UILabel+WBA.m */; };
-		1563C4E51A7EBBF600BE65EB /* WBAConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4CC1A7EBBF600BE65EB /* WBAConfig.m */; };
-		1563C4E61A7EBBF600BE65EB /* WBAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4CE1A7EBBF600BE65EB /* WBAData.m */; };
-		1563C4E71A7EBBF600BE65EB /* WBAMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4D21A7EBBF600BE65EB /* WBAMain.m */; };
-		1563C4E81A7EBBF600BE65EB /* WBASettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4D51A7EBBF600BE65EB /* WBASettings.m */; };
-		1563C4E91A7EBBF600BE65EB /* WBATranslations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4D71A7EBBF600BE65EB /* WBATranslations.m */; };
-		1563C5181A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4F41A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.m */; };
-		1563C5191A7EBD9700BE65EB /* UIAlertView+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4F61A7EBD9700BE65EB /* UIAlertView+WBANetworking.m */; };
-		1563C51A1A7EBD9700BE65EB /* UIButton+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4F81A7EBD9700BE65EB /* UIButton+WBANetworking.m */; };
-		1563C51B1A7EBD9700BE65EB /* UIImageView+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4FA1A7EBD9700BE65EB /* UIImageView+WBANetworking.m */; };
-		1563C51C1A7EBD9700BE65EB /* UIProgressView+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4FD1A7EBD9700BE65EB /* UIProgressView+WBANetworking.m */; };
-		1563C51D1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C4FF1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.m */; };
-		1563C51E1A7EBD9700BE65EB /* UIWebView+WBANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5011A7EBD9700BE65EB /* UIWebView+WBANetworking.m */; };
-		1563C51F1A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5031A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.m */; };
-		1563C5201A7EBD9700BE65EB /* WBAHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5061A7EBD9700BE65EB /* WBAHTTPRequestOperation.m */; };
-		1563C5211A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5081A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.m */; };
-		1563C5221A7EBD9700BE65EB /* WBAHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C50A1A7EBD9700BE65EB /* WBAHTTPSessionManager.m */; };
-		1563C5231A7EBD9700BE65EB /* WBANetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C50D1A7EBD9700BE65EB /* WBANetworkReachabilityManager.m */; };
-		1563C5241A7EBD9700BE65EB /* WBASecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C50F1A7EBD9700BE65EB /* WBASecurityPolicy.m */; };
-		1563C5251A7EBD9700BE65EB /* WBAURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5111A7EBD9700BE65EB /* WBAURLConnectionOperation.m */; };
-		1563C5261A7EBD9700BE65EB /* WBAURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5131A7EBD9700BE65EB /* WBAURLRequestSerialization.m */; };
-		1563C5271A7EBD9700BE65EB /* WBAURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5151A7EBD9700BE65EB /* WBAURLResponseSerialization.m */; };
-		1563C5281A7EBD9700BE65EB /* WBAURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C5171A7EBD9700BE65EB /* WBAURLSessionManager.m */; };
-		1563C52B1A7EC73800BE65EB /* UIViewController+WBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563C52A1A7EC73800BE65EB /* UIViewController+WBA.m */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
 		156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D91A691121009BB672 /* RITableViewCell.m */; };
@@ -111,78 +82,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		150ECEFA1A83BB30007274BE /* WBACache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBACache.h; sourceTree = "<group>"; };
-		150ECEFB1A83BB30007274BE /* WBACache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBACache.m; sourceTree = "<group>"; };
-		150ECEFD1A83E08E007274BE /* UIButton+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WBA.h"; sourceTree = "<group>"; };
-		150ECEFE1A83E08E007274BE /* UIButton+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WBA.m"; sourceTree = "<group>"; };
-		150ECF001A83E09F007274BE /* UITextField+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WBA.h"; sourceTree = "<group>"; };
-		150ECF011A83E09F007274BE /* UITextField+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WBA.m"; sourceTree = "<group>"; };
-		150ECF031A83E0AF007274BE /* UITextView+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+WBA.h"; sourceTree = "<group>"; };
-		150ECF041A83E0AF007274BE /* UITextView+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+WBA.m"; sourceTree = "<group>"; };
-		150ECF061A83E0C7007274BE /* UIBarItem+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarItem+WBA.h"; sourceTree = "<group>"; };
-		150ECF071A83E0C7007274BE /* UIBarItem+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarItem+WBA.m"; sourceTree = "<group>"; };
-		150ECF091A83E0DB007274BE /* UISearchBar+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WBA.h"; sourceTree = "<group>"; };
-		150ECF0A1A83E0DB007274BE /* UISearchBar+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WBA.m"; sourceTree = "<group>"; };
 		152FFB5D1A68739300F87169 /* NSObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreData.h"; sourceTree = "<group>"; };
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
 		152FFB6E1A68777900F87169 /* RITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITask.m; sourceTree = "<group>"; };
+		153004A71A84FB7700BDB1C2 /* WBA2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WBA2.framework; sourceTree = "<group>"; };
 		1563C4B01A7E8C8400BE65EB /* WBA */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WBA; sourceTree = SOURCE_ROOT; };
-		1563C4C31A7EBBF600BE65EB /* WellBakedApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WellBakedApp.framework; sourceTree = "<group>"; };
-		1563C4C91A7EBBF600BE65EB /* UILabel+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WBA.h"; sourceTree = "<group>"; };
-		1563C4CA1A7EBBF600BE65EB /* UILabel+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WBA.m"; sourceTree = "<group>"; };
-		1563C4CB1A7EBBF600BE65EB /* WBAConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAConfig.h; sourceTree = "<group>"; };
-		1563C4CC1A7EBBF600BE65EB /* WBAConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAConfig.m; sourceTree = "<group>"; };
-		1563C4CD1A7EBBF600BE65EB /* WBAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAData.h; sourceTree = "<group>"; };
-		1563C4CE1A7EBBF600BE65EB /* WBAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAData.m; sourceTree = "<group>"; };
-		1563C4CF1A7EBBF600BE65EB /* WBAEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAEnums.h; sourceTree = "<group>"; };
-		1563C4D01A7EBBF600BE65EB /* WBAMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAMacros.h; sourceTree = "<group>"; };
-		1563C4D11A7EBBF600BE65EB /* WBAMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAMain.h; sourceTree = "<group>"; };
-		1563C4D21A7EBBF600BE65EB /* WBAMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAMain.m; sourceTree = "<group>"; };
-		1563C4D31A7EBBF600BE65EB /* WBAMainPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAMainPrivate.h; sourceTree = "<group>"; };
-		1563C4D41A7EBBF600BE65EB /* WBASettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBASettings.h; sourceTree = "<group>"; };
-		1563C4D51A7EBBF600BE65EB /* WBASettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBASettings.m; sourceTree = "<group>"; };
-		1563C4D61A7EBBF600BE65EB /* WBATranslations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBATranslations.h; sourceTree = "<group>"; };
-		1563C4D71A7EBBF600BE65EB /* WBATranslations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBATranslations.m; sourceTree = "<group>"; };
-		1563C4D81A7EBBF600BE65EB /* WellBakedApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellBakedApp.h; sourceTree = "<group>"; };
-		1563C4F31A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4F41A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C4F51A7EBD9700BE65EB /* UIAlertView+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4F61A7EBD9700BE65EB /* UIAlertView+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C4F71A7EBD9700BE65EB /* UIButton+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4F81A7EBD9700BE65EB /* UIButton+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C4F91A7EBD9700BE65EB /* UIImageView+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4FA1A7EBD9700BE65EB /* UIImageView+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C4FB1A7EBD9700BE65EB /* UIKit+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4FC1A7EBD9700BE65EB /* UIProgressView+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4FD1A7EBD9700BE65EB /* UIProgressView+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C4FE1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C4FF1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C5001A7EBD9700BE65EB /* UIWebView+WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+WBANetworking.h"; sourceTree = "<group>"; };
-		1563C5011A7EBD9700BE65EB /* UIWebView+WBANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+WBANetworking.m"; sourceTree = "<group>"; };
-		1563C5021A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBANetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		1563C5031A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBANetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		1563C5051A7EBD9700BE65EB /* WBAHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAHTTPRequestOperation.h; sourceTree = "<group>"; };
-		1563C5061A7EBD9700BE65EB /* WBAHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAHTTPRequestOperation.m; sourceTree = "<group>"; };
-		1563C5071A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		1563C5081A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		1563C5091A7EBD9700BE65EB /* WBAHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAHTTPSessionManager.h; sourceTree = "<group>"; };
-		1563C50A1A7EBD9700BE65EB /* WBAHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAHTTPSessionManager.m; sourceTree = "<group>"; };
-		1563C50B1A7EBD9700BE65EB /* WBANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBANetworking.h; sourceTree = "<group>"; };
-		1563C50C1A7EBD9700BE65EB /* WBANetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBANetworkReachabilityManager.h; sourceTree = "<group>"; };
-		1563C50D1A7EBD9700BE65EB /* WBANetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBANetworkReachabilityManager.m; sourceTree = "<group>"; };
-		1563C50E1A7EBD9700BE65EB /* WBASecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBASecurityPolicy.h; sourceTree = "<group>"; };
-		1563C50F1A7EBD9700BE65EB /* WBASecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBASecurityPolicy.m; sourceTree = "<group>"; };
-		1563C5101A7EBD9700BE65EB /* WBAURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAURLConnectionOperation.h; sourceTree = "<group>"; };
-		1563C5111A7EBD9700BE65EB /* WBAURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAURLConnectionOperation.m; sourceTree = "<group>"; };
-		1563C5121A7EBD9700BE65EB /* WBAURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAURLRequestSerialization.h; sourceTree = "<group>"; };
-		1563C5131A7EBD9700BE65EB /* WBAURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAURLRequestSerialization.m; sourceTree = "<group>"; };
-		1563C5141A7EBD9700BE65EB /* WBAURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAURLResponseSerialization.h; sourceTree = "<group>"; };
-		1563C5151A7EBD9700BE65EB /* WBAURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAURLResponseSerialization.m; sourceTree = "<group>"; };
-		1563C5161A7EBD9700BE65EB /* WBAURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAURLSessionManager.h; sourceTree = "<group>"; };
-		1563C5171A7EBD9700BE65EB /* WBAURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAURLSessionManager.m; sourceTree = "<group>"; };
-		1563C5291A7EC73800BE65EB /* UIViewController+WBA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WBA.h"; sourceTree = "<group>"; };
-		1563C52A1A7EC73800BE65EB /* UIViewController+WBA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WBA.m"; sourceTree = "<group>"; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
@@ -295,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153004A81A84FB7700BDB1C2 /* WBA2.framework in Frameworks */,
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
 			);
@@ -332,132 +238,9 @@
 		1563C4BE1A7EBBF600BE65EB /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
-				1563C4BF1A7EBBF600BE65EB /* WBAFramework */,
 			);
 			path = Thirdparty;
 			sourceTree = SOURCE_ROOT;
-		};
-		1563C4BF1A7EBBF600BE65EB /* WBAFramework */ = {
-			isa = PBXGroup;
-			children = (
-				1563C4C21A7EBBF600BE65EB /* Product */,
-				1563C4C51A7EBBF600BE65EB /* Thirdparty */,
-				1563C4C71A7EBBF600BE65EB /* WellBakedApp */,
-			);
-			path = WBAFramework;
-			sourceTree = "<group>";
-		};
-		1563C4C21A7EBBF600BE65EB /* Product */ = {
-			isa = PBXGroup;
-			children = (
-				1563C4C31A7EBBF600BE65EB /* WellBakedApp.framework */,
-			);
-			path = Product;
-			sourceTree = "<group>";
-		};
-		1563C4C51A7EBBF600BE65EB /* Thirdparty */ = {
-			isa = PBXGroup;
-			children = (
-				1563C4C61A7EBBF600BE65EB /* WBANetworking */,
-			);
-			path = Thirdparty;
-			sourceTree = "<group>";
-		};
-		1563C4C61A7EBBF600BE65EB /* WBANetworking */ = {
-			isa = PBXGroup;
-			children = (
-				1563C4F21A7EBD9700BE65EB /* UIKit+WBANetworking */,
-				1563C5041A7EBD9700BE65EB /* WBANetworking */,
-			);
-			path = WBANetworking;
-			sourceTree = "<group>";
-		};
-		1563C4C71A7EBBF600BE65EB /* WellBakedApp */ = {
-			isa = PBXGroup;
-			children = (
-				1563C4C91A7EBBF600BE65EB /* UILabel+WBA.h */,
-				1563C4CA1A7EBBF600BE65EB /* UILabel+WBA.m */,
-				1563C5291A7EC73800BE65EB /* UIViewController+WBA.h */,
-				1563C52A1A7EC73800BE65EB /* UIViewController+WBA.m */,
-				150ECEFD1A83E08E007274BE /* UIButton+WBA.h */,
-				150ECEFE1A83E08E007274BE /* UIButton+WBA.m */,
-				150ECF001A83E09F007274BE /* UITextField+WBA.h */,
-				150ECF011A83E09F007274BE /* UITextField+WBA.m */,
-				150ECF031A83E0AF007274BE /* UITextView+WBA.h */,
-				150ECF041A83E0AF007274BE /* UITextView+WBA.m */,
-				150ECF061A83E0C7007274BE /* UIBarItem+WBA.h */,
-				150ECF071A83E0C7007274BE /* UIBarItem+WBA.m */,
-				150ECF091A83E0DB007274BE /* UISearchBar+WBA.h */,
-				150ECF0A1A83E0DB007274BE /* UISearchBar+WBA.m */,
-				1563C4CB1A7EBBF600BE65EB /* WBAConfig.h */,
-				1563C4CC1A7EBBF600BE65EB /* WBAConfig.m */,
-				1563C4CD1A7EBBF600BE65EB /* WBAData.h */,
-				1563C4CE1A7EBBF600BE65EB /* WBAData.m */,
-				1563C4CF1A7EBBF600BE65EB /* WBAEnums.h */,
-				1563C4D01A7EBBF600BE65EB /* WBAMacros.h */,
-				1563C4D11A7EBBF600BE65EB /* WBAMain.h */,
-				1563C4D21A7EBBF600BE65EB /* WBAMain.m */,
-				1563C4D31A7EBBF600BE65EB /* WBAMainPrivate.h */,
-				1563C4D41A7EBBF600BE65EB /* WBASettings.h */,
-				1563C4D51A7EBBF600BE65EB /* WBASettings.m */,
-				1563C4D61A7EBBF600BE65EB /* WBATranslations.h */,
-				1563C4D71A7EBBF600BE65EB /* WBATranslations.m */,
-				1563C4D81A7EBBF600BE65EB /* WellBakedApp.h */,
-				150ECEFA1A83BB30007274BE /* WBACache.h */,
-				150ECEFB1A83BB30007274BE /* WBACache.m */,
-			);
-			path = WellBakedApp;
-			sourceTree = "<group>";
-		};
-		1563C4F21A7EBD9700BE65EB /* UIKit+WBANetworking */ = {
-			isa = PBXGroup;
-			children = (
-				1563C4F31A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.h */,
-				1563C4F41A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.m */,
-				1563C4F51A7EBD9700BE65EB /* UIAlertView+WBANetworking.h */,
-				1563C4F61A7EBD9700BE65EB /* UIAlertView+WBANetworking.m */,
-				1563C4F71A7EBD9700BE65EB /* UIButton+WBANetworking.h */,
-				1563C4F81A7EBD9700BE65EB /* UIButton+WBANetworking.m */,
-				1563C4F91A7EBD9700BE65EB /* UIImageView+WBANetworking.h */,
-				1563C4FA1A7EBD9700BE65EB /* UIImageView+WBANetworking.m */,
-				1563C4FB1A7EBD9700BE65EB /* UIKit+WBANetworking.h */,
-				1563C4FC1A7EBD9700BE65EB /* UIProgressView+WBANetworking.h */,
-				1563C4FD1A7EBD9700BE65EB /* UIProgressView+WBANetworking.m */,
-				1563C4FE1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.h */,
-				1563C4FF1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.m */,
-				1563C5001A7EBD9700BE65EB /* UIWebView+WBANetworking.h */,
-				1563C5011A7EBD9700BE65EB /* UIWebView+WBANetworking.m */,
-				1563C5021A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.h */,
-				1563C5031A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.m */,
-			);
-			path = "UIKit+WBANetworking";
-			sourceTree = "<group>";
-		};
-		1563C5041A7EBD9700BE65EB /* WBANetworking */ = {
-			isa = PBXGroup;
-			children = (
-				1563C5051A7EBD9700BE65EB /* WBAHTTPRequestOperation.h */,
-				1563C5061A7EBD9700BE65EB /* WBAHTTPRequestOperation.m */,
-				1563C5071A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.h */,
-				1563C5081A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.m */,
-				1563C5091A7EBD9700BE65EB /* WBAHTTPSessionManager.h */,
-				1563C50A1A7EBD9700BE65EB /* WBAHTTPSessionManager.m */,
-				1563C50B1A7EBD9700BE65EB /* WBANetworking.h */,
-				1563C50C1A7EBD9700BE65EB /* WBANetworkReachabilityManager.h */,
-				1563C50D1A7EBD9700BE65EB /* WBANetworkReachabilityManager.m */,
-				1563C50E1A7EBD9700BE65EB /* WBASecurityPolicy.h */,
-				1563C50F1A7EBD9700BE65EB /* WBASecurityPolicy.m */,
-				1563C5101A7EBD9700BE65EB /* WBAURLConnectionOperation.h */,
-				1563C5111A7EBD9700BE65EB /* WBAURLConnectionOperation.m */,
-				1563C5121A7EBD9700BE65EB /* WBAURLRequestSerialization.h */,
-				1563C5131A7EBD9700BE65EB /* WBAURLRequestSerialization.m */,
-				1563C5141A7EBD9700BE65EB /* WBAURLResponseSerialization.h */,
-				1563C5151A7EBD9700BE65EB /* WBAURLResponseSerialization.m */,
-				1563C5161A7EBD9700BE65EB /* WBAURLSessionManager.h */,
-				1563C5171A7EBD9700BE65EB /* WBAURLSessionManager.m */,
-			);
-			path = WBANetworking;
-			sourceTree = "<group>";
 		};
 		156EC5D21A688F7B009BB672 /* Jobs */ = {
 			isa = PBXGroup;
@@ -984,6 +767,7 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				153004A71A84FB7700BDB1C2 /* WBA2.framework */,
 				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
 				D9FEF6B7B0105015289E10E7 /* libPods.a */,
 			);
@@ -1132,76 +916,46 @@
 				15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */,
 				156EC6411A6C28AC009BB672 /* RIHistory.m in Sources */,
 				156EC62B1A6AA71F009BB672 /* RICertificate.m in Sources */,
-				1563C5261A7EBD9700BE65EB /* WBAURLRequestSerialization.m in Sources */,
 				156EC63E1A6BF767009BB672 /* RIManageCertificatesController.m in Sources */,
-				150ECEFF1A83E08E007274BE /* UIButton+WBA.m in Sources */,
-				1563C5241A7EBD9700BE65EB /* WBASecurityPolicy.m in Sources */,
-				1563C5251A7EBD9700BE65EB /* WBAURLConnectionOperation.m in Sources */,
 				156EC5DA1A691121009BB672 /* RITableViewCell.m in Sources */,
-				1563C51D1A7EBD9700BE65EB /* UIRefreshControl+WBANetworking.m in Sources */,
 				156EC6501A6C5015009BB672 /* RIHistoryViewController.m in Sources */,
 				156EC60E1A694182009BB672 /* RITasksTableView.m in Sources */,
 				152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */,
 				156EC5EB1A691B4A009BB672 /* RIConfig.m in Sources */,
 				15BC73771A683A9300CD8DFA /* RIAppDelegate.m in Sources */,
-				150ECF051A83E0AF007274BE /* UITextView+WBA.m in Sources */,
 				156EC6161A6948D7009BB672 /* RIRunJob.m in Sources */,
 				152FFB6F1A68777900F87169 /* RITask.m in Sources */,
 				15BC737D1A683A9300CD8DFA /* RIViewController.m in Sources */,
-				1563C4E61A7EBBF600BE65EB /* WBAData.m in Sources */,
 				156EC5F91A692875009BB672 /* RICertificatesTableView.m in Sources */,
 				156EC6831A6EBFFE009BB672 /* RIBrowserController.m in Sources */,
-				1563C5211A7EBD9700BE65EB /* WBAHTTPRequestOperationManager.m in Sources */,
 				156EC61A1A69615E009BB672 /* RIConsoleViewController.m in Sources */,
-				1563C5191A7EBD9700BE65EB /* UIAlertView+WBANetworking.m in Sources */,
 				156EC62A1A6AA71F009BB672 /* RIAccount.m in Sources */,
 				156EC62C1A6AA71F009BB672 /* RIJob.m in Sources */,
 				156EC64D1A6C38C2009BB672 /* RICommandsController.m in Sources */,
-				1563C5201A7EBD9700BE65EB /* WBAHTTPRequestOperation.m in Sources */,
 				156EC6021A693A2B009BB672 /* RIEditJobViewController.m in Sources */,
-				1563C51B1A7EBD9700BE65EB /* UIImageView+WBANetworking.m in Sources */,
 				156EC5E21A691227009BB672 /* RIJobsController.m in Sources */,
 				156EC67F1A6EBF50009BB672 /* RIBrowserViewController.m in Sources */,
-				1563C4E71A7EBBF600BE65EB /* WBAMain.m in Sources */,
 				156EC6351A6AC0D8009BB672 /* RIEditCertificateViewController.m in Sources */,
-				1563C4E41A7EBBF600BE65EB /* UILabel+WBA.m in Sources */,
 				156EC6871A6FA903009BB672 /* RIBrowserTableViewCell.m in Sources */,
-				1563C5271A7EBD9700BE65EB /* WBAURLResponseSerialization.m in Sources */,
 				156EC6061A694002009BB672 /* RITasksViewController.m in Sources */,
-				1563C51A1A7EBD9700BE65EB /* UIButton+WBANetworking.m in Sources */,
 				156EC6741A6E8DBF009BB672 /* RICollectionView.m in Sources */,
 				156EC6121A694325009BB672 /* RIEditTaskViewController.m in Sources */,
 				15BC73741A683A9300CD8DFA /* main.m in Sources */,
-				1563C4E81A7EBBF600BE65EB /* WBASettings.m in Sources */,
-				150ECF081A83E0C7007274BE /* UIBarItem+WBA.m in Sources */,
 				156EC6381A6BF6CC009BB672 /* RISelectCertificateViewController.m in Sources */,
 				156EC68B1A6FBD7C009BB672 /* RIPathLabel.m in Sources */,
 				156EC6541A6C5051009BB672 /* RIHistoryController.m in Sources */,
 				156EC60A1A694065009BB672 /* RITasksController.m in Sources */,
 				156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */,
-				1563C5231A7EBD9700BE65EB /* WBANetworkReachabilityManager.m in Sources */,
-				1563C5281A7EBD9700BE65EB /* WBAURLSessionManager.m in Sources */,
-				1563C51F1A7EBD9700BE65EB /* WBANetworkActivityIndicatorManager.m in Sources */,
-				150ECF0B1A83E0DB007274BE /* UISearchBar+WBA.m in Sources */,
-				1563C51C1A7EBD9700BE65EB /* UIProgressView+WBANetworking.m in Sources */,
-				1563C4E91A7EBBF600BE65EB /* WBATranslations.m in Sources */,
 				15BC73AD1A683F3C00CD8DFA /* RIAccountsTableView.m in Sources */,
 				15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */,
-				1563C4E51A7EBBF600BE65EB /* WBAConfig.m in Sources */,
 				156EC5F11A69253A009BB672 /* RICertificatesViewController.m in Sources */,
 				156EC5DE1A6911A2009BB672 /* RITableViewController.m in Sources */,
 				156EC5F51A6925BB009BB672 /* RICertificatesController.m in Sources */,
 				156EC61E1A696BC3009BB672 /* RIUploaderViewController.m in Sources */,
 				15BC73AA1A683F2200CD8DFA /* RITableView.m in Sources */,
-				1563C51E1A7EBD9700BE65EB /* UIWebView+WBANetworking.m in Sources */,
 				156EC5E61A691252009BB672 /* RIJobsTableView.m in Sources */,
 				156EC67B1A6E90BA009BB672 /* RIIconCollectionViewCell.m in Sources */,
 				15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */,
-				150ECF021A83E09F007274BE /* UITextField+WBA.m in Sources */,
-				1563C52B1A7EC73800BE65EB /* UIViewController+WBA.m in Sources */,
-				1563C5181A7EBD9700BE65EB /* UIActivityIndicatorView+WBANetworking.m in Sources */,
-				1563C5221A7EBD9700BE65EB /* WBAHTTPSessionManager.m in Sources */,
-				150ECEFC1A83BB30007274BE /* WBACache.m in Sources */,
 				156EC6771A6E8E53009BB672 /* RIIconsController.m in Sources */,
 				156EC6491A6C3867009BB672 /* RILinuxCommandsViewController.m in Sources */,
 			);
