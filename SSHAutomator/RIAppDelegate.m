@@ -83,7 +83,7 @@
     [[WBAMain sharedWBA].translations setDidReceiveLocalizationFileResponse:^(NSDictionary *data, NSError *error) {
         NSLog(@"Localization: %@ - %@", data, error.localizedDescription);
     }];
-    [[WBAMain sharedWBA] startWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://s3.amazonaws.com/admin.wellbakedapp.com/API_1.0/2/live/"]];
+    [[WBAMain sharedWBA] startWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://api.wba2.com/1.0/2/live/"]];
     
     //[[WBAMain sharedWBA] setDebugMode:YES];
     
