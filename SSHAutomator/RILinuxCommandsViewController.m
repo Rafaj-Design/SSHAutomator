@@ -7,6 +7,7 @@
 //
 
 #import "RILinuxCommandsViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RICommandsController.h"
 #import "RITableView.h"
 
@@ -52,7 +53,8 @@
 - (void)setup {
     [super setup];
     
-    [self setTitle:@"Linux commands"];
+    [self setTitle:LUITranslate(@"Linux commands")];
+    [self registerTitleWithTranslationKey:@"Linux commands"];
     
     _controller = [[RICommandsController alloc] init];
 }

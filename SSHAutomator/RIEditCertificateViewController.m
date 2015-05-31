@@ -7,6 +7,7 @@
 //
 
 #import "RIEditCertificateViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import <RETableViewManager/RETableViewManager.h>
 #import "RICertificate.h"
 #import "NSObject+CoreData.h"
@@ -40,20 +41,20 @@
 #pragma mark Creating elements
 
 - (void)createControls {
-    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Cancel") style:UIBarButtonItemStylePlain target:self action:@selector(closePressed:)];
     [self.navigationItem setLeftBarButtonItem:cancel];
     
-    UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(savePressed:)];
+    UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Save") style:UIBarButtonItemStylePlain target:self action:@selector(savePressed:)];
     [self.navigationItem setRightBarButtonItem:save];
 }
 
 - (void)createTableElements {
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
     
-    RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Certificate details"];
+    RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:LUITranslate(@"Certificate details")];
     [_manager addSection:section];
     
-    _certificateName = [RETextItem itemWithTitle:@"Name" value:nil placeholder:@"Certificate name"];
+    _certificateName = [RETextItem itemWithTitle:LUITranslate(@"Name") value:nil placeholder:LUITranslate(@"Certificate name")];
     [section addItem:_certificateName];
     
     [self assignValues];
@@ -88,7 +89,7 @@
             [errors addObject:error.localizedDescription];
         }
         NSString *errorString = [errors componentsJoinedByString:@"\n"];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Errors" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:LUITranslate(@"Errors") message:errorString delegate:nil cancelButtonTitle:LUITranslate(@"Ok") otherButtonTitles:nil];
         [alert show];
     }
     else {

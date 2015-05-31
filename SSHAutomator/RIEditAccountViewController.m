@@ -9,6 +9,7 @@
 #import "RIEditAccountViewController.h"
 #import <LUIFramework/LUIFramework.h>
 #import <RETableViewManager/RETableViewManager.h>
+#import <REValidation/REValidation.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RICertificatesViewController.h"
 #import "RISelectCertificateViewController.h"
@@ -64,13 +65,13 @@
 #pragma mark Creating elements
 
 - (void)createControls {
-    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Cancel") style:UIBarButtonItemStylePlain target:self action:@selector(closePressed:)];
     [self.navigationItem setLeftBarButtonItem:cancel];
     
     FAKFontAwesome *settingsIcon = [FAKFontAwesome certificateIconWithSize:20];
     UIBarButtonItem *settings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithStackedIcons:@[settingsIcon] imageSize:CGSizeMake(22, 22)] style:UIBarButtonItemStyleDone target:self action:@selector(settingsPressed:)];
     
-    UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(savePressed:)];
+    UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Save") style:UIBarButtonItemStylePlain target:self action:@selector(savePressed:)];
     [self.navigationItem setRightBarButtonItems:@[save, settings]];
 }
 
@@ -79,6 +80,17 @@
     
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
     
+    // Register error messages
+    NSDictionary *messages = @{
+                               @"com.REValidation.presence": LUITranslate(@"%@ can't be blank."),
+                               @"com.REValidation.minimumLength": LUITranslate(@"%@ is too short (minimum is %i characters)."),
+                               @"com.REValidation.maximumLength": LUITranslate(@"%@ is too long (maximum is %i characters)."),
+                               @"com.REValidation.email": LUITranslate(@"%@ is not a valid email."),
+                               @"com.REValidation.url": LUITranslate(@"%@ is not a valid url.")
+                               };
+    [REValidation setErrorMessages:messages];
+    
+    // Creating sections
     RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:LUITranslate(@"Account")];
     [_manager addSection:section];
     
@@ -90,7 +102,7 @@
     section = [RETableViewSection sectionWithHeaderTitle:LUITranslate(@"Server")];
     [_manager addSection:section];
     
-    _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:LUITranslate(@"my.example-host.com")];
+    _serverHost = [RETextItem itemWithTitle:LUITranslate(@"Host") value:nil placeholder:LUITranslate(@"my.example-host.com")];
     [_serverHost setValidators:@[@"presence"]];
     [_serverHost setKeyboardType:UIKeyboardTypeURL];
     [_serverHost setAutocorrectionType:UITextAutocorrectionTypeNo];
@@ -100,7 +112,7 @@
     [_serverPort setValidators:@[@"presence", @"length(1, 8)"]];
     [section addItem:_serverPort];
     
-    _serverUser = [RETextItem itemWithTitle:LUITranslate(@"User") value:nil placeholder:@"ec2-user"];
+    _serverUser = [RETextItem itemWithTitle:LUITranslate(@"User") value:nil placeholder:LUITranslate(@"ec2-user")];
     [_serverUser setValidators:@[@"presence"]];
     [_serverUser setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [_serverUser setAutocorrectionType:UITextAutocorrectionTypeNo];

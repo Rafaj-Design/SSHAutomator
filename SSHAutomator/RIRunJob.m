@@ -7,6 +7,7 @@
 //
 
 #import "RIRunJob.h"
+#import <LUIFramework/LUIFramework.h>
 #import <NMSSH/NMSSH.h>
 #import "NSObject+CoreData.h"
 
@@ -68,7 +69,7 @@
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         if (_success) {
             _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
-            [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
+            [self log:[NSString stringWithFormat:LUITranslate(@"Execution time: %f"), _executionTime]];
             
             [self removeTemporaryKeyFile];
             
@@ -81,7 +82,7 @@
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         if (_failure) {
             _executionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
-            [self log:[NSString stringWithFormat:@"Execution time: %f", _executionTime]];
+            [self log:[NSString stringWithFormat:LUITranslate(@"Execution time: %f"), _executionTime]];
             
             [self removeTemporaryKeyFile];
             
@@ -117,13 +118,13 @@
         
         _startDate = [NSDate date];
         
-        [self log:@"Session started"];
-        [self log:[NSString stringWithFormat:@"Connecting to: %@@%@ port %@", _account.user, _account.host, _account.port]];
+        [self log:LUITranslate(@"Session started")];
+        [self log:[NSString stringWithFormat:LUITranslate(@"Connecting to: %@@%@ port %@"), _account.user, _account.host, _account.port]];
         _session = [NMSSHSession connectToHost:_account.host port:_account.port.intValue withUsername:_account.user];
         [_session setDelegate:self];
         if (_session.isConnected) {
             _connectionTime = [[NSDate date] timeIntervalSinceDate:_startDate];
-            [self log:[NSString stringWithFormat:@"Connection time: %f", _connectionTime]];
+            [self log:[NSString stringWithFormat:LUITranslate(@"Connection time: %f"), _connectionTime]];
             _startDate = [NSDate date]; // Reset timer for execution
             if (_account.certificate) {
                 NSString *path = [self keyPath];
@@ -134,14 +135,14 @@
                 [_session authenticateByPassword:_account.password];
             }
             if (_session.isAuthorized) {
-                [self log:@"Authentication succeeded"];
+                [self log:LUITranslate(@"Authentication succeeded")];
                 
                 NSError *shellError = nil;
                 [_session.channel startShell:&shellError];
                 [_session.channel setDelegate:self];
                 [_session.channel setRequestPty:YES];
                 if(!shellError) {
-                    [self log:@"Started Shell"];
+                    [self log:LUITranslate(@"Started Shell")];
                     [self log:nil];
                     [self log:nil];
                     BOOL ok = YES;
@@ -161,17 +162,17 @@
                     }
                     if (ok) {
                         //[_session.channel closeShell];
-                        [self log:@"Job succeeded"];
+                        [self log:LUITranslate(@"Job succeeded")];
                         [self doSuccess];
                     }
                     else {
-                        [self log:@"Job failed"];
+                        [self log:LUITranslate(@"Job failed")];
                         [self doFailure];
                     }
                 }
                 else {
                     [self log:shellError.localizedDescription];
-                    [self log:@"Job failed"];
+                    [self log:LUITranslate(@"Job failed")];
                     [self doFailure];
                 }
                 
@@ -187,14 +188,14 @@
             }
             else {
                 _logUpdated = nil;
-                [self log:@"Authentication failed"];
+                [self log:LUITranslate(@"Authentication failed")];
                 [self doFailure];
             }
             //[_session disconnect];
         }
         else {
             _logUpdated = nil;
-            [self log:@"Connection failed"];
+            [self log:LUITranslate(@"Connection failed")];
             [self doFailure];
         }
     });
@@ -214,7 +215,7 @@
 
 - (void)session:(NMSSHSession *)session didDisconnectWithError:(NSError *)error {
     _logUpdated = nil;
-    [self log:[NSString stringWithFormat:@"Disconnected with error: %@", error.localizedDescription]];
+    [self log:[NSString stringWithFormat:LUITranslate(@"Disconnected with error: %@"), error.localizedDescription]];
     [self doFailure];
 }
 

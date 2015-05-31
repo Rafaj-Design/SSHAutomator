@@ -7,6 +7,7 @@
 //
 
 #import "RIBrowserViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import <DLSFTPClient/DLSFTPFile.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIBrowserTableViewCell.h"
@@ -44,7 +45,7 @@
 }
 
 - (void)createControlButtons {
-    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(didClickCloseButton:)];
+    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Close") style:UIBarButtonItemStylePlain target:self action:@selector(didClickCloseButton:)];
     [self.navigationItem setLeftBarButtonItem:close];
     
     _bottomToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 44), self.view.frame.size.width, 44)];

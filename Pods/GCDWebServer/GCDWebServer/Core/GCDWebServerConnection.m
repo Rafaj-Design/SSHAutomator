@@ -590,7 +590,7 @@ static inline NSUInteger _ScanHexNumber(const void* bytes, NSUInteger size) {
         }
       } else {
         [self abortRequest:nil withStatusCode:kGCDWebServerHTTPStatusCode_InternalServerError];
-        GWS_DNOT_REACHED();
+        //GWS_DNOT_REACHED();
       }
     } else {
       [self abortRequest:nil withStatusCode:kGCDWebServerHTTPStatusCode_InternalServerError];

@@ -7,6 +7,7 @@
 //
 
 #import "RIManageCertificatesController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "NSObject+CoreData.h"
 #import "RITableViewCell.h"
 #import "RICertificate.h"
@@ -35,7 +36,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return (section == 0) ? @"Uploader" : @"Certificates";
+    return LUITranslate((section == 0) ? @"Uploader" : @"Certificates");
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -47,7 +48,7 @@
     }
     
     if (indexPath.section == 0) {
-        [cell.textLabel setText:@"Upload new certificate"];
+        [cell.textLabel setText:LUITranslate(@"Upload new certificate")];
         [cell.detailTextLabel setText:nil];
     }
     else {

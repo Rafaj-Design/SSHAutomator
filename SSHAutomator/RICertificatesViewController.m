@@ -7,6 +7,7 @@
 //
 
 #import "RICertificatesViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RIUploaderViewController.h"
 #import "RIEditCertificateViewController.h"
 #import "RIManageCertificatesController.h"
@@ -31,11 +32,11 @@
 #pragma mark Creating elements
 
 - (void)createControlButtons {
-    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
+    UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Close") style:UIBarButtonItemStylePlain target:self action:@selector(closePressed:)];
     [self.navigationItem setLeftBarButtonItem:close];
     
-    _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
-    _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editPressed:)];
+    _editButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Edit") style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
+    _doneButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Done") style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
     
     [self.navigationItem setRightBarButtonItems:@[_editButton]];
 }
@@ -50,6 +51,8 @@
 
 - (void)createAllElements {
     [super createAllElements];
+    
+    [self setTitle:LUITranslate(@"Certificates")];
     
     [self createTableView];
     [self createControlButtons];

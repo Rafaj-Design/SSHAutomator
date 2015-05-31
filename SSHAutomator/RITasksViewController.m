@@ -7,6 +7,7 @@
 //
 
 #import "RITasksViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIEditTaskViewController.h"
 #import "RITasksViewController.h"
@@ -35,9 +36,9 @@
 #pragma mark Creating elements
 
 - (void)createControlButtons {
-    _editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editPressed:)];
-    _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editPressed:)];
-    _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTaskPressed:)];
+    _editButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Edit") style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
+    _doneButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Done") style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
+    _addButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Add") style:UIBarButtonItemStylePlain target:self action:@selector(addTaskPressed:)];
     
     [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];
 }

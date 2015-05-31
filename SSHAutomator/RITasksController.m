@@ -7,6 +7,7 @@
 //
 
 #import "RITasksController.h"
+#import <LUIFramework/LUIFramework.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RITableView.h"
 #import "RITableViewCell.h"
@@ -81,7 +82,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return (section == 0) ? @"Action" : @"Tasks";
+    return LUITranslate((section == 0) ? @"Action" : @"Tasks");
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,13 +95,13 @@
         }
         
         if (indexPath.row == 0) {
-            [cell.textLabel setText:@"Run"];
+            [cell.textLabel setText:LUITranslate(@"Run")];
             FAKFontAwesome *icon = [FAKFontAwesome playIconWithSize:20];
             [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
             [cell.imageView setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];
         }
         else {
-            [cell.textLabel setText:@"History"];
+            [cell.textLabel setText:LUITranslate(@"History")];
             FAKFontAwesome *icon = [FAKFontAwesome historyIconWithSize:20];
             [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
             [cell.imageView setImage:[UIImage imageWithStackedIcons:@[icon] imageSize:CGSizeMake(22, 22)]];

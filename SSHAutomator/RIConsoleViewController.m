@@ -7,6 +7,7 @@
 //
 
 #import "RIConsoleViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RIHistory.h"
 #import "RIRunJob.h"
 
@@ -41,7 +42,7 @@
     [super createAllElements];
     
     [self.view setBackgroundColor:[UIColor blackColor]];
-    [self setTitle:@"Log"];
+    [self setTitle:LUITranslate(@"Log")];
     
     [self createConsoleView];
 }

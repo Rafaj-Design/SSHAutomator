@@ -50,6 +50,7 @@
     [[LUIURLs sharedInstance] setCustomImagesUrlString:@"http://localhost/images.liveui.io/"];
     [[LUIMain sharedInstance] setDebugMode:YES];
     [[LUIMain sharedInstance] setApiKey:@"5914F91F-2057-4573-A21B-294323EBAF48"];
+    [[LUITranslations sharedInstance] setReplaceStringsForUnderscores:YES];
     
     // Appearance
     [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];

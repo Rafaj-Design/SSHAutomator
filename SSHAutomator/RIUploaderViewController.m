@@ -7,6 +7,7 @@
 //
 
 #import "RIUploaderViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import <Reachability/Reachability.h>
 #import "GCDWebServer.h"
 #import "GCDWebServerDataResponse.h"
@@ -56,7 +57,7 @@
 - (void)createAllElements {
     [super createAllElements];
     
-    [self setTitle:@"Upload"];
+    [self setTitle:LUITranslate(@"Upload")];
     
     [self createUrlLabel];
     [self createImacImage];
@@ -67,10 +68,10 @@
 - (void)updateLabel {
     NSString *ip = [self getIPAddress];
     if (ip) {
-        [_label setText:[NSString stringWithFormat:@"Visit http://%@:8888 in your web browser.", ip]];
+        [_label setText:[NSString stringWithFormat:LUITranslate(@"Visit http://%@:8888 in your web browser."), ip]];
     }
     else {
-        [_label setText:@"Please connect to the same WiFi network your computer is on."];
+        [_label setText:LUITranslate(@"Please connect to the same WiFi network your computer is on.")];
     }
 }
 

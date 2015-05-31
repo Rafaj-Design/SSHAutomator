@@ -7,6 +7,7 @@
 //
 
 #import "RISelectCertificateViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RICertificatesController.h"
 #import "RICertificatesTableView.h"
 
@@ -52,7 +53,7 @@
 - (void)setup {
     [super setup];
     
-    [self setTitle:@"Select certificate"];
+    [self setTitle:LUITranslate(@"Select certificate")];
     
     _controller = [[RICertificatesController alloc] init];
 }

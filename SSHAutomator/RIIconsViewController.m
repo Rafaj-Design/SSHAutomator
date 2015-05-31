@@ -7,6 +7,7 @@
 //
 
 #import "RIIconsViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RICollectionView.h"
 #import "RIIconsController.h"
 #import "RIIconCollectionViewCell.h"
@@ -51,7 +52,7 @@
 - (void)setup {
     [super setup];
     
-    [self setTitle:@"Select icon"];
+    [self setTitle:LUITranslate(@"Select icon")];
     
     _controller = [[RIIconsController alloc] init];
 }

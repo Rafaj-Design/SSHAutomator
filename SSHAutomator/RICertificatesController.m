@@ -7,6 +7,7 @@
 //
 
 #import "RICertificatesController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RITableView.h"
 #import "RITableViewCell.h"
 #import "NSObject+CoreData.h"
@@ -69,7 +70,7 @@
     [cell setAccessoryType:UITableViewCellAccessoryNone];
     
     if (indexPath.row == 0) {
-         [cell.textLabel setText:@"Use password"];
+         [cell.textLabel setText:LUITranslate(@"Use password")];
     }
     else {
         NSInteger index = (indexPath.row - 1);

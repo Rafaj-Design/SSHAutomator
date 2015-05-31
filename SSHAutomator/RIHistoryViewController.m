@@ -7,6 +7,7 @@
 //
 
 #import "RIHistoryViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import "RIConsoleViewController.h"
 #import "RIHistoryController.h"
 #import "RITableView.h"
@@ -76,7 +77,7 @@
 - (void)setup {
     [super setup];
     
-    [self setTitle:@"History"];
+    [self setTitle:LUITranslate(@"History")];
     
     _controller = [[RIHistoryController alloc] init];
 }

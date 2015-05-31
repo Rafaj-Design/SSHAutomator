@@ -39,7 +39,7 @@
     _doneButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Done") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
     [_doneButton registerTitleWithTranslationKey:@"Done"];
     
-    _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccountPressed:)];
+    _addButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Add") style:UIBarButtonItemStylePlain target:self action:@selector(addAccountPressed:)];
     
     [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];
 }

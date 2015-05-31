@@ -7,6 +7,7 @@
 //
 
 #import "RIEditJobViewController.h"
+#import <LUIFramework/LUIFramework.h>
 #import <RETableViewManager/RETableViewManager.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RIIconsViewController.h"
@@ -59,10 +60,10 @@
 #pragma mark Creating elements
 
 - (void)createControls {
-    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closePressed:)];
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Cancel") style:UIBarButtonItemStylePlain target:self action:@selector(closePressed:)];
     [self.navigationItem setLeftBarButtonItem:cancel];
     
-    UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(savePressed:)];
+    UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Save") style:UIBarButtonItemStylePlain target:self action:@selector(savePressed:)];
     [self.navigationItem setRightBarButtonItem:save];
 }
 
@@ -71,10 +72,10 @@
     
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
     
-    RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:@"Job details"];
+    RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:LUITranslate(@"Job details")];
     [_manager addSection:section];
     
-    _icon = [RETableViewItem itemWithTitle:@"Icon" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+    _icon = [RETableViewItem itemWithTitle:LUITranslate(@"Icon") accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         
         // Present options
@@ -88,7 +89,7 @@
     }];
     [section addItem:_icon];
     
-    _jobName = [RETextItem itemWithTitle:@"Name" value:nil placeholder:@"Account name"];
+    _jobName = [RETextItem itemWithTitle:LUITranslate(@"Name") value:nil placeholder:LUITranslate(@"Account name")];
     [_jobName setValidators:@[@"presence", @"length(1, 999)"]];
     [_jobName setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [section addItem:_jobName];
@@ -131,7 +132,7 @@
             [errors addObject:error.localizedDescription];
         }
         NSString *errorString = [errors componentsJoinedByString:@"\n"];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Errors" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:LUITranslate(@"Errors") message:errorString delegate:nil cancelButtonTitle:LUITranslate(@"Ok") otherButtonTitles:nil];
         [alert show];
     }
     else {
