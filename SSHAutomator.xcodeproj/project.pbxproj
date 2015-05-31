@@ -63,7 +63,6 @@
 		15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B31A68563900CD8DFA /* RICoreData.m */; };
 		15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */; };
 		15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */; };
-		15C44F401A853C0700164368 /* WBA2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C44F3F1A853C0700164368 /* WBA2.framework */; };
 		15C44F421A853C6700164368 /* full.json in Resources */ = {isa = PBXBuildFile; fileRef = 15C44F411A853C6700164368 /* full.json */; };
 		BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FEF6B7B0105015289E10E7 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -188,7 +187,6 @@
 		15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditAccountViewController.m; sourceTree = "<group>"; };
 		15BC73BA1A685C1300CD8DFA /* RIIconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconsViewController.h; sourceTree = "<group>"; };
 		15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconsViewController.m; sourceTree = "<group>"; };
-		15C44F3F1A853C0700164368 /* WBA2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WBA2.framework; sourceTree = "<group>"; };
 		15C44F411A853C6700164368 /* full.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = full.json; sourceTree = "<group>"; };
 		62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9FEF6B7B0105015289E10E7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +198,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15C44F401A853C0700164368 /* WBA2.framework in Frameworks */,
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
 			);
@@ -767,7 +764,6 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15C44F3F1A853C0700164368 /* WBA2.framework */,
 				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
 				D9FEF6B7B0105015289E10E7 /* libPods.a */,
 			);
