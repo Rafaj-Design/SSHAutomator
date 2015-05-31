@@ -7,7 +7,7 @@
 //
 
 #import "RIEditAccountViewController.h"
-#import <WBA2/WBA2.h>
+#import <LUIFramework/LUIFramework.h>
 #import <RETableViewManager/RETableViewManager.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
 #import "RICertificatesViewController.h"
@@ -51,7 +51,7 @@
         [_serverCertificate setValue:_temporaryCertificate.name];
     }
     else {
-        [_serverCertificate setValue:WBAGet(@"Use password")];
+        [_serverCertificate setValue:LUITranslate(@"Use password")];
     }
 }
 
@@ -79,38 +79,38 @@
     
     _manager = [[RETableViewManager alloc] initWithTableView:self.tableView];
     
-    RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:WBAGet(@"Account")];
+    RETableViewSection *section = [RETableViewSection sectionWithHeaderTitle:LUITranslate(@"Account")];
     [_manager addSection:section];
     
-    _accountName = [RETextItem itemWithTitle:WBAGet(@"Name") value:nil placeholder:WBAGet(@"Account name")];
+    _accountName = [RETextItem itemWithTitle:LUITranslate(@"Name") value:nil placeholder:LUITranslate(@"Account name")];
     [_accountName setValidators:@[@"presence", @"length(1, 999)"]];
     [_accountName setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [section addItem:_accountName];
     
-    section = [RETableViewSection sectionWithHeaderTitle:WBAGet(@"Server")];
+    section = [RETableViewSection sectionWithHeaderTitle:LUITranslate(@"Server")];
     [_manager addSection:section];
     
-    _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:WBAGet(@"my.example-host.com")];
+    _serverHost = [RETextItem itemWithTitle:@"Host" value:nil placeholder:LUITranslate(@"my.example-host.com")];
     [_serverHost setValidators:@[@"presence"]];
     [_serverHost setKeyboardType:UIKeyboardTypeURL];
     [_serverHost setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_serverHost];
     
-    _serverPort = [RENumberItem itemWithTitle:WBAGet(@"Port") value:@"22" placeholder:@"22" format:@"XXXXXXXX"];
+    _serverPort = [RENumberItem itemWithTitle:LUITranslate(@"Port") value:@"22" placeholder:@"22" format:@"XXXXXXXX"];
     [_serverPort setValidators:@[@"presence", @"length(1, 8)"]];
     [section addItem:_serverPort];
     
-    _serverUser = [RETextItem itemWithTitle:WBAGet(@"User") value:nil placeholder:@"ec2-user"];
+    _serverUser = [RETextItem itemWithTitle:LUITranslate(@"User") value:nil placeholder:@"ec2-user"];
     [_serverUser setValidators:@[@"presence"]];
     [_serverUser setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [_serverUser setAutocorrectionType:UITextAutocorrectionTypeNo];
     [section addItem:_serverUser];
     
-    _serverPassword = [RETextItem itemWithTitle:WBAGet(@"Password") value:nil placeholder:WBAGet(@"password")];
+    _serverPassword = [RETextItem itemWithTitle:LUITranslate(@"Password") value:nil placeholder:LUITranslate(@"password")];
     [_serverPassword setSecureTextEntry:YES];
     [section addItem:_serverPassword];
     
-    _serverCertificate = [RERadioItem itemWithTitle:WBAGet(@"Certificate") accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+    _serverCertificate = [RERadioItem itemWithTitle:LUITranslate(@"Certificate") accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
         [item deselectRowAnimated:YES];
         
         // Present options
@@ -162,7 +162,7 @@
             [errors addObject:error.localizedDescription];
         }
         NSString *errorString = [errors componentsJoinedByString:@"\n"];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:WBAGet(@"Errors") message:errorString delegate:nil cancelButtonTitle:WBAGet(@"OK") otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:LUITranslate(@"Errors") message:errorString delegate:nil cancelButtonTitle:LUITranslate(@"OK") otherButtonTitles:nil];
         [alert show];
     }
     else {

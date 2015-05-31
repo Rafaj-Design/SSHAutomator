@@ -1,0 +1,3 @@
+[submodule "Thirdparty/LiveUI"]
+	path = Thirdparty/LiveUI
+	url = git@github.com:Ridiculous-Innovations/LUI.git

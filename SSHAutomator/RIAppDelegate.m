@@ -9,7 +9,7 @@
 #import "RIAppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
-#import <WBA2/WBA2.h>
+#import <LUIFramework/LUIFramework.h>
 #import "RIAccountsViewController.h"
 #import "RILinuxCommandsViewController.h"
 #import "RIConfig.h"
@@ -45,39 +45,11 @@
     // Core Data
     _coreData = [[RICoreData alloc] init];
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // WellBakedApp
-    
-    [[WBAMain sharedWBA].translations setDidReceiveInfoFileResponse:^(NSDictionary *data, NSError *error) {
-        NSLog(@"Info: %@ - %@", data, error.localizedDescription);
-    }];
-    [[WBAMain sharedWBA].translations setDidReceiveLocalizationFileResponse:^(NSDictionary *data, NSError *error) {
-        NSLog(@"Localization: %@ - %@", data, error.localizedDescription);
-    }];
-    
-    WBATranslationData *basicData = [[WBATranslationData alloc] initWithBundledWBALocalizationFileNamed:@"full.json" withDefaultLanguageCode:@"de"];
-    [[WBAMain sharedWBA] startTranslationsWithBasicData:basicData andCustomUrl:[NSURL URLWithString:@"http://api.wba2.com/1.0/2/2/"]];
-    
-    //[[WBAMain sharedWBA] setDebugMode:YES];
-    
-    NSLog(@"Translations: %@", [WBAMain sharedWBA].data.translations);
-    
-    
-    
-    
-    
-    
-    
-    
+    // Remote localization from http://www.liveui.io
+    [[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io/"];
+    [[LUIURLs sharedInstance] setCustomImagesUrlString:@"http://localhost/images.liveui.io/"];
+    [[LUIMain sharedInstance] setDebugMode:YES];
+    [[LUIMain sharedInstance] setApiKey:@"5914F91F-2057-4573-A21B-294323EBAF48"];
     
     // Appearance
     [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];

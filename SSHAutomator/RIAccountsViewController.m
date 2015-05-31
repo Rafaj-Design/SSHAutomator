@@ -7,7 +7,7 @@
 //
 
 #import "RIAccountsViewController.h"
-#import <WBA2/WBA2.h>
+#import <LUIFramework/LUIFramework.h>
 #import "RIEditAccountViewController.h"
 #import "RIJobsViewController.h"
 #import "RIAccountsController.h"
@@ -33,11 +33,11 @@
 #pragma mark Creating elements
 
 - (void)createControlButtons {
-    _editButton = [[UIBarButtonItem alloc] initWithTitle:WBAGet(@"Edit") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
-    [_editButton registerTitleWithWBAKey:@"Edit"];
+    _editButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Edit") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
+    [_editButton registerTitleWithTranslationKey:@"Edit"];
     
-    _doneButton = [[UIBarButtonItem alloc] initWithTitle:WBAGet(@"Done") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
-    [_doneButton registerTitleWithWBAKey:@"Done"];
+    _doneButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Done") style:UIBarButtonItemStyleDone target:self action:@selector(editPressed:)];
+    [_doneButton registerTitleWithTranslationKey:@"Done"];
     
     _addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccountPressed:)];
     
@@ -95,8 +95,8 @@
         [weakSelf reloadData];
     }];
     
-    [self setTitle:WBAGet(@"Accounts")];
-    [self registerTitleWithWBAKey:@"Accounts"];
+    [self setTitle:LUITranslate(@"Accounts")];
+    [self registerTitleWithTranslationKey:@"Accounts"];
 }
 
 #pragma mark Table view delegate methods

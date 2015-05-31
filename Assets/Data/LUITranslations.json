@@ -1,0 +1,116 @@
+{
+    "timestamp": 1433095569,
+    "code": 200,
+    "data": {
+        "cs": {
+            "default": true,
+            "translations": {
+                "WBALang_EN": "Anglina",
+                "WBALang_CS": "Cestina",
+                "WBALang_EN-GB": "Britstina",
+                "WBALang_JA": "Japonstina",
+                "Accounts": "\u00da\u010dty",
+                "LUI Demo App": "LUI Demo Aplikace",
+                "Language": "Jazyky",
+                "Ok": "Ok",
+                "Edit": "Editovat",
+                "Done": "Hotovo",
+                "Cancel": "Zru\u0161it",
+                "Save": "Ulo\u017eit",
+                "Name": "N\u00e1zev",
+                "Host": "Host",
+                "Port": "Port",
+                "User": "U\u017eivatel",
+                "Password": "Heslo",
+                "password": "heslo",
+                "Certificate": "Certifik\u00e1t",
+                "Use password": "Pou\u017e\u00edt heslo",
+                "my.example-host.com": "moje.ukazkova-url.cz"
+            }
+        },
+        "ja": {
+            "default": false,
+            "translations": {
+                "WBALang_EN": "\u82f1\u8a9e",
+                "WBALang_CS": "\u30c1\u30a7\u30b3\u8a9e",
+                "WBALang_EN-GB": "\u30a4\u30ae\u30ea\u30b9\u82f1\u8a9e",
+                "WBALang_JA": "\u65e5\u672c\u4eba",
+                "Accounts": "\u30a2\u30ab\u30a6\u30f3\u30c8",
+                "LUI Demo App": "LUI\u30c7\u30e2\u30a2\u30d7\u30ea",
+                "Language": "\u8a00\u8a9e",
+                "Ok": "Ok",
+                "Edit": "\u7de8\u96c6",
+                "Done": "\u7d42\u308f\u3063\u305f",
+                "Cancel": "\u30ad\u30e3\u30f3\u30bb\u30eb",
+                "Save": "\u4fdd\u5b58",
+                "Name": "\u540d",
+                "Host": "\u30b5\u30fc\u30d0\u30fc\u00b7\u30db\u30b9\u30c8",
+                "Port": "\u30b5\u30fc\u30d0\u30fc\u306e\u30dd\u30fc\u30c8",
+                "User": "\u30e6\u30fc\u30b6\u30fc",
+                "Password": "\u30d1\u30b9\u30ef\u30fc\u30c9",
+                "password": "\u30d1\u30b9\u30ef\u30fc\u30c9",
+                "Certificate": "\u8a3c\u660e\u66f8",
+                "Use password": "\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u4f7f\u7528\u3057\u307e\u3059",
+                "my.example-host.com": "my.example-host.jp"
+            }
+        },
+        "en": {
+            "default": false,
+            "translations": {
+                "WBALang_EN": "English",
+                "WBALang_CS": "Czech",
+                "WBALang_DE": "",
+                "WBALang_EN-GB": "English mate!",
+                "WBALang_JA": "Japanese",
+                "Accounts": "Accounts",
+                "LUI Demo App": "LUI Demo App",
+                "Language": "Language",
+                "Ok": "Ok",
+                "Edit": "Edit",
+                "Done": "Done",
+                "Cancel": "Cancel",
+                "Save": "Save",
+                "Name": "Name",
+                "Host": "Host",
+                "Port": "Port",
+                "User": "User",
+                "Password": "Password",
+                "password": "password",
+                "Certificate": "Certificate",
+                "Use password": "Use password",
+                "my.example-host.com": "my.example-host.com"
+            }
+        },
+        "en-GB": {
+            "default": false,
+            "translations": {
+                "WBALang_EN": "English",
+                "WBALang_CS": "Czech",
+                "WBALang_DE": "",
+                "WBALang_EN-GB": "British English",
+                "WBALang_JA": "Japanese",
+                "Accounts": "Accounts",
+                "LUI Demo App": "LUI Demo App",
+                "Language": "Language",
+                "Ok": "Ok",
+                "Edit": "Edit",
+                "Done": "Done",
+                "Cancel": "Cancel",
+                "Save": "Save",
+                "Name": "Name",
+                "Host": "Host",
+                "Port": "Port",
+                "User": "User",
+                "Password": "Password",
+                "password": "password",
+                "Certificate": "Certificate",
+                "Use password": "Use password",
+                "my.example-host.com": "my.example-host.co.uk"
+            }
+        }
+    },
+    "app": {
+        "name": "SSHAutomator",
+        "production": true
+    }
+}

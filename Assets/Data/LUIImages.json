@@ -1,0 +1,57 @@
+{
+    "timestamp": 1433095569,
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "single": true,
+            "key": "HeaderImageThree",
+            "image": {
+                "hash": "4bcc31abc16eda60606f5fea95313fca",
+                "file": "2\/9\/1\/0.png",
+                "thumb": "2\/9\/1\/0_th.png"
+            }
+        },
+        {
+            "id": 6,
+            "single": false,
+            "key": "MilujuKacenku",
+            "images": {
+                "en-GB": {
+                    "hash": "97014b4019cb4a7598b292ec9af1caa9",
+                    "file": "2\/9\/6\/196.png",
+                    "thumb": "2\/9\/6\/196_th.png"
+                },
+                "en": {
+                    "hash": "cc393e186ecd4d3449611ebf2d05f493",
+                    "file": "2\/9\/6\/676.png",
+                    "thumb": "2\/9\/6\/676_th.png"
+                },
+                "cs": {
+                    "hash": "88cbfd1dd290881bf8af16e9b8d29dca",
+                    "file": "2\/9\/6\/363.png",
+                    "thumb": "2\/9\/6\/363_th.png"
+                },
+                "ja": {
+                    "hash": "c958a4a36364d55f03a35454962bca65",
+                    "file": "2\/9\/6\/452.png",
+                    "thumb": "2\/9\/6\/452_th.png"
+                }
+            }
+        },
+        {
+            "id": 9,
+            "single": true,
+            "key": "FuerteLogo",
+            "image": {
+                "hash": "7382fffd1f9a95694b86aeb268562a1d",
+                "file": "2\/9\/9\/0.png",
+                "thumb": "2\/9\/9\/0_th.png"
+            }
+        }
+    ],
+    "app": {
+        "name": "SSHAutomator",
+        "production": true
+    }
+}

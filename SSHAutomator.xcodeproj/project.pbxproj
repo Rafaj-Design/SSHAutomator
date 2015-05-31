@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
+		154C9EDC1B1B81D900807481 /* LUIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154C9EDB1B1B81D900807481 /* LUIFramework.framework */; };
+		154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154C9EDD1B1B842C00807481 /* Fabric.framework */; };
+		154C9EE31B1B84BC00807481 /* LUIImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 154C9EE11B1B84BC00807481 /* LUIImages.json */; };
+		154C9EE41B1B84BC00807481 /* LUITranslations.json in Resources */ = {isa = PBXBuildFile; fileRef = 154C9EE21B1B84BC00807481 /* LUITranslations.json */; };
 		1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
@@ -63,7 +67,6 @@
 		15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B31A68563900CD8DFA /* RICoreData.m */; };
 		15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */; };
 		15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */; };
-		15C44F421A853C6700164368 /* full.json in Resources */ = {isa = PBXBuildFile; fileRef = 15C44F411A853C6700164368 /* full.json */; };
 		BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FEF6B7B0105015289E10E7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,10 @@
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
 		152FFB6E1A68777900F87169 /* RITask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RITask.m; sourceTree = "<group>"; };
+		154C9EDB1B1B81D900807481 /* LUIFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LUIFramework.framework; path = Thirdparty/LiveUI/iOS/Latest/LUIFramework.framework; sourceTree = "<group>"; };
+		154C9EDD1B1B842C00807481 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		154C9EE11B1B84BC00807481 /* LUIImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUIImages.json; sourceTree = "<group>"; };
+		154C9EE21B1B84BC00807481 /* LUITranslations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUITranslations.json; sourceTree = "<group>"; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
@@ -187,7 +194,6 @@
 		15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditAccountViewController.m; sourceTree = "<group>"; };
 		15BC73BA1A685C1300CD8DFA /* RIIconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconsViewController.h; sourceTree = "<group>"; };
 		15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconsViewController.m; sourceTree = "<group>"; };
-		15C44F411A853C6700164368 /* full.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = full.json; sourceTree = "<group>"; };
 		62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9FEF6B7B0105015289E10E7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2DA2B31CCC993EFA094AF9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
+				154C9EDC1B1B81D900807481 /* LUIFramework.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
+				154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +238,23 @@
 				156EC6401A6C28AC009BB672 /* RIHistory.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		154C9EDF1B1B84BC00807481 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				154C9EE01B1B84BC00807481 /* Data */,
+			);
+			path = Assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		154C9EE01B1B84BC00807481 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				154C9EE11B1B84BC00807481 /* LUIImages.json */,
+				154C9EE21B1B84BC00807481 /* LUITranslations.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		1563C4BE1A7EBBF600BE65EB /* Thirdparty */ = {
@@ -593,7 +618,7 @@
 		15BC73711A683A9300CD8DFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				15C44F411A853C6700164368 /* full.json */,
+				154C9EDF1B1B84BC00807481 /* Assets */,
 				156EC6431A6C3770009BB672 /* Commands */,
 				156EC62D1A6AA774009BB672 /* HTML */,
 				15BC73811A683A9300CD8DFA /* Images.xcassets */,
@@ -764,6 +789,8 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				154C9EDD1B1B842C00807481 /* Fabric.framework */,
+				154C9EDB1B1B81D900807481 /* LUIFramework.framework */,
 				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
 				D9FEF6B7B0105015289E10E7 /* libPods.a */,
 			);
@@ -846,8 +873,9 @@
 				156EC6311A6AA774009BB672 /* uploader-upload.html in Resources */,
 				156EC6301A6AA774009BB672 /* uploader-done.html in Resources */,
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
+				154C9EE41B1B84BC00807481 /* LUITranslations.json in Resources */,
 				156EC6691A6E65FB009BB672 /* uploader-error.html in Resources */,
-				15C44F421A853C6700164368 /* full.json in Resources */,
+				154C9EE31B1B84BC00807481 /* LUIImages.json in Resources */,
 				156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */,
 				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
 			);
@@ -1020,6 +1048,7 @@
 					"$(PROJECT_DIR)",
 					/Projects/iOS/WBAFramework/Product,
 					"$(PROJECT_DIR)/Thirdparty/WBAFramework/Product",
+					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1125,6 +1154,7 @@
 					"$(PROJECT_DIR)",
 					/Projects/iOS/WBAFramework/Product,
 					"$(PROJECT_DIR)/Thirdparty/WBAFramework/Product",
+					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1152,6 +1182,7 @@
 					"$(PROJECT_DIR)",
 					/Projects/iOS/WBAFramework/Product,
 					"$(PROJECT_DIR)/Thirdparty/WBAFramework/Product",
+					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
