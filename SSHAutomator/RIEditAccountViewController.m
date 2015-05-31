@@ -174,7 +174,7 @@
             [errors addObject:error.localizedDescription];
         }
         NSString *errorString = [errors componentsJoinedByString:@"\n"];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:LUITranslate(@"Errors") message:errorString delegate:nil cancelButtonTitle:LUITranslate(@"OK") otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:LUITranslate(@"Errors") message:errorString delegate:nil cancelButtonTitle:LUITranslate(@"Ok") otherButtonTitles:nil];
         [alert show];
     }
     else {

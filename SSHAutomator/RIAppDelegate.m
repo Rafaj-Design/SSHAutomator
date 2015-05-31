@@ -7,9 +7,10 @@
 //
 
 #import "RIAppDelegate.h"
+#import <LUIFramework/LUIFramework.h>
+#import <LUIFramework/NSLocalizedStringOverride.h>
 #import <Crashlytics/Crashlytics.h>
 #import <FontAwesomeKit/FAKFontAwesome.h>
-#import <LUIFramework/LUIFramework.h>
 #import "RIAccountsViewController.h"
 #import "RILinuxCommandsViewController.h"
 #import "RIConfig.h"
@@ -50,7 +51,7 @@
     [[LUIURLs sharedInstance] setCustomImagesUrlString:@"http://localhost/images.liveui.io/"];
     [[LUIMain sharedInstance] setDebugMode:YES];
     [[LUIMain sharedInstance] setApiKey:@"5914F91F-2057-4573-A21B-294323EBAF48"];
-    [[LUITranslations sharedInstance] setReplaceStringsForUnderscores:YES];
+    [[LUITranslations sharedInstance] setReplaceStringsForUnderscores:NO];
     
     // Appearance
     [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];

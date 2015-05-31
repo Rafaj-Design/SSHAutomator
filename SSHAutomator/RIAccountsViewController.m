@@ -41,6 +41,9 @@
     
     _addButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Add") style:UIBarButtonItemStylePlain target:self action:@selector(addAccountPressed:)];
     
+    UIBarButtonItem *langs = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Languages") style:UIBarButtonItemStylePlain target:self action:@selector(selectLanguage:)];
+    [self.navigationItem setLeftBarButtonItem:langs];
+    
     [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];
 }
 
@@ -67,6 +70,11 @@
 }
 
 #pragma mark Actions
+
+- (void)selectLanguage:(UIBarButtonItem *)sender {
+    LUILanguageSelectorViewController *c = [[LUILanguageSelectorViewController alloc] init];
+    [self presentViewController:c animated:YES completion:nil];
+}
 
 - (void)addAccountPressed:(UIBarButtonItem *)sender {
     __typeof(self) __weak weakSelf = self;

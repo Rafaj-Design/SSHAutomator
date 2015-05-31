@@ -69,7 +69,7 @@
     r.size.height = 36;
     _pathLabel = [[RIPathLabel alloc] initWithFrame:r];
     [_pathLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    [_pathLabel setText:@"Loading ..."];
+    [_pathLabel setText:LUITranslate(@"Loading ...")];
     [self.view addSubview:_pathLabel];
 }
 

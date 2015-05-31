@@ -61,7 +61,7 @@
     _taskEnabled = [REBoolItem itemWithTitle:LUITranslate(@"Enabled") value:YES];
     [section addItem:_taskEnabled];
     
-    _taskCommand = [RELongTextItem itemWithTitle:nil value:nil placeholder:LUITranslate(@"Commands, for example: \n\ncd /var/www/html\npwd\nls -a ./\n\nTo browse for a path on the server, use the folder tool on top of this screen next to save button")];
+    _taskCommand = [RELongTextItem itemWithTitle:nil value:nil placeholder:LUITranslate(@"CommandsExampleCode")];
     [_taskCommand setValidators:@[@"presence"]];
     [_taskCommand setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [_taskCommand setAutocorrectionType:UITextAutocorrectionTypeNo];
