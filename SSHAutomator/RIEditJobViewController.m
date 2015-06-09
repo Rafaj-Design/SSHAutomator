@@ -89,7 +89,7 @@
     }];
     [section addItem:_icon];
     
-    _jobName = [RETextItem itemWithTitle:LUITranslate(@"Name") value:nil placeholder:LUITranslate(@"Account name")];
+    _jobName = [RETextItem itemWithTitle:LUITranslate(@"Name") value:nil placeholder:LUITranslate(@"Job name")];
     [_jobName setValidators:@[@"presence", @"length(1, 999)"]];
     [_jobName setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [section addItem:_jobName];

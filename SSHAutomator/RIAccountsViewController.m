@@ -40,8 +40,10 @@
     [_doneButton registerTitleWithTranslationKey:@"Done"];
     
     _addButton = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Add") style:UIBarButtonItemStylePlain target:self action:@selector(addAccountPressed:)];
+    [_addButton registerTitleWithTranslationKey:@"Add"];
     
     UIBarButtonItem *langs = [[UIBarButtonItem alloc] initWithTitle:LUITranslate(@"Languages") style:UIBarButtonItemStylePlain target:self action:@selector(selectLanguage:)];
+    [langs registerTitleWithTranslationKey:@"Languages"];
     [self.navigationItem setLeftBarButtonItem:langs];
     
     [self.navigationItem setRightBarButtonItems:@[_editButton, _addButton]];

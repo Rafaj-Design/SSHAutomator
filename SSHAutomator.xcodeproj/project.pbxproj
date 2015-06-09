@@ -194,6 +194,7 @@
 		15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditAccountViewController.m; sourceTree = "<group>"; };
 		15BC73BA1A685C1300CD8DFA /* RIIconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconsViewController.h; sourceTree = "<group>"; };
 		15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconsViewController.m; sourceTree = "<group>"; };
+		15DC56571B1BB7B6007B256B /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9FEF6B7B0105015289E10E7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2DA2B31CCC993EFA094AF9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -992,6 +993,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				15BC73841A683A9300CD8DFA /* Base */,
+				15DC56571B1BB7B6007B256B /* cs */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -1193,7 +1195,7 @@
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b9a8e449-6920-4c5c-a899-df75cd94b861";
 			};
 			name = Release;
 		};

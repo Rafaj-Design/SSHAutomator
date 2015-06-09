@@ -7,9 +7,10 @@
 //
 
 #import "RIViewController.h"
+#import <LUIFramework/LUIFramework.h>
 
 
-@interface RIViewController ()
+@interface RIViewController () <UITableViewDelegate>
 
 @end
 
@@ -61,6 +62,12 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark Table view delegate methods
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return LUITranslate(@"Delete");
 }
 
 
