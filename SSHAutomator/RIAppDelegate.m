@@ -14,6 +14,7 @@
 #import "RIAccountsViewController.h"
 #import "RILinuxCommandsViewController.h"
 #import "RIConfig.h"
+#import "Flurry.h"
 
 
 @interface RIAppDelegate ()
@@ -43,15 +44,18 @@
     // Crashlytics
     [Crashlytics startWithAPIKey:@"fdad57f5fd93d14410334446675bff03d3a3f996"];
     
+    // Analytics
+    [Flurry startSession:@"NC9N9GNX2WVQ356KSR63"];
+    
     // Core Data
     _coreData = [[RICoreData alloc] init];
     
     // Remote localization from http://www.liveui.io
-    [[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io/"];
-    [[LUIURLs sharedInstance] setCustomImagesUrlString:@"http://localhost/images.liveui.io/"];
-    [[LUIMain sharedInstance] setDebugMode:YES];
+    //[[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io/"];
+    //[[LUIURLs sharedInstance] setCustomImagesUrlString:@"http://localhost/images.liveui.io/"];
+    //[[LUIMain sharedInstance] setDebugMode:YES];
     [[LUIMain sharedInstance] setApiKey:@"5914F91F-2057-4573-A21B-294323EBAF48"];
-    [[LUITranslations sharedInstance] setReplaceStringsForUnderscores:NO];
+    //[[LUITranslations sharedInstance] setReplaceStringsForUnderscores:NO];
     
     // Appearance
     [[UINavigationBar appearance] setBarTintColor:[RIConfig mainColor]];

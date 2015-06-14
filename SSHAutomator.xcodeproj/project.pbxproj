@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151749C61B2E0D45001A930A /* libFlurry_6.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 151749C51B2E0D45001A930A /* libFlurry_6.4.0.a */; };
 		152FFB5F1A68739300F87169 /* NSObject+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB5E1A68739300F87169 /* NSObject+CoreData.m */; };
 		152FFB6F1A68777900F87169 /* RITask.m in Sources */ = {isa = PBXBuildFile; fileRef = 152FFB6E1A68777900F87169 /* RITask.m */; };
 		154C9EDC1B1B81D900807481 /* LUIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154C9EDB1B1B81D900807481 /* LUIFramework.framework */; };
@@ -84,6 +85,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		151749C31B2E0D45001A930A /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		151749C41B2E0D45001A930A /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		151749C51B2E0D45001A930A /* libFlurry_6.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.4.0.a; sourceTree = "<group>"; };
 		152FFB5D1A68739300F87169 /* NSObject+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreData.h"; sourceTree = "<group>"; };
 		152FFB5E1A68739300F87169 /* NSObject+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreData.m"; sourceTree = "<group>"; };
 		152FFB6D1A68777900F87169 /* RITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RITask.h; sourceTree = "<group>"; };
@@ -209,12 +213,23 @@
 				154C9EDC1B1B81D900807481 /* LUIFramework.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
 				154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */,
+				151749C61B2E0D45001A930A /* libFlurry_6.4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151749C21B2E0D45001A930A /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				151749C31B2E0D45001A930A /* Flurry.h */,
+				151749C41B2E0D45001A930A /* FlurryWatch.h */,
+				151749C51B2E0D45001A930A /* libFlurry_6.4.0.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		152FFB5C1A68736B00F87169 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +276,7 @@
 		1563C4BE1A7EBBF600BE65EB /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				151749C21B2E0D45001A930A /* Flurry */,
 			);
 			path = Thirdparty;
 			sourceTree = SOURCE_ROOT;
@@ -1059,6 +1075,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-iOS/Libraries/lib",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
+					"$(PROJECT_DIR)/Thirdparty/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8DE82982-C128-4E90-A941-5001D32DFC4C";
@@ -1165,6 +1182,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-iOS/Libraries/lib",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
+					"$(PROJECT_DIR)/Thirdparty/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1193,6 +1211,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-iOS/Libraries/lib",
 					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
+					"$(PROJECT_DIR)/Thirdparty/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b9a8e449-6920-4c5c-a899-df75cd94b861";
