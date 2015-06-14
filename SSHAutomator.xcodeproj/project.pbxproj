@@ -182,8 +182,6 @@
 		15BC737C1A683A9300CD8DFA /* RIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIViewController.m; sourceTree = "<group>"; };
 		15BC73811A683A9300CD8DFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15BC73841A683A9300CD8DFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		15BC738F1A683A9300CD8DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHAutomatorTests.m; sourceTree = "<group>"; };
 		15BC739D1A683B7D00CD8DFA /* RIAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccountsViewController.h; sourceTree = "<group>"; };
 		15BC739E1A683B7D00CD8DFA /* RIAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIAccountsViewController.m; sourceTree = "<group>"; };
 		15BC73A31A683BE400CD8DFA /* RIAccountsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIAccountsController.h; sourceTree = "<group>"; };
@@ -601,7 +599,6 @@
 			children = (
 				15BC73701A683A9300CD8DFA /* SSHAutomator */,
 				15BC73711A683A9300CD8DFA /* Supporting Files */,
-				15BC738D1A683A9300CD8DFA /* SSHAutomatorTests */,
 				15BC736F1A683A9300CD8DFA /* Products */,
 				49F0F817D89D3DDC47A7A258 /* Pods */,
 				4050CAFEBE9B40D45762605E /* Frameworks */,
@@ -647,23 +644,6 @@
 			);
 			name = "Supporting Files";
 			path = SSHAutomator;
-			sourceTree = "<group>";
-		};
-		15BC738D1A683A9300CD8DFA /* SSHAutomatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				15BC73901A683A9300CD8DFA /* SSHAutomatorTests.m */,
-				15BC738E1A683A9300CD8DFA /* Supporting Files */,
-			);
-			path = SSHAutomatorTests;
-			sourceTree = "<group>";
-		};
-		15BC738E1A683A9300CD8DFA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				15BC738F1A683A9300CD8DFA /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		15BC739A1A683ABE00CD8DFA /* View controllers */ = {
