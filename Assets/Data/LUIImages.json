@@ -1,9 +1,17 @@
 {
-    "timestamp": 1433109682,
-    "code": 200,
-    "data": [],
-    "app": {
-        "name": "SSHAutomator",
-        "production": true
-    }
+	"code":200,
+	"timestamp":1434833751,
+	"data":
+	[
+		{
+			"id": 0,
+			"single": true,
+			"key": "TestItem",
+		}
+	],
+	"app":
+	{
+		"name":"SSHAutomator",
+		"production":true
+	}
 }

@@ -7,6 +7,7 @@
 //
 
 #import "RIBrowserTableViewCell.h"
+#import "RIConfig.h"
 
 
 @implementation RIBrowserTableViewCell
@@ -28,7 +29,7 @@
 - (void)setup {
     [super setup];
     
-    [self.detailTextLabel setTextColor:[UIColor grayColor]];
+    [self.detailTextLabel setTextColor:[RIConfig infoTextColor]];
     [self.detailTextLabel setLineBreakMode:NSLineBreakByTruncatingHead];
 }
 

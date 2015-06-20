@@ -8,6 +8,7 @@
 
 #import "RITableViewController.h"
 #import <LUIFramework/LUIFramework.h>
+#import "RIConfig.h"
 
 
 @interface RITableViewController () <UITableViewDelegate>
@@ -21,20 +22,16 @@
 #pragma mark Creating elements
 
 - (void)createAllElements {
-    
+    [self.tableView setBackgroundColor:[RIConfig tableBackgroundColor]];
 }
 
 #pragma mark View lifecycle
 
-//- (void)loadView {
-//    [super loadView];
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
 //    
 //    [self createAllElements];
 //}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
 
 #pragma mark Initialization
 

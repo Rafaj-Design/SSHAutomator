@@ -20,9 +20,14 @@
 + (UIColor *)lightMainColor;
 + (UIColor *)textColor;
 + (UIColor *)lightTextColor;
-+ (UIColor *)backgroundColor;
-+ (UIColor *)borderColor;
++ (UIColor *)infoTextColor;
 + (UIColor *)dangerColor;
+
++ (UIColor *)terminalBackgroundColor;
++ (UIColor *)terminalTextColor;
+
++ (UIColor *)tableBackgroundColor;
++ (UIColor *)tabBarInactiveColor;
 
 
 @end

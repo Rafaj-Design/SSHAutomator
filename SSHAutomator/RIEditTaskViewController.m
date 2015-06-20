@@ -74,6 +74,8 @@
 - (void)createAllElements {
     [self createTableElements];
     [self createControls];
+    
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
 }
 
 #pragma mark View lifecycle

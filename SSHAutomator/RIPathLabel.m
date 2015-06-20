@@ -8,6 +8,7 @@
 
 #import "RIPathLabel.h"
 #import <FontAwesomeKit/FAKFontAwesome.h>
+#import "RIConfig.h"
 
 
 @implementation RIPathLabel
@@ -19,7 +20,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.05]];
-        [self setTextColor:[UIColor darkGrayColor]];
+        [self setTextColor:[RIConfig textColor]];
         [self setFont:[UIFont boldSystemFontOfSize:10]];
         [self setNumberOfLines:2];
         [self setLineBreakMode:NSLineBreakByTruncatingHead];

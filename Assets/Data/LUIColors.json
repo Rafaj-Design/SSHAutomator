@@ -1,0 +1,15 @@
+{
+    "timestamp": 1434834453,
+    "code": 200,
+    "data": {
+        "TestColor": {
+            "id": 0,
+            "value": "FF0000",
+            "alpha": 100
+        }
+    },
+    "app": {
+        "name": "SSHAutomator",
+        "production": true
+    }
+}

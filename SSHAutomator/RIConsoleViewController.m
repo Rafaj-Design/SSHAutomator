@@ -10,6 +10,7 @@
 #import <LUIFramework/LUIFramework.h>
 #import "RIHistory.h"
 #import "RIRunJob.h"
+#import "RIConfig.h"
 
 
 @interface RIConsoleViewController ()
@@ -29,7 +30,7 @@
     [_textView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_textView setEditable:NO];
     [_textView setFont:[UIFont fontWithName:@"Courier" size:10]];
-    [_textView setTextColor:[UIColor greenColor]];
+    [_textView setTextColor:[RIConfig terminalTextColor]];
     [_textView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:_textView];
     
@@ -41,7 +42,7 @@
 - (void)createAllElements {
     [super createAllElements];
     
-    [self.view setBackgroundColor:[UIColor blackColor]];
+    [self.view setBackgroundColor:[RIConfig terminalBackgroundColor]];
     [self setTitle:LUITranslate(@"Log")];
     
     [self createConsoleView];

@@ -33,6 +33,7 @@
 
 - (void)createTableView {
     _tableView = [[RITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [_tableView setBackgroundColor:[UIColor clearColor]];
     [_tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_tableView setDataSource:_controller];
     [_tableView setDelegate:self];

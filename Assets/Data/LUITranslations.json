@@ -1,5 +1,5 @@
 {
-    "timestamp": 1433109682,
+    "timestamp": 1434833751,
     "code": 200,
     "data": {
         "cs": {
@@ -35,6 +35,7 @@
                 "Cancel": "Zru\u0161it",
                 "Save": "Ulo\u017eit",
                 "Loading ...": "Nahr\u00e1v\u00e1m ...",
+                "Delete": "Smazat",
                 "Job details": "Detail jobu",
                 "Icon": "Ikona",
                 "Select icon": "Vyberte ikonu",
@@ -75,6 +76,7 @@
             "translations": {
                 "WBALang_EN": "English",
                 "WBALang_CS": "Czech",
+                "WBALang_ZH": "",
                 "Accounts": "Accounts",
                 "LUI Demo App": "LUI Demo App",
                 "Language": "Language",
@@ -103,6 +105,7 @@
                 "Cancel": "Cancel",
                 "Save": "Save",
                 "Loading ...": "Loading ...",
+                "Delete": "Delete",
                 "Job details": "Job details",
                 "Icon": "Icon",
                 "Select icon": "Select icon",

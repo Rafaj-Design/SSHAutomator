@@ -8,6 +8,7 @@
 
 #import "RIViewController.h"
 #import <LUIFramework/LUIFramework.h>
+#import "RIConfig.h"
 
 
 @interface RIViewController () <UITableViewDelegate>
@@ -21,7 +22,7 @@
 #pragma mark Creating elements
 
 - (void)createAllElements {
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[RIConfig tableBackgroundColor]];
 }
 
 #pragma mark View lifecycle

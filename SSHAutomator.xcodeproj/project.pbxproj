@@ -14,6 +14,15 @@
 		154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154C9EDD1B1B842C00807481 /* Fabric.framework */; };
 		154C9EE31B1B84BC00807481 /* LUIImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 154C9EE11B1B84BC00807481 /* LUIImages.json */; };
 		154C9EE41B1B84BC00807481 /* LUITranslations.json in Resources */ = {isa = PBXBuildFile; fileRef = 154C9EE21B1B84BC00807481 /* LUITranslations.json */; };
+		155680211B2E248400934858 /* SSHDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 155680201B2E248400934858 /* SSHDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		155680331B2E248400934858 /* SSHDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556801C1B2E248400934858 /* SSHDataKit.framework */; };
+		155680341B2E248400934858 /* SSHDataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1556801C1B2E248400934858 /* SSHDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		155680471B2E24C800934858 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155680461B2E24C800934858 /* InterfaceController.m */; };
+		155680491B2E24C800934858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155680481B2E24C800934858 /* Images.xcassets */; };
+		1556804D1B2E24C900934858 /* SSHAutomator WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 1556804C1B2E24C900934858 /* SSHAutomator WatchKit App.app */; };
+		155680551B2E24C900934858 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155680531B2E24C900934858 /* Interface.storyboard */; };
+		155680571B2E24C900934858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155680561B2E24C900934858 /* Images.xcassets */; };
+		1556805A1B2E24C900934858 /* SSHAutomator WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 155680411B2E24C800934858 /* SSHAutomator WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
@@ -68,16 +77,53 @@
 		15BC73B41A68563900CD8DFA /* RICoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B31A68563900CD8DFA /* RICoreData.m */; };
 		15BC73B81A6858A900CD8DFA /* RIEditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */; };
 		15BC73BC1A685C1300CD8DFA /* RIIconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */; };
+		15C4E53F1B360B44004B4F35 /* LUIColors.json in Resources */ = {isa = PBXBuildFile; fileRef = 15C4E53E1B360B44004B4F35 /* LUIColors.json */; };
 		BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FEF6B7B0105015289E10E7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		155680311B2E248400934858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BC73661A683A9200CD8DFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1556801B1B2E248400934858;
+			remoteInfo = SSHDataKit;
+		};
+		1556804E1B2E24C900934858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BC73661A683A9200CD8DFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1556804B1B2E24C900934858;
+			remoteInfo = "SSHAutomator WatchKit App";
+		};
+		155680581B2E24C900934858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15BC73661A683A9200CD8DFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 155680401B2E24C800934858;
+			remoteInfo = "SSHAutomator WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		155680631B2E24C900934858 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1556805A1B2E24C900934858 /* SSHAutomator WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1563C4B41A7E8F3000BE65EB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				155680341B2E248400934858 /* SSHDataKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +142,20 @@
 		154C9EDD1B1B842C00807481 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		154C9EE11B1B84BC00807481 /* LUIImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUIImages.json; sourceTree = "<group>"; };
 		154C9EE21B1B84BC00807481 /* LUITranslations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUITranslations.json; sourceTree = "<group>"; };
+		1556801C1B2E248400934858 /* SSHDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSHDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1556801F1B2E248400934858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155680201B2E248400934858 /* SSHDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHDataKit.h; sourceTree = "<group>"; };
+		1556802E1B2E248400934858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1556802F1B2E248400934858 /* SSHDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHDataKitTests.m; sourceTree = "<group>"; };
+		155680411B2E24C800934858 /* SSHAutomator WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SSHAutomator WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		155680441B2E24C800934858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155680451B2E24C800934858 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		155680461B2E24C800934858 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		155680481B2E24C800934858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1556804C1B2E24C900934858 /* SSHAutomator WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSHAutomator WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		155680521B2E24C900934858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155680541B2E24C900934858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		155680561B2E24C900934858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
@@ -196,6 +256,7 @@
 		15BC73B71A6858A900CD8DFA /* RIEditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIEditAccountViewController.m; sourceTree = "<group>"; };
 		15BC73BA1A685C1300CD8DFA /* RIIconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIIconsViewController.h; sourceTree = "<group>"; };
 		15BC73BB1A685C1300CD8DFA /* RIIconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIIconsViewController.m; sourceTree = "<group>"; };
+		15C4E53E1B360B44004B4F35 /* LUIColors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUIColors.json; sourceTree = "<group>"; };
 		15DC56571B1BB7B6007B256B /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9FEF6B7B0105015289E10E7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +264,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		155680181B2E248400934858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1556803E1B2E24C800934858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15BC736B1A683A9300CD8DFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +286,7 @@
 				154C9EDC1B1B81D900807481 /* LUIFramework.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
 				154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */,
+				155680331B2E248400934858 /* SSHDataKit.framework in Frameworks */,
 				151749C61B2E0D45001A930A /* libFlurry_6.4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +341,82 @@
 		154C9EE01B1B84BC00807481 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				15C4E53E1B360B44004B4F35 /* LUIColors.json */,
 				154C9EE11B1B84BC00807481 /* LUIImages.json */,
 				154C9EE21B1B84BC00807481 /* LUITranslations.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		1556801D1B2E248400934858 /* SSHDataKit */ = {
+			isa = PBXGroup;
+			children = (
+				155680201B2E248400934858 /* SSHDataKit.h */,
+				1556801E1B2E248400934858 /* Supporting Files */,
+			);
+			path = SSHDataKit;
+			sourceTree = "<group>";
+		};
+		1556801E1B2E248400934858 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1556801F1B2E248400934858 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1556802C1B2E248400934858 /* SSHDataKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1556802F1B2E248400934858 /* SSHDataKitTests.m */,
+				1556802D1B2E248400934858 /* Supporting Files */,
+			);
+			path = SSHDataKitTests;
+			sourceTree = "<group>";
+		};
+		1556802D1B2E248400934858 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1556802E1B2E248400934858 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		155680421B2E24C800934858 /* SSHAutomator WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				155680451B2E24C800934858 /* InterfaceController.h */,
+				155680461B2E24C800934858 /* InterfaceController.m */,
+				155680481B2E24C800934858 /* Images.xcassets */,
+				155680431B2E24C800934858 /* Supporting Files */,
+			);
+			path = "SSHAutomator WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		155680431B2E24C800934858 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				155680441B2E24C800934858 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		155680501B2E24C900934858 /* SSHAutomator WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				155680531B2E24C900934858 /* Interface.storyboard */,
+				155680561B2E24C900934858 /* Images.xcassets */,
+				155680511B2E24C900934858 /* Supporting Files */,
+			);
+			path = "SSHAutomator WatchKit App";
+			sourceTree = "<group>";
+		};
+		155680511B2E24C900934858 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				155680521B2E24C900934858 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1563C4BE1A7EBBF600BE65EB /* Thirdparty */ = {
@@ -599,6 +747,10 @@
 			children = (
 				15BC73701A683A9300CD8DFA /* SSHAutomator */,
 				15BC73711A683A9300CD8DFA /* Supporting Files */,
+				1556801D1B2E248400934858 /* SSHDataKit */,
+				1556802C1B2E248400934858 /* SSHDataKitTests */,
+				155680421B2E24C800934858 /* SSHAutomator WatchKit Extension */,
+				155680501B2E24C900934858 /* SSHAutomator WatchKit App */,
 				15BC736F1A683A9300CD8DFA /* Products */,
 				49F0F817D89D3DDC47A7A258 /* Pods */,
 				4050CAFEBE9B40D45762605E /* Frameworks */,
@@ -609,6 +761,9 @@
 			isa = PBXGroup;
 			children = (
 				15BC736E1A683A9300CD8DFA /* SSHAutomator.app */,
+				1556801C1B2E248400934858 /* SSHDataKit.framework */,
+				155680411B2E24C800934858 /* SSHAutomator WatchKit Extension.appex */,
+				1556804C1B2E24C900934858 /* SSHAutomator WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -805,7 +960,69 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		155680191B2E248400934858 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155680211B2E248400934858 /* SSHDataKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1556801B1B2E248400934858 /* SSHDataKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1556803B1B2E248400934858 /* Build configuration list for PBXNativeTarget "SSHDataKit" */;
+			buildPhases = (
+				155680171B2E248400934858 /* Sources */,
+				155680181B2E248400934858 /* Frameworks */,
+				155680191B2E248400934858 /* Headers */,
+				1556801A1B2E248400934858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSHDataKit;
+			productName = SSHDataKit;
+			productReference = 1556801C1B2E248400934858 /* SSHDataKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		155680401B2E24C800934858 /* SSHAutomator WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1556805F1B2E24C900934858 /* Build configuration list for PBXNativeTarget "SSHAutomator WatchKit Extension" */;
+			buildPhases = (
+				1556803D1B2E24C800934858 /* Sources */,
+				1556803E1B2E24C800934858 /* Frameworks */,
+				1556803F1B2E24C800934858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1556804F1B2E24C900934858 /* PBXTargetDependency */,
+			);
+			name = "SSHAutomator WatchKit Extension";
+			productName = "SSHAutomator WatchKit Extension";
+			productReference = 155680411B2E24C800934858 /* SSHAutomator WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		1556804B1B2E24C900934858 /* SSHAutomator WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1556805B1B2E24C900934858 /* Build configuration list for PBXNativeTarget "SSHAutomator WatchKit App" */;
+			buildPhases = (
+				1556804A1B2E24C900934858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SSHAutomator WatchKit App";
+			productName = "SSHAutomator WatchKit App";
+			productReference = 1556804C1B2E24C900934858 /* SSHAutomator WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		15BC736D1A683A9300CD8DFA /* SSHAutomator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15BC73941A683A9300CD8DFA /* Build configuration list for PBXNativeTarget "SSHAutomator" */;
@@ -817,10 +1034,13 @@
 				D9DE8AE141BD3AA264B46DD6 /* Copy Pods Resources */,
 				156EC5CF1A68877B009BB672 /* ShellScript */,
 				1563C4B41A7E8F3000BE65EB /* Embed Frameworks */,
+				155680631B2E24C900934858 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				155680321B2E248400934858 /* PBXTargetDependency */,
+				155680591B2E24C900934858 /* PBXTargetDependency */,
 			);
 			name = SSHAutomator;
 			productName = SSHAutomator;
@@ -837,6 +1057,17 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Ridiculous Innovations";
 				TargetAttributes = {
+					1556801B1B2E248400934858 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = BZCFE4ZBF8;
+					};
+					155680401B2E24C800934858 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = BZCFE4ZBF8;
+					};
+					1556804B1B2E24C900934858 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					15BC736D1A683A9300CD8DFA = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = BZCFE4ZBF8;
@@ -857,11 +1088,39 @@
 			projectRoot = "";
 			targets = (
 				15BC736D1A683A9300CD8DFA /* SSHAutomator */,
+				1556801B1B2E248400934858 /* SSHDataKit */,
+				155680401B2E24C800934858 /* SSHAutomator WatchKit Extension */,
+				1556804B1B2E24C900934858 /* SSHAutomator WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1556801A1B2E248400934858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1556803F1B2E24C800934858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1556804D1B2E24C900934858 /* SSHAutomator WatchKit App.app in Resources */,
+				155680491B2E24C800934858 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1556804A1B2E24C900934858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155680551B2E24C900934858 /* Interface.storyboard in Resources */,
+				155680571B2E24C900934858 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15BC736C1A683A9300CD8DFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -872,6 +1131,7 @@
 				15BC73821A683A9300CD8DFA /* Images.xcassets in Resources */,
 				154C9EE41B1B84BC00807481 /* LUITranslations.json in Resources */,
 				156EC6691A6E65FB009BB672 /* uploader-error.html in Resources */,
+				15C4E53F1B360B44004B4F35 /* LUIColors.json in Resources */,
 				154C9EE31B1B84BC00807481 /* LUIImages.json in Resources */,
 				156EC6671A6DBD4B009BB672 /* Assets.xcassets in Resources */,
 				156EC6451A6C3786009BB672 /* commands.txt in Resources */,
@@ -927,6 +1187,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		155680171B2E248400934858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1556803D1B2E24C800934858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155680471B2E24C800934858 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15BC736A1A683A9300CD8DFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -984,7 +1259,33 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		155680321B2E248400934858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1556801B1B2E248400934858 /* SSHDataKit */;
+			targetProxy = 155680311B2E248400934858 /* PBXContainerItemProxy */;
+		};
+		1556804F1B2E24C900934858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1556804B1B2E24C900934858 /* SSHAutomator WatchKit App */;
+			targetProxy = 1556804E1B2E24C900934858 /* PBXContainerItemProxy */;
+		};
+		155680591B2E24C900934858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 155680401B2E24C800934858 /* SSHAutomator WatchKit Extension */;
+			targetProxy = 155680581B2E24C900934858 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		155680531B2E24C900934858 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				155680541B2E24C900934858 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		15BC73831A683A9300CD8DFA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -997,6 +1298,186 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		155680351B2E248400934858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SSHDataKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		155680361B2E248400934858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SSHDataKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		155680371B2E248400934858 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SSHDataKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		1556805C1B2E24C900934858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = SSHAutomator_WatchKit_Extension;
+				INFOPLIST_FILE = "SSHAutomator WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		1556805D1B2E24C900934858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SSHAutomator_WatchKit_Extension;
+				INFOPLIST_FILE = "SSHAutomator WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		1556805E1B2E24C900934858 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SSHAutomator_WatchKit_Extension;
+				INFOPLIST_FILE = "SSHAutomator WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Enterprise;
+		};
+		155680601B2E24C900934858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SSHAutomator WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		155680611B2E24C900934858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SSHAutomator WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		155680621B2E24C900934858 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SSHAutomator WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Enterprise;
+		};
 		156EC6551A6C63DF009BB672 /* Enterprise */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1025,7 +1506,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1049,7 +1530,7 @@
 					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1096,7 +1577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1132,7 +1613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1156,7 +1637,7 @@
 					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1185,7 +1666,7 @@
 					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
 				);
 				INFOPLIST_FILE = SSHAutomator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1201,6 +1682,36 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1556803B1B2E248400934858 /* Build configuration list for PBXNativeTarget "SSHDataKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155680351B2E248400934858 /* Debug */,
+				155680361B2E248400934858 /* Release */,
+				155680371B2E248400934858 /* Enterprise */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1556805B1B2E24C900934858 /* Build configuration list for PBXNativeTarget "SSHAutomator WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1556805C1B2E24C900934858 /* Debug */,
+				1556805D1B2E24C900934858 /* Release */,
+				1556805E1B2E24C900934858 /* Enterprise */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1556805F1B2E24C900934858 /* Build configuration list for PBXNativeTarget "SSHAutomator WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155680601B2E24C900934858 /* Debug */,
+				155680611B2E24C900934858 /* Release */,
+				155680621B2E24C900934858 /* Enterprise */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		15BC73691A683A9200CD8DFA /* Build configuration list for PBXProject "SSHAutomator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

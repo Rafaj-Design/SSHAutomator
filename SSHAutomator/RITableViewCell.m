@@ -7,6 +7,7 @@
 //
 
 #import "RITableViewCell.h"
+#import "RIConfig.h"
 
 
 @implementation RITableViewCell
@@ -21,7 +22,8 @@
 #pragma mark Initialization
 
 - (void)setup {
-    
+    [self.textLabel setTextColor:[RIConfig textColor]];
+    [self setBackgroundColor:[RIConfig tableBackgroundColor]];
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {

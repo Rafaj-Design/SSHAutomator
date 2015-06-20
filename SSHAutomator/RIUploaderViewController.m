@@ -15,6 +15,7 @@
 #import "GCDWebServerMultiPartFormRequest.h"
 #include <ifaddrs.h>
 #include <arpa/inet.h>
+#import "RIConfig.h"
 
 
 @interface RIUploaderViewController ()
@@ -35,7 +36,7 @@
 - (void)createUrlLabel {
     _label = [[UILabel alloc] initWithFrame:CGRectMake(20, 90, (self.view.frame.size.width - 40), 60)];
     [_label setTextAlignment:NSTextAlignmentCenter];
-    [_label setTextColor:[UIColor darkTextColor]];
+    [_label setTextColor:[RIConfig textColor]];
     [_label setBackgroundColor:[UIColor clearColor]];
     [_label setNumberOfLines:5];
     [_label setLineBreakMode:NSLineBreakByWordWrapping];

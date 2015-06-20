@@ -29,7 +29,7 @@
 
 - (UINavigationController *)tabBarElementWithIcon:(FAKFontAwesome *)icon andController:(UIViewController *)controller {
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:controller];
-    [icon addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor]];
+    [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig tabBarInactiveColor]];
     [nc.tabBarItem setImage:[[icon imageWithSize:CGSizeMake(22, 22)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [icon addAttribute:NSForegroundColorAttributeName value:[RIConfig mainColor]];
     [nc.tabBarItem setSelectedImage:[[icon imageWithSize:CGSizeMake(22, 22)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];

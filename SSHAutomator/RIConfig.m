@@ -7,6 +7,7 @@
 //
 
 #import "RIConfig.h"
+#import <LUIFramework/LUIFramework.h>
 
 
 @implementation RIConfig
@@ -21,31 +22,53 @@
 #pragma mark Colors
 
 + (UIColor *)mainColor {
-    return [UIColor colorWithRed:(100.0f / 255.0f) green:(161.0f / 255.0f) blue:(13.0f / 255.0f) alpha:1];
+    //return [UIColor colorWithRed:(100.0f / 255.0f) green:(161.0f / 255.0f) blue:(13.0f / 255.0f) alpha:1];
+    return LUIColor(@"mainColor");
 }
 
 + (UIColor *)lightMainColor {
-    return [UIColor colorWithRed:(154.0f / 255.0f) green:(208.0f / 255.0f) blue:(156.0f / 255.0f) alpha:1];
+    //return [UIColor colorWithRed:(154.0f / 255.0f) green:(208.0f / 255.0f) blue:(156.0f / 255.0f) alpha:1];
+    return LUIColor(@"lightMainColor");
 }
 
 + (UIColor *)textColor {
-    return [UIColor darkGrayColor];
+    //return [UIColor darkGrayColor];
+    return LUIColor(@"textColor");
 }
 
 + (UIColor *)lightTextColor {
-    return [UIColor whiteColor];
+    //return [UIColor whiteColor];
+    return LUIColor(@"lightTextColor");
 }
 
-+ (UIColor *)backgroundColor {
-    return [UIColor colorWithRed:(241.0f / 255.0f) green:(241.0f / 255.0f) blue:(241.0f / 255.0f) alpha:1];
-}
-
-+ (UIColor *)borderColor {
-    return [UIColor colorWithWhite:0 alpha:0.04];
++ (UIColor *)infoTextColor {
+    //return [UIColor lightGrayColor];
+    return LUIColor(@"infoTextColor");
 }
 
 + (UIColor *)dangerColor {
-    return [UIColor colorWithRed:(254.0f / 255.0f) green:(205.0f / 255.0f) blue:(190.0f / 255.0f) alpha:1];
+    //return [UIColor colorWithRed:(254.0f / 255.0f) green:(205.0f / 255.0f) blue:(190.0f / 255.0f) alpha:1];
+    return LUIColor(@"dangerColor");
+}
+
++ (UIColor *)terminalBackgroundColor {
+    //return [UIColor blueColor];
+    return LUIColor(@"terminalBackgroundColor");
+}
+
++ (UIColor *)terminalTextColor {
+    //return [UIColor redColor];
+    return LUIColor(@"terminalTextColor");
+}
+
++ (UIColor *)tableBackgroundColor {
+    //return [UIColor whiteColor];
+    return LUIColor(@"tableBackgroundColor");
+}
+
++ (UIColor *)tabBarInactiveColor {
+    //return [UIColor redColor];
+    return LUIColor(@"tabBarInactiveColor");
 }
 
 

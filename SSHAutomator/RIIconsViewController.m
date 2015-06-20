@@ -31,6 +31,7 @@
     [layout setSectionInset:UIEdgeInsetsMake(16, 10, 16, 10)];
     
     _collectionView = [[RICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    [_collectionView setBackgroundColor:[UIColor clearColor]];
     [_collectionView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_collectionView setDataSource:_controller];
     [_collectionView setDelegate:self];

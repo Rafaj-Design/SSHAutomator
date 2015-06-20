@@ -120,7 +120,7 @@
         RITask *object = _data[indexPath.row];
         [cell.textLabel setText:object.command];
         
-        [cell.textLabel setTextColor:(object.enabled ? [UIColor darkTextColor] : [UIColor grayColor])];
+        [cell.textLabel setTextColor:(object.enabled ? [RIConfig textColor] : [RIConfig infoTextColor])];
         if (object.enabled) {
             [cell.imageView setImage:_enabledImage];
         }
