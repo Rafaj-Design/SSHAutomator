@@ -14,6 +14,7 @@
 		154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154C9EDD1B1B842C00807481 /* Fabric.framework */; };
 		154C9EE31B1B84BC00807481 /* LUIImages.json in Resources */ = {isa = PBXBuildFile; fileRef = 154C9EE11B1B84BC00807481 /* LUIImages.json */; };
 		154C9EE41B1B84BC00807481 /* LUITranslations.json in Resources */ = {isa = PBXBuildFile; fileRef = 154C9EE21B1B84BC00807481 /* LUITranslations.json */; };
+		15607BE31BA88DBB00B3FE4B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15607BE21BA88DBB00B3FE4B /* CloudKit.framework */; };
 		1563C4B61A7E903D00BE65EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC73831A683A9300CD8DFA /* LaunchScreen.xib */; };
 		156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156EC5D01A6887EE009BB672 /* Crashlytics.framework */; };
 		156EC5D51A688FA8009BB672 /* RIJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156EC5D41A688FA8009BB672 /* RIJobsViewController.m */; };
@@ -85,6 +86,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1507EF9F1BA873CE00D256C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1507EFA01BA8745800D256C3 /* SSHAutomator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SSHAutomator.entitlements; sourceTree = "<group>"; };
 		151749C31B2E0D45001A930A /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		151749C41B2E0D45001A930A /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
 		151749C51B2E0D45001A930A /* libFlurry_6.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.4.0.a; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		154C9EDD1B1B842C00807481 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		154C9EE11B1B84BC00807481 /* LUIImages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUIImages.json; sourceTree = "<group>"; };
 		154C9EE21B1B84BC00807481 /* LUITranslations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LUITranslations.json; sourceTree = "<group>"; };
+		15607BE21BA88DBB00B3FE4B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		156EC5D01A6887EE009BB672 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		156EC5D31A688FA8009BB672 /* RIJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIJobsViewController.h; sourceTree = "<group>"; };
 		156EC5D41A688FA8009BB672 /* RIJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIJobsViewController.m; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				156EC5D11A6887EE009BB672 /* Crashlytics.framework in Frameworks */,
 				154C9EDC1B1B81D900807481 /* LUIFramework.framework in Frameworks */,
 				BE49F21051B6B82FDCB1DAF9 /* libPods.a in Frameworks */,
+				15607BE31BA88DBB00B3FE4B /* CloudKit.framework in Frameworks */,
 				154C9EDE1B1B842C00807481 /* Fabric.framework in Frameworks */,
 				151749C61B2E0D45001A930A /* libFlurry_6.4.0.a in Frameworks */,
 			);
@@ -635,6 +640,7 @@
 		15BC73711A683A9300CD8DFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1507EFA01BA8745800D256C3 /* SSHAutomator.entitlements */,
 				154C9EDF1B1B84BC00807481 /* Assets */,
 				156EC6431A6C3770009BB672 /* Commands */,
 				156EC62D1A6AA774009BB672 /* HTML */,
@@ -644,6 +650,7 @@
 				15BC73781A683A9300CD8DFA /* SSHAutomator.xcdatamodeld */,
 				15BC73721A683A9300CD8DFA /* Info.plist */,
 				15BC73731A683A9300CD8DFA /* main.m */,
+				1507EF9F1BA873CE00D256C3 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			path = SSHAutomator;
@@ -806,6 +813,7 @@
 		4050CAFEBE9B40D45762605E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15607BE21BA88DBB00B3FE4B /* CloudKit.framework */,
 				154C9EDD1B1B842C00807481 /* Fabric.framework */,
 				154C9EDB1B1B81D900807481 /* LUIFramework.framework */,
 				156EC5D01A6887EE009BB672 /* Crashlytics.framework */,
@@ -859,7 +867,12 @@
 				TargetAttributes = {
 					15BC736D1A683A9300CD8DFA = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = BZCFE4ZBF8;
+						DevelopmentTeam = 6UPNZ3ACG2;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1039,6 +1052,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = SSHAutomator/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1058,6 +1072,7 @@
 			baseConfigurationReference = 62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SSHAutomator/SSHAutomator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1078,7 +1093,7 @@
 					"$(PROJECT_DIR)/Thirdparty/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8DE82982-C128-4E90-A941-5001D32DFC4C";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Enterprise;
 		};
@@ -1105,6 +1120,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = SSHAutomator/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1146,6 +1162,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = SSHAutomator/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1165,6 +1182,37 @@
 			baseConfigurationReference = DF2DA2B31CCC993EFA094AF9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SSHAutomator/SSHAutomator.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ondrej rafaj (J65YJ2E252)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ondrej rafaj (J65YJ2E252)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
+					"$(PROJECT_DIR)",
+					/Projects/iOS/WBAFramework/Product,
+					"$(PROJECT_DIR)/Thirdparty/WBAFramework/Product",
+					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
+				);
+				INFOPLIST_FILE = SSHAutomator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-iOS/Libraries/lib",
+					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
+					"$(PROJECT_DIR)/Thirdparty/Flurry",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f29afec4-94c7-474e-8e05-6df2588cff9a";
+			};
+			name = Debug;
+		};
+		15BC73961A683A9300CD8DFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SSHAutomator/SSHAutomator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1186,35 +1234,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Debug;
-		};
-		15BC73961A683A9300CD8DFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62E63B1EA2623C898D3F6D7B /* Pods.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSHTests/Settings/lib",
-					"$(PROJECT_DIR)",
-					/Projects/iOS/WBAFramework/Product,
-					"$(PROJECT_DIR)/Thirdparty/WBAFramework/Product",
-					"$(PROJECT_DIR)/Thirdparty/LiveUI/iOS/Latest",
-				);
-				INFOPLIST_FILE = SSHAutomator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-iOS/Libraries/lib",
-					"$(PROJECT_DIR)/Thirdparty/NMSSH/NMSSH-OSX/Libraries/lib",
-					"$(PROJECT_DIR)/Thirdparty/Flurry",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b9a8e449-6920-4c5c-a899-df75cd94b861";
 			};
 			name = Release;
 		};

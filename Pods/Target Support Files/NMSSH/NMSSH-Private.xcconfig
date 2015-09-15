@@ -1,0 +1,7 @@
+#include "NMSSH.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/NMSSH" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/DLSFTPClient" "${PODS_ROOT}/Headers/Public/Ensembles" "${PODS_ROOT}/Headers/Public/FontAwesomeKit" "${PODS_ROOT}/Headers/Public/GCDWebServer" "${PODS_ROOT}/Headers/Public/NMSSH" "${PODS_ROOT}/Headers/Public/REFormattedNumberField" "${PODS_ROOT}/Headers/Public/RETableViewManager" "${PODS_ROOT}/Headers/Public/REValidation" "${PODS_ROOT}/Headers/Public/Reachability"
+LIBRARY_SEARCH_PATHS = ${NMSSH_LIBRARY_SEARCH_PATHS}
+OTHER_LDFLAGS = ${NMSSH_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

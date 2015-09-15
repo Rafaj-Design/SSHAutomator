@@ -1,0 +1,2 @@
+DLSFTPCLIENT_LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/DLSFTPClient/DLSFTPClient/Libraries/lib" "$(PODS_ROOT)/DLSFTPClient/DLSFTPClient/Libraries/lib" "$(PODS_ROOT)/DLSFTPClient/DLSFTPClient/Libraries/lib"
+DLSFTPCLIENT_OTHER_LDFLAGS = -l"crypto" -l"ssh2" -l"ssl" -l"z" -framework "CFNetwork" -framework "Foundation"

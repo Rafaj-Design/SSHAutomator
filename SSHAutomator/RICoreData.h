@@ -38,5 +38,7 @@
 - (RICertificate *)newCertificate;
 - (NSArray *)certificates;
 
+- (void)syncWithCloud;
+
 
 @end

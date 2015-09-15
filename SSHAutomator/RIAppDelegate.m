@@ -50,6 +50,8 @@
     // Core Data
     _coreData = [[RICoreData alloc] init];
     
+    [_coreData syncWithCloud];
+    
     // Remote localization from http://www.liveui.io
     //[[LUIURLs sharedInstance] setCustomApiUrlString:@"http://localhost/api.liveui.io/"];
     //[[LUIURLs sharedInstance] setCustomImagesUrlString:@"http://localhost/images.liveui.io/"];
@@ -86,10 +88,11 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     [_coreData saveContext];
+    [_coreData syncWithCloud];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    
+    [_coreData syncWithCloud];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

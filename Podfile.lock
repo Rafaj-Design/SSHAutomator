@@ -1,11 +1,14 @@
 PODS:
   - DLSFTPClient (1.0.5)
+  - Ensembles (1.4.1):
+    - Ensembles/Core (= 1.4.1)
+  - Ensembles/Core (1.4.1)
   - FontAwesomeKit (2.1.8):
-    - FontAwesomeKit/Core
-    - FontAwesomeKit/FontAwesome
-    - FontAwesomeKit/FoundationIcons
-    - FontAwesomeKit/IonIcons
-    - FontAwesomeKit/Zocial
+    - FontAwesomeKit/Core (= 2.1.8)
+    - FontAwesomeKit/FontAwesome (= 2.1.8)
+    - FontAwesomeKit/FoundationIcons (= 2.1.8)
+    - FontAwesomeKit/IonIcons (= 2.1.8)
+    - FontAwesomeKit/Zocial (= 2.1.8)
   - FontAwesomeKit/Core (2.1.8)
   - FontAwesomeKit/FontAwesome (2.1.8):
     - FontAwesomeKit/Core
@@ -16,7 +19,7 @@ PODS:
   - FontAwesomeKit/Zocial (2.1.8):
     - FontAwesomeKit/Core
   - GCDWebServer (3.2.2):
-    - GCDWebServer/Core
+    - GCDWebServer/Core (= 3.2.2)
   - GCDWebServer/Core (3.2.2)
   - GCDWebServer/WebUploader (3.2.2):
     - GCDWebServer/Core
@@ -30,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - DLSFTPClient
+  - Ensembles (~> 1.0)
   - FontAwesomeKit (~> 2.1.0)
   - GCDWebServer (~> 3.0)
   - GCDWebServer/WebUploader (~> 3.0)
@@ -38,13 +42,14 @@ DEPENDENCIES:
   - RETableViewManager
 
 SPEC CHECKSUMS:
-  DLSFTPClient: f893396f5216487b318194adc0199a0966e812dc
-  FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
-  GCDWebServer: 285fde9951ab2cd87c2d9d74735fee977a16fe04
-  NMSSH: 6075839f1d4415ce55bf5db62fa1178888e12ae5
-  Reachability: 1ef8adf5c4e3d362f96515d4278f68dad3c26930
-  REFormattedNumberField: 86318c549b60130a6d7a05abebb142f08f671319
-  RETableViewManager: 62cab967dd2d24545283cf4751e94c222268533a
-  REValidation: a0033a582415848854e875dfcbe69c107de19f81
+  DLSFTPClient: 83221f2149920cd10e2d956806833c9e561c4fff
+  Ensembles: 90013c435ff874a7a9ccb7a334b74b93ac53dc12
+  FontAwesomeKit: 64759fb28b5d2e74a1bd81553d7c11ca10e32179
+  GCDWebServer: 5320220ad0d497da8e7beca1396f0c82d4f83730
+  NMSSH: 9b9ab841e851a5a6304263ce02cc995fa211563c
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  REFormattedNumberField: be3d55dd709f65541fb26b7e1709da07903147f8
+  RETableViewManager: 317f43f31c0a5818c6257cb7544167819a8ae170
+  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.38.2

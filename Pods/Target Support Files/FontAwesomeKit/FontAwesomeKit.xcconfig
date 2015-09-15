@@ -1,0 +1,1 @@
+FONTAWESOMEKIT_OTHER_LDFLAGS = -framework "CoreText" -framework "UIKit"

@@ -416,7 +416,6 @@
     const char *pubKey = [[publicKey stringByExpandingTildeInPath] UTF8String] ?: NULL;
     const char *privKey = [[privateKey stringByExpandingTildeInPath] UTF8String] ?: NULL;
 
-    
     // Try to authenticate with key pair and password
     int error = libssh2_userauth_publickey_fromfile(self.session,
                                                     [self.username UTF8String],

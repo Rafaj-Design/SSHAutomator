@@ -9,12 +9,76 @@
 #import "RICoreData.h"
 
 
+@interface RICoreData () <CDEPersistentStoreEnsembleDelegate>
+
+@property (nonatomic, readonly) CDEICloudFileSystem *cloudFileSystem;
+@property (nonatomic, readonly) CDEPersistentStoreEnsemble *ensemble;
+
+@property (nonatomic, readonly) NSURL *modelURL;
+@property (nonatomic, readonly) NSURL *storeURL;
+
+@end
+
+
 @implementation RICoreData
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
+#pragma mark Initialization
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _modelURL = [[NSBundle mainBundle] URLForResource:@"SSHAutomator" withExtension:@"momd"];
+        _storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"SSHAutomator.sqlite"];
+    }
+    return self;
+}
+
+#pragma mark Ensemble
+
+- (void)setupCloudSync {
+    _cloudFileSystem = [[CDEICloudFileSystem alloc] initWithUbiquityContainerIdentifier:@"6UPNZ3ACG2.com.ridiculous-innovations.SSHAutomator"];
+    //_cloudFileSystem = [[CDEICloudFileSystem alloc] initWithUbiquityContainerIdentifier:@"iCloud.com.ridiculous-innovations.SSHAutomator"];
+    _ensemble = [[CDEPersistentStoreEnsemble alloc] initWithEnsembleIdentifier:@"MainStore" persistentStoreURL:_storeURL managedObjectModelURL:_modelURL cloudFileSystem:_cloudFileSystem];
+    [_ensemble setDelegate:self];
+    
+    [self checkLeech];
+}
+
+- (void)checkLeech {
+    NSURL *ubiq = [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier:nil];
+    if (ubiq) {
+        NSLog(@"iCloud access at %@", ubiq);
+    }
+    else {
+        NSLog(@"No iCloud access");
+    }
+    
+    if (!_ensemble.isLeeched) {
+        [_ensemble leechPersistentStoreWithCompletion:^(NSError *error) {
+            if (error) NSLog(@"Could not leech to ensemble: %@", error);
+        }];
+    }
+    [_ensemble mergeWithCompletion:^(NSError *error) {
+        if (error) NSLog(@"Error merging: %@", error);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(icloudDidDownload:) name:CDEICloudFileSystemDidDownloadFilesNotification object:nil];
+}
+
+- (void)icloudDidDownload:(NSNotification *)notification {
+    [self syncWithCloud];
+}
+
+- (void)syncWithCloud {
+    [_ensemble mergeWithCompletion:^(NSError *error) {
+        if (error) NSLog(@"Error merging: %@", error);
+    }];
+}
 
 #pragma mark Accounts
 
@@ -189,8 +253,8 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"SSHAutomator" withExtension:@"momd"];
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:_modelURL];
+    [self setupCloudSync];
     return _managedObjectModel;
 }
 
@@ -200,10 +264,9 @@
     }
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"SSHAutomator.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:_storeURL options:nil error:&error]) {
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
         dict[NSLocalizedFailureReasonErrorKey] = failureReason;
