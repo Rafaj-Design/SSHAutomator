@@ -75,6 +75,7 @@
 }
 
 - (void)syncWithCloud {
+    [self checkLeech];
     [_ensemble mergeWithCompletion:^(NSError *error) {
         if (error) NSLog(@"Error merging: %@", error);
     }];
