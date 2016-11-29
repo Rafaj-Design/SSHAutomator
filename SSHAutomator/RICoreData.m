@@ -38,6 +38,17 @@
     return self;
 }
 
+- (NSArray<NSString *> *)uniqueStrings:(NSArray<NSString *>)array {
+    NSMutableArray *temp = [NSMutableArray array];
+    for (NSString *string in array) {
+        if ([temp containsObject:string]) {
+            [temp addObject:string];
+            
+        }
+    }
+    return [temp copy];
+}
+
 #pragma mark Ensemble
 
 - (void)setupCloudSync {
